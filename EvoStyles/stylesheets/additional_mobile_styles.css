@@ -1,0 +1,2581 @@
+﻿@font-face {
+    font-family: 'FontAwesome';
+    src: url('/abiFiles/fonts/fontawesome-webfont.eot?v=4.2.0');
+    src: url('/abiFiles/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/abiFiles/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('/abiFiles/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('/abiFiles/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.FixedHeaderBar
+{
+  height: 52px !important;
+}
+body
+{
+  background-color: #a8a7a8;
+}
+#navigation-row
+{
+  width: 100%;
+}
+.navigation ul.sf-menu
+{
+  border-left: 1px solid #494949; /*SubMenu Styles*/
+}
+.navigation ul.sf-menu > li
+{
+  padding: 0;
+  margin: 0;
+}
+.navigation ul.sf-menu > li.active > a, .navigation ul.sf-menu > li.sfHover > a, .navigation ul.sf-menu > li.current > a, .navigation ul.sf-menu > li.active > span, .navigation ul.sf-menu > li.sfHover > span, .navigation ul.sf-menu > li.current > span
+{
+  background: #3e3e3e !important;
+  color: #ffffff;
+}
+.navigation ul.sf-menu > li > a, .navigation ul.sf-menu > li > span
+{
+  line-height: 2.5em;
+  text-decoration: none;
+  font-family: 'Arial' , sans-serif;
+  color: #ffffff;
+  background: #4D4D4D;
+  display: block;
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0 15px;
+  margin-right: 5px;
+  border-right: 0px solid #676767 !important;
+  border-top: 1px solid #676767 !important;
+  border-left: 0px solid #676767 !important;
+  font-weight: 400;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.navigation ul.sf-menu > li > a:hover, .navigation ul.sf-menu > li > span:hover
+{
+  background: #eee !important;
+  color: #4d4d4d;
+}
+.navigation ul.sf-menu > li > a:hover > span, .navigation ul.sf-menu > li > span:hover > span
+{
+  background-position: center bottom !important;
+}
+.navigation ul.sf-menu li > ul
+{
+  /* top: 47px;*/ /*Define 1st SubMenu position*/
+}
+.navigation ul.sf-menu ul
+{
+  width: 195px; /*Define menu width*/
+}
+.navigation ul.sf-menu li li ul
+{
+  /*Define SubMenu position*/
+  top: 0px;
+  left: 195px;
+}
+.Closenav
+{
+  display: none;
+}
+.navigation ul.sf-menu ul
+{
+  background: #eee;
+  padding: 0;
+}
+.navigation ul.sf-menu ul li + li
+{
+  border-top: 1px solid #ddd;
+}
+.navigation ul.sf-menu ul li.open > .sub-menu
+{
+  display: block !important;
+}
+.navigation ul.sf-menu ul li > a, .navigation ul.sf-menu ul li > span
+{
+  font-size: 12px;
+  line-height: 21px;
+  font-family: 'Roboto' , sans-serif;
+  color: #4d4d4d;
+  background: #eee;
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+.navigation ul.sf-menu ul li > a:hover, .navigation ul.sf-menu ul li > span:hover
+{
+  background: #2d2d2d;
+  color: #ffffff;
+}
+.navigation ul.sf-menu ul li.active > a, .navigation ul.sf-menu ul li.sfHover > a, .navigation ul.sf-menu ul li.active > span, .navigation ul.sf-menu ul li.sfHover > span
+{
+  background: #2d2d2d;
+  color: #ffffff;
+}
+.navigation ul.sf-menu ul li.firstItem
+{
+  border: none;
+}
+.navigation ul.sf-menu.sf-vertical
+{
+  width: 195px;
+}
+.navigation ul.sf-menu.sf-vertical li
+{
+  width: 195px;
+  margin-bottom: 1px;
+}
+.navigation ul.sf-menu.sf-vertical li:hover > ul, .navigation ul.sf-menu.sf-vertical li.sfHover > ul
+{
+  /*Define 1st SubMenu position*/
+  top: -13px;
+}
+.navigation ul.sf-menu.sf-vertical ul
+{
+  left: 197px;
+}
+.navigation ul.sf-menu.sf-vertical ul li a, .navigation ul.sf-menu.sf-vertical ul li span
+{
+  padding: 9px 12px;
+}
+.navigation ul.sf-menu.sf-navbar
+{
+  height: 47px;
+  padding-bottom: 47px;
+  margin-bottom: 2px;
+}
+.navigation ul.sf-menu.sf-navbar li:hover > ul, .navigation ul.sf-menu.sf-navbar li.sfHover > ul
+{
+  /*Define 1st SubMenu position*/
+  top: 49px;
+  left: 0;
+}
+.navigation ul.sf-menu.sf-navbar li ul
+{
+  width: auto;
+  padding: 2px 0;
+}
+.navigation ul.sf-menu.sf-navbar li ul ul.sub-menu
+{
+  width: 195px;
+  top: 47px;
+}
+.navigation .select-menu
+{
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.masonry .item
+{
+  margin-left: 0 !important;
+}
+
+@media only screen and (max-width: 767px)
+{
+  .ajax__tab_default .ajax__tab_header span
+  {
+  }
+
+  .dataListSeperator
+  {
+    margin-left: 14px;
+    width: 97%;
+    margin-top: 5px;
+  }
+  .evo_help_button
+  {
+    padding-bottom: 5px;
+  }
+}
+
+.welcome_user_class_ie.welcome_user_class_ie
+{
+  text-align: center;
+  clear: both;
+  visibility: hidden;
+}
+.headerHeightPadding
+{
+  height: 66px;
+  background-color: rgba(187, 187, 187, 0.7);
+}
+.FixedHeaderBar, .standalone_page .FixedHeaderBar
+{
+  height: 130px;
+  position: fixed;
+  z-index: 10000;
+  background-color: rgba(23, 18, 18, 0.4); /*#0076BD;*/ /*background-color:rgba(222, 239, 255, 0.4);*/
+}
+
+.headerHeight, .standalone_page .headerHeight
+{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100200;
+}
+.main_repeat
+{
+  margin-right: -10px !important;
+}
+.headerHeight .welcome_text
+{
+  /*margin-right:-10px !important;*/
+  padding: 10px;
+  height: 23px;
+  background-color: Transparent !important;
+}
+
+.searchBox
+{
+  float: right;
+  margin-top: -44px !important;
+  margin-right: 8px !important;
+}
+.navigation
+{
+  position: relative;
+  top: -4px;
+}
+.standalone_page .evolution_logo_standalone
+{
+  margin-left: -25px !important;
+}
+.standalone_page .headerHeightPadding
+{
+  height: 110px;
+}
+.slicknav_btn
+{
+  float: right;
+}
+.faaFlightSearch .faaFlightSearchPanel .columns, .faaFlightSearch .faaFlightSearchPanel .remove_margin
+{
+  margin-bottom: 10px !important;
+}
+.faaFlightSearch .faaFlightSearchPanel .remove_margin .float_right
+{
+  float: none !important;
+}
+.faaFlightSearch .faaOriginsTable td, .faaFlightSearch td
+{
+  white-space: normal !important;
+  font-size: 11px;
+  word-wrap: break-word !important;
+}
+.faaFlightSearch .faaOriginsTable td span
+{
+  display: inline-block;
+  width: 250px;
+}
+.standalone_page .searchBox
+{
+  margin-top: -60px !important;
+  margin-right: 3px !important;
+}
+.loadMobileScreen
+{
+  width: 80% !important;
+  height: auto !important;
+  margin: auto !important;
+  padding: 30px !important;
+}
+table.dataTable > tbody > tr.child ul.dtr-details
+{
+  width: 100%;
+  display: block;
+}
+table.dataTable > tbody > tr.child ul.dtr-details li
+{
+  width: 100%;
+  display: block;
+  padding: 0px;
+  margin-bottom: 7px;
+}
+table.dataTable > tbody > tr.child span.dtr-title br
+{
+  display: none;
+}
+table.dataTable > tbody > tr.child span.dtr-title br::before
+{
+  display: inline;
+  width: 4px;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before
+{
+  top: 3px;
+  left: 3px;
+  height: 13px;
+  width: 13px;
+  line-height: 12px;
+}
+
+.headerHeight .sevenhalf.columns .white_text
+{
+  display: none;
+}
+.searchBox input[type="text"]
+{
+  font-size: 15px;
+  height: 25px !important;
+  margin-right: 5px;
+}
+
+.searchBoxMobile
+{
+  margin-top: -34px !important;
+  margin-right: 16px !important;
+}
+.dataTable
+{
+  width: 100%;
+}
+
+.slicknav_menu
+{
+  z-index: 45500000;
+  width: auto;
+  margin-top: 0px;
+  right: 0;
+}
+.DetailsBrowseTable
+{
+  display: none;
+}
+
+.standalone_page .headerHeightPadding
+{
+  height: 35px;
+}
+.headerHeight .evolution_logo
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fa-home:before
+{
+  content: "\f015" !important;
+  opacity: 1 !important;
+  padding-left: 0px !important;
+  font: 14px FontAwesome !important;
+}
+
+.performance_container_content
+{
+  overflow: auto;
+  width: auto !important;
+  height: auto !important;
+}
+
+table.opCostsTableListing table
+{
+  width: 119px;
+}
+table.opCostsTableListing td
+{
+  padding: 1px !important;
+  font-size: 10px;
+}
+table.opCostsTableListing td strong
+{
+  font-size: 10px;
+}
+.setMobileHeight
+{
+  height: 40px;
+}
+
+.fa
+{
+  display: inline-block;
+  padding: 3px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-bar-chart-o::before, .fa-bar-chart::before
+{
+  content: "\f080";
+}
+.fa-calendar::before
+{
+  content: "\f073";
+}
+.fa-building-o::before
+{
+  content: "\f0f7";
+}
+.fa-plane::before
+{
+  content: "\f072";
+}
+.fa-area-chart::before
+{
+  content: "\f1fe";
+}
+.fa-search::before
+{
+  content: "\f002";
+}
+.fa-usd::before
+{
+  content: "\f155";
+}
+.fa-line-chart::before
+{
+  content: "\f201";
+}
+.fa-money::before
+{
+  content: "\f0d6";
+}
+.fa-bars::before
+{
+  content: "\f0c9";
+}
+.fa-check-square::before
+{
+  content: "\f14a";
+}
+.fa-file-text::before
+{
+  content: "\f15c";
+}
+
+.fa-info::before
+{
+  content: "\f129";
+}
+.actionItemRadio td
+{
+  display: block;
+  vertical-align: top;
+}
+.adjustTableMobile table td
+{
+  height: 70px;
+}
+.mobileAlignTop
+{
+  vertical-align: top;
+}
+.mobileAlignBottom
+{
+  vertical-align: bottom;
+}
+.home_page_margin
+{
+  width: 82% !important;
+}
+.searchPanelContainerDiv .chosen-container
+{
+}
+
+
+.collapseSearchTable
+{
+  display: block;
+  width: 100% !important;
+}
+
+#ctl00_ContentPlaceHolder1_eventCategoryTypeDropdowns_eventsCatagories select
+{
+  width: 145px !important;
+}
+.eventTimes td
+{
+  width: 48% !important;
+  display: inline-block;
+}
+.eventTimes td input
+{
+}
+.marketSer
+{
+  width: 47.5% !important;
+}
+
+.mobileChosenSpacer
+{
+  height: 23px !important;
+  display: block !important;
+}
+.companyMobileHalf
+{
+  width: 50%;
+  float: left;
+  display: block;
+}
+.companyMobileHalf2
+{
+  width: 49%;
+  float: right;
+  display: block;
+}
+.mobileHalf
+{
+  max-width: 48%;
+  min-width: 1%;
+}
+.mobileHalf .li_no_bullet
+{
+  padding: 0px;
+}
+.mobileTopPaddingAttention p
+{
+  display: block;
+  padding-top: 25px;
+}
+.CompanydataListSeperator
+{
+  padding: 0px !important;
+  background-color: Transparent;
+  border: 0px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+.CompanyPage .mGrid .boxed_item_padding
+{
+  padding: 0px;
+}
+.container .sixteen.columns
+{
+  width: 100% !important;
+}
+
+.searchPanelContainerDiv .ui-slider
+{
+  width: 95% !important;
+  float: left;
+  margin-left: 5px;
+}
+.mobile_float_right
+{
+  float: right !important;
+}
+
+.mobile_float_left
+{
+  float: left !important;
+}
+.mobile_top_padding
+{
+  padding-top: 5px;
+}
+.valueTabs .ajax__tab_body
+{
+  min-height: auto !important;
+  width: 100%;
+  height: auto !important;
+}
+.mobileAlignLeft
+{
+  text-align: left !important;
+}
+.mobileAlignCenter
+{
+  text-align: center;
+}
+.mobileAlignRight
+{
+  text-align: right;
+}
+.mobileOverflowAuto
+{
+  overflow: auto;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 767px)
+{
+  .faaFlightSearch .faaOriginsTable td span
+  {
+    width: 300px;
+  }
+
+  .tab_container_div_small div
+  {
+    width: 100% !important;
+  }
+
+  .valueTables
+  {
+    width: 360px !important;
+  }
+
+  .searchPanelContainerDiv .chosen-container
+  {
+    width: 317px !important;
+  }
+  .searchPanelContainerDiv .amount
+  {
+    margin-top: 0px;
+  }
+
+
+  .tabContainerBottomBox .dark-theme
+  {
+    margin-left: 0px !important;
+    width: 100% !important;
+  }
+
+}
+
+.tab_container_div div
+{
+  width: 99% !important;
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 350px)
+{
+  .tab_container_div_small div
+  {
+    width: 100% !important;
+  }
+  .tabContainerBottomBox .dark-theme
+  {
+    margin-left: 0px !important;
+    width: 100% !important;
+  }
+
+  .valueTables
+  {
+    width: 100% !important;
+  }
+
+  .searchPanelContainerDiv .chosen-container
+  {
+  }
+  .searchPanelContainerDiv .amount
+  {
+    margin-top: 0px;
+  }
+
+}
+.mobileModelTable
+{
+  width: 98% !important;
+  display: block;
+}
+.mobileWidth
+{
+  width: 99% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.valueSummary
+{
+  position: relative;
+}
+
+div.dt-buttons
+{
+  float: left !important;
+  text-align: left;
+  width: 300px;
+}
+.searchPanelContainerDiv
+{
+  width: 99%;
+}
+.dark-theme .ajax__tab_header .ajax__tab_tab, .green-theme .ajax__tab_header .ajax__tab_tab, .blue-theme .ajax__tab_header .ajax__tab_tab
+{
+  font-size: 13px !important;
+}
+
+.valueTables .dark-theme .ajax__tab_header .ajax__tab_tab
+{
+  font-size: 12px !important;
+}
+
+.dark-theme .ajax__tab_header .ajax__tab_outer, .green-theme .ajax__tab_header .ajax__tab_outer
+{
+  margin: 0px 0px 0px 0px !important;
+}
+
+table.dataTable > tbody > tr.child:hover
+{
+  background: #fff !important;
+}
+
+.loadingTextStyle
+{
+  left: -45px !important;
+}
+
+.dark-theme .ajax__tab_active .ajax__tab_tab, .green-theme .ajax__tab_active .ajax__tab_tab
+{
+  font-weight: normal !important;
+}
+.trendsTabImageHolder td
+{
+  display: block;
+}
+
+#RetailsTable.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child::before, #RetailsTable.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before, #MyJqueryTable.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child::before, #MyJqueryTable.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before
+{
+  top: 3px;
+  left: 7px !important;
+  height: 13px;
+  width: 13px;
+  line-height: 12px;
+}
+.tab_container_div
+{
+  padding: 0px !important;
+}
+
+
+.tab_container_div_small div
+{
+  height: auto !important;
+}
+.tab_container_div_small
+{
+  min-height: auto !important;
+  height: auto !important;
+  max-height: 200px !important;
+}
+
+#outerCostsTbl td
+{
+}
+.descriptionMobile td
+{
+  display: block;
+}
+#starReportHeaderTable td
+{
+  display: block;
+  width: 100%;
+}
+
+.starReports .ajax__tab_outer
+{
+  display: none !important;
+}
+.starReportSelections
+{
+  text-align: center !important;
+}
+
+table.dataTable th
+{
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.valueSummary .one.columns, .valueSummary .two.columns
+{
+  width: 24% !important;
+}
+.displayBlockMobile, .valueSummary .displayBlockMobile.two.columns
+{
+  display: block !important;
+  width: 100% !important;
+}
+.displayNoneMobile
+{
+  display: none !important;
+}
+.searchPanelContainerDiv .amount
+{
+  font-size: 13px !important;
+  width: auto !important;
+}
+.valueSearchTable #startTable_length, .valueSearchTable #transactionTable_length, .valueSearchTable #vintageTable_length, .valueSearchTable #afttTable_length, .valueSearchTable #quarterTable_length, .valueSearchTable #weightTable_length
+{
+  display: none;
+}
+.valuesSearchTable #startTable_paginate, .valueSearchTable #transactionTable_paginate, .valueSearchTable #vintageTable_paginate, .valueSearchTable #afttTable_paginate, .valueSearchTable #quarterTable_paginate, .valueSearchTable #weightTable_paginate
+{
+  display: none;
+}
+
+.dataTables_wrapper .dataTables_filter
+{
+  display: none;
+}
+
+table.dataTable thead th, table.dataTable thead td
+{
+  padding: 2px 4px !important;
+}
+table.dataTable th
+{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.welcome_text a
+{
+  font-size: 14px;
+}
+.headerHeight .welcome_text .welcome_LOGOUT
+{
+  padding-right: 4px !important;
+}
+.gray_menu_repeat
+{
+  border-top: 1px solid #676767;
+}
+.sf-menu .button_width
+{
+  width: 96% !important;
+  margin-left: 5px;
+}
+
+.sf-menu .button-darker
+{
+  color: #8ca9c1 !important;
+  text-shadow: none !important;
+  filter: none !important;
+  border: 1px solid #8fa8bc !important;
+  padding: 10px 9px 10px 9px !important;
+  margin-top: 3px !important;
+  font-weight: normal !important;
+  font-size: 1.7em !important;
+  background: #fff !important;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.sf-menu .button-darker:hover
+{
+  background: rgba(77, 136, 192, .7) !important;
+  color: #fff !important;
+  border: 1px solid #000 !important;
+  text-decoration: underline;
+}
+.slicknav_menu .slicknav_menutxt
+{
+  display: none !important;
+}
+
+#viewCriteriaDivID div:first-child
+{
+  overflow: visible !important;
+}
+#makeModelDynamic.chosen-select
+{
+  width: 300px !important;
+}
+
+
+@media (max-width: 767px)
+{
+  .navigation ul.sf-menu
+  {
+    overflow: hidden;
+    height: auto !important;
+    float: none;
+  }
+  .navigation ul.sf-menu
+  {
+    border-left: 0px !important;
+    margin-top: 10px;
+  }
+  .navigation ul.sf-menu > li
+  {
+    padding: 0;
+    margin: 4px !important;
+  }
+  .navigation ul.sf-menu > li > a, .navigation ul.sf-menu > li > span
+  {
+    border-radius: 0px !important;
+  }
+  .navigation ul.sf-menu > li > a:hover
+  {
+    text-decoration: underline !important;
+  }
+  .FixedHeaderBar
+  {
+    height: 52px !important;
+  }
+  .Closenav
+  {
+    width: 100%;
+    display: block !important;
+    line-height: 1em;
+    padding: 4px 0px 0px 3px;
+    font-family: 'Arial' , sans-serif;
+    margin-right: 5px;
+    color: #000 !important;
+  }
+  .mGrid
+  {
+    background-color: Transparent;
+  }
+  .mGrid td
+  {
+    background-color: White;
+  }
+  #book
+  {
+    margin-left: -10px;
+    margin-right: -6px;
+  }
+  .ClosenavBG
+  {
+    background-color: #fff;
+    margin-top: 7px;
+    margin-bottom: 3px;
+  }
+  .KeepOpennavBG
+  {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 3px 8px 0px 5px;
+    width: 99%;
+  }
+  .fa-caret-square-o-down:before, .fa-caret-square-o-up:before
+  {
+    content: "\f150";
+    font-family: 'FontAwesome';
+    font-weight: normal !important;
+    font-size: 1.2em;
+    margin-right: 7px;
+  }
+  .fa-caret-square-o-up:before
+  {
+    content: "\f151";
+  }
+}
+
+
+.content_border
+{
+  border: 0px !important;
+  margin-top: 0px !important;
+}
+.gray_menu_repeat
+{
+  display: none !important;
+}
+.collapse
+{
+  padding-top: 15px;
+}
+.white_background_color
+{
+  background-color: transparent;
+}
+.DataGridShadowContainer
+{
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 0px rgba(100, 100, 100, .8);
+  box-shadow: 0px 0px 0px rgba(100, 100, 100, .8);
+}
+.slicknav_btn
+{
+  background-color: #282d2c; /*#0A263C;*/
+  margin: 0px 6px;
+}
+.slicknav_menu
+{
+  background-color: #282d2c;
+  margin-right: 7px;
+}
+.dark-theme .ajax__tab_body, .green-theme .ajax__tab_body, .blue-theme .ajax__tab_body
+{
+  padding: 0px;
+}
+.slicknav_menu .slicknav_icon
+{
+  float: left;
+  width: 1em;
+  height: 0.675em;
+  margin: 0em;
+}
+
+
+.slicknav_menu
+{
+  top: 39px;
+  padding: 0px;
+  font-size: 20px;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.fa-home::before
+{
+  position: absolute;
+  right: -8px;
+  top: 13px;
+  margin-right: 18px;
+  font: 26px FontAwesome !important;
+  display: inline-block;
+  margin-top: -5px;
+}
+.headerHeight .evolution_logo {
+    height: 23px;
+}
+.slicknav_btn
+{
+  font-size: .9em;
+}
+
+
+.standalone_page .FixedHeaderBar
+{
+  height: 44px !important; /*background-color:rgba(0, 93, 171, 0.6);*/
+}
+
+
+.standalone_page .slicknav_menu
+{
+  top: 8px !important;
+}
+.fullTextSearch table.dataTable td
+{
+  font-size: 13px !important;
+  line-height: 1.4em !important;
+}
+
+.dark_header .chosen-container
+{
+  text-shadow: none !important;
+}
+.tab_container_div_small
+{
+  font-size: 13px !important;
+}
+.fullTextSearch .distinct, .fullTextSearch .distinct a
+{
+  text-transform: uppercase;
+  color: #13558B;
+  cursor: pointer;
+}
+.fullTextSearch .underline
+{
+  cursor: pointer;
+}
+.indent
+{
+  text-indent: 25px !important;
+}
+.searchBox .searchIcon
+{
+  width: 31px !important;
+  margin: 0px 6px 0px 0px !important;
+  padding: 10px 23px 17px 7px !important;
+  font-size: 18px !important;
+}
+.searchBoxFullSearch .searchBoxMobile
+{
+  /*margin-top: -48px !important;*/
+  width: 99%;
+}
+
+
+.fullTextSearch table.dataTable tbody th, .fullTextSearch table.dataTable tbody td
+{
+  padding: 8px 10px !important;
+}
+.slicknav_nav a:visited
+{
+  color: #fff;
+}
+.content_padding
+{
+  padding: 0px !important;
+}
+.gray_menu_repeat
+{
+  margin-top: 12px !important;
+}
+
+.forceOverflowMobile
+{
+  overflow: scroll !important;
+  height: 300px !important;
+  background-color: #fff;
+}
+.tab_container_div
+{
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+}
+.slideOutTip
+{
+  margin-left: -250px !important;
+  top: -12px !important;
+  font-size: 12px;
+  display: none;
+}
+.tipVisible
+{
+  margin-top: 2px;
+}
+.tipIcon
+{
+  width: 15px;
+  height: 15px;
+}
+.red .plusIcon::before
+{
+  margin: 4px;
+  font-size: 12px;
+}
+.searchBox input[type="text"]
+{
+  margin-top: 10px !important;
+}
+.container
+{
+  min-height: 105%; /*position: absolute;*/
+  width: 100%;
+}
+body
+{
+  position: absolute;
+  width: 100%;
+}
+.footer
+{
+  padding: 0px 0px 0px 0px;
+  background-color: Transparent;
+  background-image: none;
+  color: #fff;
+  opacity: .7;
+  font-size: 12px;
+  bottom: -15px;
+  left: 0px;
+  position: absolute;
+}
+
+.tab_container_div_small table:first-child
+{
+  width: 100%;
+}
+
+.searchBox
+{
+  position: absolute;
+  width: 87%;
+  left: 0px;
+}
+.searchBox input[type="text"]
+{
+  width: 95% !important;
+  margin-right: 0px;
+  position: relative;
+  z-index: 1;
+  left: 7px;
+}
+.searchBox .searchIcon, .searchBox .searchIcon:hover, .searchBox .searchIcon:active, .searchBox .searchIcon:focus
+{
+  top: 5;
+  margin-top: 2px !important;
+  margin-right: 0px !important;
+  position: absolute;
+  right: 12px !important;
+  background: transparent;
+  border: 0px;
+  z-index: 150;
+  font-size: 18px !important;
+}
+.searchBoxFullSearch .searchBox .searchIcon, .searchBoxFullSearch .searchBox .searchIcon:hover, .searchBoxFullSearch .searchBox .searchIcon:active
+{
+  right: 10px;
+  top: 5px;
+}
+.homePage .searchBox .searchIcon:focus, .homePage .searchBox .searchIcon, .homePage .searchBox .searchIcon:hover, .homePage .searchBox .searchIcon:active, .homePage .searchBox .searchIcon:focus
+{
+  right: -26px !important; top:-6px !important 
+}
+
+.searchBox .searchIcon:hover, .searchBox .searchIcon:active, .searchBox .searchIcon:focus
+{
+  color: #ff0000 !important;
+}
+.mGrid .ac_action_bar
+{
+  display: none;
+}
+.searchBoxFullSearch .searchBox
+{
+  position: fixed;
+  left: 3px;
+}
+.headerHeight .sevenhalf.columns, .headerHeight .one-third.column
+{
+  width: 100% !important;
+}
+/**********************************************************Datatable javascript classes***************************************************************/
+
+/* iPhone 4 ----------- */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 480px !important;
+    width: 98% !important;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 320px !important;
+    width: 98% !important;
+  }
+}
+
+/* iPhone 5 ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 568px !important;
+    width: 98% !important;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 320px !important;
+    width: 98% !important;
+  }
+}
+
+/* iPhone 6 ----------- */
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 667px !important;
+    width: 98% !important;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 375px !important;
+    width: 98% !important;
+  }
+}
+
+/* iPhone 6+ ----------- */
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 736px !important;
+    width: 98% !important;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 414px !important;
+    width: 98% !important;
+  }
+}
+
+/* Samsung Galaxy S3 ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 640px !important;
+    width: 98% !important;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 320px !important;
+    width: 98% !important;
+  }
+}
+
+/* Samsung Galaxy S4 ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 640px !important;
+    width: 98% !important;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 320px !important;
+    width: 98% !important;
+  }
+}
+
+/* Samsung Galaxy S5 ----------- */
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 640px !important;
+    width: 98% !important;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)
+{
+  /* Styles */
+  .tab_container_div div
+  {
+    max-width: 360px !important;
+    width: 98% !important;
+  }
+}
+
+.forceOverflowMobile
+{
+  width: 100%;
+}
+/*****************************************************************************************/
+.PerformanceListingTable .collapse
+{
+  padding-top: 0px;
+  background-color: Transparent;
+}
+.PerformanceListingTable .data_aircraft_grid b, .PerformanceListingTable #innerCostsTbl th, .PerformanceListingTable .data_aircraft_grid_cell strong, .PerformanceListingTable .upperHeader
+{
+  color: #000;
+  font-size: 1.1em;
+  font-style: normal;
+}
+.PerformanceListingTable table.performanceTable table tbody tr:first-child, .PerformanceListingTable table.performanceTable table tbody tr:first-child, .PerformanceListingTable table.performanceTable .performance_header_row
+{
+  background-color: transparent !important;
+}
+.PerformanceListingTable table.performanceTable table td
+{
+  padding: 6px;
+  white-space: normal !important;
+  line-height: 1.1em;
+}
+.Performance table.performanceTable td:first-child table td
+{
+  text-align: left;
+}
+.PerformanceListingTable .cell_right td
+{
+  border-right: 0px;
+  white-space: normal !important;
+}
+.PerformanceListingTable .data_aircraft_grid, .PerformanceListingTable .data_aircraft_grid_cell .sub_table
+{
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.PerformanceListingTable .data_aircraft_grid, .PerformanceListingTable .data_aircraft_grid_cell .sub_table
+{
+  font-size: 13px !important;
+  font-weight: 400;
+  color: #5b5b5b;
+}
+.PerformanceListingTable table.performanceTable table
+{
+  width: 100%;
+}
+.activeLinks span
+{
+  display: none;
+}
+.activeLinks .activeTog
+{
+  display: block;
+}
+#innerCostsTbl .margin-top
+{
+  margin-top: 4px;
+}
+.PerformanceListingTable #innerCostsTbl th, .PerformanceListingTable #innerCostsTbl b
+{
+  font-size: .8em;
+  font-weight: 900;
+}
+.PerformanceListingTable #innerCostsTbl th
+{
+  text-indent: 8px each-line;
+  vertical-align: middle;
+  font-weight: 900;
+}
+.PerformanceListingTable #innerCostsTbl .activeLinks
+{
+  margin-top: -4px;
+}
+.PerformanceListingTable .activeLinks span
+{
+  color: #c9c9c9;
+  display: inline;
+  text-decoration: underline;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin-left: 7px;
+}
+.padding_table
+{
+  padding: 0px;
+}
+.OpHeight td, .OpHeight th
+{
+  height: 32px !important;
+}
+.OpHeight .data_aircraft_grid td
+{
+  border: 0px !important;
+}
+.OpHeight .data_aircraft_grid td td td
+{
+  border-bottom: 1px solid #eeeeee !important;
+}
+.chosen-container, .chosen-select
+{
+  font-size: 17px;
+  text-align: left;
+}
+.OpHeight.PerformanceListingTable table.performanceTable table td
+{
+  padding: 0px;
+}
+.OpHeight .marginDropdown
+{
+  min-width: 100%;
+  margin-top: 10px !important;
+}
+.performance_container_content
+{
+  background-color: #fff;
+}
+.DataGridShadowContainer.PerformanceListingTable
+{
+  background-color: rgba(187, 187, 187, 0.7);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0px 0px 0px rgba(100, 100, 100, .8);
+}
+.PerformanceListingTable .dark_header
+{
+  background-color: transparent;
+  border: 0px;
+}
+
+.OpHeight .activeLinks
+{
+  float: right;
+}
+.PerformanceListingTable .activeLinks .activeTog
+{
+  color: white;
+  text-decoration: none;
+  background-color: #656565;
+  padding: 5px;
+  font-size: 1em;
+}
+.PerformanceListingTable h1, .CompanyPage h1
+{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin: 5px 0px 10px 0px;
+  text-transform: uppercase;
+  border-bottom: 0px solid;
+}
+.CompanyPage h1
+{
+  text-align: left;
+}
+.sixteen img
+{
+  max-width: 97%;
+  display: inherit;
+}
+
+
+#standardTable, #metricTable
+{
+  width: 90% !important;
+}
+
+.ViewClass .sixteen
+{
+  background-color: #fff;
+  padding: 5px;
+}
+.ViewClass p, .ViewClass span, .ViewClass h1, .ViewClass h2
+{
+  line-height: 2em;
+  font-size: 1.2em;
+  padding: 5px;
+}
+.ViewClass h2
+{
+  padding: 0px;
+  margin-top: 0px;
+}
+.ViewClass .marketStatus h2
+{
+  margin-left: 5px;
+}
+.ViewClass span
+{
+  display: block;
+  font-size: 1.1em;
+}
+.ViewClass h1, .ViewClass h2
+{
+  font-size: 2em;
+  margin-bottom: 0px;
+  border-top: 5px solid #eee;
+  width: 95%;
+  text-align: left;
+}
+.ViewClass .OpHeight .data_aircraft_grid td
+{
+  border-bottom: 1px solid #eeeeee !important;
+}
+.ViewClass .Performance
+{
+  padding-left: 10px;
+}
+.ViewClass #standardTable, .ViewClass #metricTable
+{
+  width: 93% !important;
+}
+.ViewClass th
+{
+  background-color: #fff;
+  padding: 0px;
+  text-align: left;
+}
+.ViewClass .padding
+{
+  padding: 5px;
+}
+.ViewClass .OpHeight td, .ViewClass .OpHeight th
+{
+  height: 34px !important;
+}
+.ViewClass #standardTableOp, .ViewClass #metricTableOp
+{
+  width: 100% !important;
+}
+.ViewClass span.tiny
+{
+  display: inline;
+  font-size: 9px !important;
+}
+.ViewClass span.mobileLabel
+{
+  display: inline-block !important;
+  line-height: 30px;
+  border-bottom: 1px solid #eee;
+  float: left;
+  width: 43%;
+  font-size: 1.1em;
+  clear: both;
+}
+.ViewClass span.mobileAnswer
+{
+  font-size: 1em;
+  line-height: 30px;
+  text-align: right;
+  display: inline-block;
+  border-bottom: 1px solid #eee;
+  width: 50%;
+}
+.ViewClass .TrendsTabClass
+{
+  text-align: center;
+}
+.ViewClass .TrendsTabClass img
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+.ViewClass div
+{
+  width: 96%;
+}
+.ViewClass .ViewForSale span
+{
+  display: inline;
+  font-size: 1em;
+  line-height: 1em;
+  padding: 0px 0px 0px 0px;
+}
+.ViewClass .ViewForSale .li, .ViewClass .ViewForSale .ac_company_bullet, .ViewClass .ViewForSale .gray_background_color
+{
+  display: block !important;
+  padding: 0px 3px 3px 5px;
+  line-height: 1.5em;
+  background-image: none;
+}
+.ViewClass .ViewForSale h1
+{
+  font-size: 1.4em;
+  line-height: 1em;
+}
+.ViewClass .ViewForSale .green_background
+{
+  display: block !important;
+  padding: 3px 0px 3px 0px;
+}
+.dataListSeperator
+{
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border: 0px;
+}
+.ViewClass .ViewForSale .gray_background_color
+{
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border: 0px;
+}
+.ViewClass .ViewForSale .dataListH1
+{
+  border-top: 0px;
+}
+.ViewClass .ViewForSale img
+{
+  max-width: 100%;
+}
+.ViewClass .ViewForSale .paddingRight
+{
+  padding-right: 10px !important;
+}
+.ViewClass .ViewForSale .mGrid .boxed_item_padding, .ViewClass .ViewForSale .mGrid td, .ViewClass .ViewForSale .dataListSeperator
+{
+  padding: 0px;
+}
+
+.ViewClass .padding_right
+{
+  padding-right: 1em !important;
+}
+.ViewClass
+{
+  background-color: #fff;
+  padding-left: 5px;
+}
+.ViewClass .StarReports
+{
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+.ViewClass .StarReports img
+{
+  display: none;
+}
+.ViewClass .StarReports .header
+{
+  display: none;
+}
+.ViewClass .StarReports .alt_row
+{
+  background-color: #fff;
+}
+.ViewClass .ViewForSale .seperator
+{
+  border-bottom: 1px solid #eee;
+}
+.ViewClass .ViewForSale p
+{
+  margin-bottom: 5px;
+}
+.ViewClass .ViewForSale h2 .tiny
+{
+  line-height: 54px;
+  font-size: 12px !important;
+  float: right;
+}
+.ViewClass .ViewForSale .dataListSeperatorHistory
+{
+  background-color: #F9F9F9;
+  padding: 0px;
+  border: 0px;
+  width: 100% !important;
+}
+.ViewClass .ViewForSale .seperator
+{
+  border-bottom: 3px solid #cacaca;
+}
+.ViewClass #innerCostsTbl .margin-top
+{
+  margin-right: 0px;
+  width: auto;
+  display: inline;
+}
+.marketStatus
+{
+  line-height: 2em;
+}
+.marketStatus .mobileWidth
+{
+  width: 95% !important;
+}
+.ViewClass .chosen-single span
+{
+  display: inline;
+  font-size: 1em;
+  line-height: 1em;
+}
+.marketStatus strong
+{
+  display: block;
+  font-weight: 900;
+  font-size: 1.3em;
+  clear: both;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.marketStatus .containerMarket
+{
+  width: 95% !important;
+}
+.secondNavigation .textLink
+{
+  font-size: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 0px;
+  line-height: 1em;
+  vertical-align: middle;
+}
+.secondNavigation .red_text
+{
+  color: #d40000;
+}
+.secondNavigation .red_text:hover, .secondNavigation .red_text:active, .secondNavigation .red_text:focus
+{
+  color: #ea0404;
+}
+.secondNavigation .gray_text:hover, .secondNavigation .gray_text:active, .secondNavigation .gray_text:focus
+{
+  color: #b9b9b9 !important;
+}
+.secondNavigation .green_text:hover, .secondNavigation .green_text:active, .secondNavigation .green_text:focus
+{
+  color: #577b42 !important;
+}
+.secondNavigation .blue_text:hover, .secondNavigation .blue_text:active, .secondNavigation .blue_text:focus
+{
+  color: #346fab !important;
+}
+.secondNavigation a:hover, .secondNavigation a:active, .secondNavigation a:focus
+{
+  color: #5b5b5b;
+}
+.navigation .fa
+{
+  font-size: 3.2em;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: bottom;
+  padding-top: 7px;
+  opacity: .8;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+.navigation .fa:hover, .navigation .fa:active, .navigation .fa:focus
+{
+  opacity: 1;
+}
+.navigation .fa-container
+{
+  -webkit-border-radius: 33px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 33px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 5px 0px #737373;
+  box-shadow: 1px 1px 5px 0px #737373;
+  display: inline-block;
+  width: 53px;
+  height: 53px;
+  padding: 5px;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  margin-bottom: 1.5em;
+}
+
+.navigation .fa-container:hover, .navigation .fa-container:active, .navigation .fa-container:focus
+{
+  -webkit-box-shadow: 1px 1px 5px 1px #737373;
+  box-shadow: 1px 1px 5px 1px #737373;
+}
+.KeepOpennavBG
+{
+  background-color: rgba(187, 187, 187, 0.7);
+}
+#slider1
+{
+  display: none;
+}
+.slideshowContainer table table, .stepcarousel
+{
+  width: 100% !important;
+}
+#thumbnails
+{
+  width: 100%;
+}
+.contentThumb a, .contentThumb a:hover
+{
+  text-decoration: none;
+}
+.contentThumb img
+{
+  width: 30%;
+  float: left;
+  margin: 5px;
+  padding: 0px !important;
+  opacity: 1;
+  border: 0px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.contentThumb img:hover
+{
+  opacity: .5;
+  padding: 0px !important;
+  margin: 5px;
+  width: 30%;
+  border: 0px;
+}
+.standalone_page .footer
+{
+  margin-bottom: -20px;
+}
+.model_search_box
+{
+  display: none !important;
+}
+.mobileAFTT
+{
+  border: 0px !important;
+  background-color: #fff;
+  width: 100%;
+  padding-left: 10px;
+  margin-top: 0px;
+}
+.market_search_box
+{
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+}
+.button_width
+{
+  width: 48% !important;
+}
+.seperator_search_box .button_width
+{
+  width: 100% !important;
+}
+.newSearchLink
+{
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 1.6em;
+  vertical-align: bottom;
+  display: block;
+  width: 57px;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  text-shadow: 0px;
+}
+.newSearchLink:hover
+{
+  color: #fff;
+  text-decoration: none;
+}
+.newSearchLink:active, .newSearchLink:visited, .newSearchLink:focus
+{
+  color: #fff;
+}
+.controlImage
+{
+  display: none !important;
+}
+.mobileWhiteBackground
+{
+  background-color: #fff;
+}
+.mGrid img
+{
+  width: 35%;
+  clear: both;
+}
+.mGrid .green_text
+{
+  color: #54b919 !important;
+  padding: 0px;
+  display: inline;
+  float: left;
+  padding-right: 5px;
+}
+.mGrid .halfScreen
+{
+  width: 62%;
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+.mGrid .li, .mGrid .ac_company_bullet
+{
+  background-image: none;
+  padding-left: 0px;
+}
+.mGrid .label
+{
+  font-weight: normal;
+}
+.mGrid h1
+{
+  font-size: 1.5em;
+  color: #3e3e3e;
+}
+.mGrid h1 a
+{
+  color: #3e3e3e !important;
+}
+.ul_top.sort_dropdown_width
+{
+  width: 50px;
+}
+.dark_header
+{
+  text-shadow: 0 0 0 ##fff;
+}
+.fixPosition
+{
+  background-color: /*#0076BD*/ rgba(187, 187, 187, 0.7);
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+}
+.mobileSpacer
+{
+  display: block;
+  width: 100%;
+  height: 36px;
+}
+.mGrid tbody
+{
+  display: block;
+  margin-top: 34px;
+  margin-bottom: -2px;
+}
+.AirportListing .airportName
+{
+  margin-top: 32px;
+  margin-bottom: -23px;
+  padding-left: 5px;
+}
+.AirportListing .airportName strong
+{
+  display: block;
+  font-size: 9px;
+}
+.AirportListing .mobileTopPaddingAttention p
+{
+  padding-top: 25px;
+  display: block;
+  margin-top: 7px;
+}
+.CompanyPage .mGrid
+{
+  margin-top: 34px;
+  margin-bottom: -2px;
+}
+.CompanyPage .fa
+{
+  font-size: 2em;
+  padding: 0px 5px 0px 5px;
+  margin: 8px 15px 0px 0px;
+  border: 1px solid #bfbfbf;
+  -webkit-box-shadow: 1px 1px 2px 0px #C4C4C4;
+  box-shadow: 1px 1px 2px 0px #C4C4C4;
+}
+.CompanyPage .fa-phone
+{
+  color: #253f65;
+}
+.displayBlockMobile
+{
+  display: block;
+}
+.AircraftPage .mGrid h1
+{
+  text-align: left;
+}
+.AircraftPage .ACborder_right
+{
+  width: 50%;
+  text-align: right;
+}
+.AircraftPage .mobileSearchHeader
+{
+  font-weight: normal !important;
+}
+.AircraftPage .mobileRadio
+{
+  line-height: 25px;
+  font-weight: normal !important;
+}
+.loadingScreenAC img, .loadingScreenAC p
+{
+  margin: auto;
+}
+.loadingScreenAC p
+{
+  padding-top: 25%;
+  padding-bottom: 15px;
+}
+.loadingScreenAC
+{
+  position: fixed;
+  text-align: center;
+  background-color: #eee;
+  filter: alpha(opacity=90);
+  opacity: .9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #003957;
+  z-index: 200000;
+}
+
+
+.event_search_box .displayBlockMobile
+{
+  font-size: 17px !important;
+  line-height: 22px;
+}
+#cboEventsCategoriesID, #cboEventsTypeCodesID
+{
+  font-size: 17px !important;
+}
+.event_search_box *
+{
+  font-size: 17px !important;
+}
+.disableHeaders .row
+{
+  margin-bottom: 0px;
+}
+.disableHeaders .ajax__tab_header
+{
+  display: none;
+}
+.disableHeaders .dark-theme .ajax__tab_body
+{
+  background-color: Transparent;
+  border-left: 0px;
+  border-right: 0px;
+}
+.dataTables_scrollHead
+{
+  width: 320px !important;
+}
+
+@media only screen and (min-width: 360px)
+{
+  .dataTables_scrollHead
+  {
+    width: 360px !important;
+  }
+}
+@media only screen and (min-width: 370px)
+{
+  .dataTables_scrollHead
+  {
+    width: 370px !important;
+  }
+}
+@media only screen and (min-width: 380px)
+{
+  .dataTables_scrollHead
+  {
+    width: 380px !important;
+  }
+}
+@media only screen and (min-width: 390px)
+{
+  .dataTables_scrollHead
+  {
+    width: 390px !important;
+  }
+}
+@media only screen and (min-width: 400px)
+{
+  .dataTables_scrollHead
+  {
+    width: 400px !important;
+  }
+}
+@media only screen and (min-width: 410px)
+{
+  .dataTables_scrollHead
+  {
+    width: 410px !important;
+  }
+}
+@media only screen and (min-width: 420px)
+{
+  .dataTables_scrollHead
+  {
+    width: 420px !important;
+  }
+}
+@media only screen and (min-width: 430px)
+{
+  .dataTables_scrollHead
+  {
+    width: 430px !important;
+  }
+}
+@media only screen and (min-width: 440px)
+{
+  .dataTables_scrollHead
+  {
+    width: 440px !important;
+  }
+}
+@media only screen and (min-width: 450px)
+{
+  .dataTables_scrollHead
+  {
+    width: 450px !important;
+  }
+}
+
+@media only screen and (max-width: 500px)
+{
+  .valueTabs .dark-theme .ajax__tab_header .ajax__tab_outer
+  {
+    margin: 0px 0px 0px 0px !important;
+    min-height: 40px;
+    width: 24% !important;
+    text-align: center;
+  }
+}
+.disableHeaders
+{
+  margin-left: -5px !important;
+}
+.valueTabs
+{
+  margin-left: 5px !important;
+}
+.valueTabs .sixteen.columns
+{
+  width: 97% !important;
+}
+.valueSummary label, .searchPanelContainerDiv .ajax__tab_panel
+{
+  font-size: 13px !important;
+}
+.valueControl #fleetTable
+{
+  font-size: 12px !important;
+}
+.valueTabs .chosen-container
+{
+  width: 98% !important;
+}
+@media screen and (max-width: 768px)
+{
+  .standalone_page
+  {
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+  }
+  .IOSScrollFix
+  {
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    height: 500px;
+  }
+  .aircraftContainer .ajax__tab_body
+  {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.sorting_1
+{
+  width: 25px;
+}
+table.dataTable th:first-child
+{
+  width: 25px;
+}
+.blockAnchor
+{
+  display: block;
+  margin-bottom: 50px;
+}
+.mobileDateHeight
+{
+  height: 25px;
+}
+.valueTabs .searchPanelContainerDiv .chosen-container
+{
+  z-index: 200000;
+}
+.fixPosition .collapse, .AirportListing .mobileWhiteBackground
+{
+  font-size: 1.2em !important;
+  line-height: 1.7em;
+  overflow-y: scroll;
+  max-height: 445px;
+}
+.eventsOnly.fixPosition .collapse
+{
+  max-height: 440px;
+}
+.slicknav_btn
+{
+  padding: 0.388em 0.15em 0.388em 0.15em;
+}
+.moduletable ul
+{
+  padding-left: 0px;
+  width: auto;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.moduletable ul li
+{
+  width: 30%;
+  display: inline-block;
+  max-width: 30%;
+  text-align: center;
+  vertical-align: top;
+  margin-bottom: 0px;
+}
+.moduletable ul li.dividerRight
+{
+  background-image: url('../../images/dividers.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+}
+.moduletable ul li .textLink
+{
+  display: block;
+  color: #fff;
+}
+.moduletable ul li span
+{
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.moduletable ul li span img
+{
+  width: 85%;
+}
+.moduletable ul.darkGray
+{
+  background-color: rgba(23, 18, 18, 0.4);
+  padding-top: 10px;
+}
+@media screen and (max-width: 330px)
+{
+  .moduletable ul li .textLink
+  {
+    font-size: 1.4em !important;
+  }
+  .moduletable ul li span
+  {
+    width: 75%;
+  }
+}
+
+
+
+.mGrid .th td
+{
+  background-color: rgba(23, 18, 18, 0.4);
+}
+.login_page_blue_bar
+{
+  height: 2px;
+  background-image: none;
+  border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+}
+.login_page_blue_bar_bottom
+{
+  background-image: none;
+  display: none;
+}
+.login_white_page
+{
+  border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+  margin-top: 5px !important;
+}
+#TellJetnetChangesContainer
+{
+  display: none;
+}
+.fullTextTableHeader
+{
+  background-color: #5c666f !important;
+  border: 1px solid rgb(68, 68, 68) !important;
+  background: #5c666f !important;
+}
+.fullTextTableHeader strong
+{
+  color: #fff;
+}
+
+.AirportListing input[type="text"]
+{
+  margin: 3px 3px 3px 0px;
+  width: 75%;
+  padding: 4px;
+}
+.AirportListing .searchPanel
+{
+  margin-top: 5px;
+  background-color: white;
+  padding: 5px;
+}
+.AirportListing .collapse
+{
+  padding-top: 0px;
+  background-color: #eee;
+}
+.AirportListing .mobileWhiteBackground td
+{
+  padding: 2px 8px 2px 8px;
+}
+.lowerLevel .headerHeight .evolution_logo
+{
+  margin-right: 0px;
+  margin-left: -100px;
+}
+.lowerLevel .searchBox
+{
+  display: none;
+  margin-top: -2px !important;
+  width: 100%;
+  padding: 5px;
+  background-color: #373737;
+  height: 30px;
+}
+.lowerLevel .searchBoxFullSearch .searchBox
+{
+  margin-top: -15px !important;
+  left: 0px;
+  height: 30px;
+}
+.lowerLevel .searchBoxFullSearch .searchBox input[type="text"]
+{
+  width: 93%;
+  margin-left: 5px;
+}
+.lowerLevel .searchBox input[type="text"]
+{
+  padding: 2px 0px 2px 0px;
+  left: 2px;
+  width: 96%;
+}
+
+
+.fa-home::before
+{
+  right: 60px;
+}
+.slicknav_menu
+{
+  top: 7px;
+}
+
+.searchPopupButton
+{
+  position: absolute;
+  right: 37px;
+  top: 9px;
+  margin-right: 18px;
+  font: 22px FontAwesome !important;
+  display: inline-block;
+  margin-top: 0px;
+  color: #fff;
+  cursor: pointer;
+}
+.homePage .searchBox
+{
+  width: 96%;left:0px;position:absolute !important;
+}
+.homePage .searchPopupButton
+{
+  display: none;
+}
+
+.lowerLevel .welcome_text a::before
+{
+  content: "";
+}
+.lowerLevel .headerHeightPadding
+{
+  height: 36px;
+}
+
+.lowerLevel .FixedHeaderBar
+{
+  height: 36px !important;
+  background-color: rgba(102,100,100,1);
+}
+.lowerLevel .headerHeight .welcome_text
+{
+  height: 0px;
+  padding: 0px;
+}
+.loginPage .FixedHeaderBar
+{
+  background-color: rgba(0,0,0,0);
+}
+
+.valueTabs table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child::before, .valueTabs table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child::before
+{
+  top: 5px !important;
+  left: 3px !important;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  border: 0px solid white;
+  border-radius: 0px;
+  box-shadow: 0 0 0px #444;
+  box-sizing: content-box;
+  text-align: center;
+  font-family: 'Courier New' , Courier, monospace;
+  line-height: 14px;
+  content: '+';
+  color: #31b131;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: Transparent;
+}
+
+.standalone_page .large_panel_height, .standalone_page .small_panel_height
+{
+  max-height: none !important;
+  overflow: visible;
+  height: auto !important;
+}
+
+.SalesTransaction .four.columns, .SalesTransaction .three.columns
+{
+  width: 100%;
+}
+.SalesTransaction .four.columns input[type="text"], .SalesTransaction .three.columns input[type="text"], .SalesTransaction .nine.columns textarea
+{
+  width: 95% !important;
+}
+.SalesTransaction .columns
+{
+  padding: 2px;
+}
+.SalesTransaction .row
+{
+  margin-bottom: 10px;
+}
+.caption_text_large
+{
+  width: 97%;
+  padding: 0px;
+}
+
+.eulaAgreementPopup
+{
+  max-width: 95% !important;
+  width: auto !important;
+  text-align: center;
+}
+.eulaAgreementPopup span
+{
+  height: 200px !important;
+  display: block;
+  margin: auto;
+  width: 90% !important;
+}
+.modalDemoPopup
+{
+  position: relative;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  color: #000;
+  background-color: #fff;
+  padding: 15px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.notifyFormBackground {
+    background-color: #fafafa;
+    padding: 15px;
+    margin-top: 25px
+}
+.standalone_page .evolution_logo_standalone{margin-left:10px !important;filter:invert(1);}

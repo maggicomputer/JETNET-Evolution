@@ -1,0 +1,301 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EmptyEvoTheme.master.vb"
+  Inherits="crmWebClient.EmptyEvoTheme" %>
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head id="head1" runat="server">
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8" content="" />
+  <title>JETNET - Login</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <!-- CSS
+  ================================================== -->
+  <!--Created Stylesheet-->
+  <!--Google Material Icons-->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+  <!-- Header Alternate Styles-->
+  <link href="/EvoStyles/stylesheets/slicknav.css" rel="stylesheet" type="text/css" />
+  <!--Grid/Layout Styles-->
+  <link href="/EvoStyles/stylesheets/layout/base_html_elements.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="/EvoStyles/stylesheets/layout/skeleton_grid.css" rel="stylesheet" type="text/css" />
+  <!--Jquery Datatables-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="/common/chosen.css" />
+  <link rel="stylesheet" href="/common/classic.css" type="text/css" />
+  <link href="/EvoStyles/stylesheets/print.css" rel="stylesheet" media="print" type="text/css" />
+  <!--Masonry-->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://rawgithub.com/desandro/classie/master/classie.js"></script>
+
+  <!-- Favicons ================================================== -->
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/EvoStyles/images/apple-touch-icon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/EvoStyles/images/apple-touch-icon-72x72.png?v=2" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/EvoStyles/images/apple-touch-icon-114x114.png?v=2" />
+  <!--Javascript ==================================================  -->
+  <style type="text/css">
+    A.underline {
+      font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+
+  <asp:Literal runat="server" ID="hotjarScriptTestEvo" Visible="false">
+<%--        <!-- Hotjar Tracking Code for https://www.testjetnetevolution.com/ -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+                h._hjSettings = { hjid: 1433190, hjsv: 6 };
+                a = o.getElementsByTagName('head')[0];
+                r = o.createElement('script'); r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>--%>
+  </asp:Literal>
+  <asp:Literal runat="server" ID="hotjarScriptLiveEvo" Visible="false"><!-- Hotjar Tracking Code for https://www.jetnetevolution.com/ -->
+<script>
+  (function (h, o, t, j, a, r) {
+    h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+    h._hjSettings = { hjid: 1419295, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+       
+
+  </asp:Literal>
+  <asp:Literal runat="server" ID="googleAnalyticsScript" Visible="false">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117332538-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117332538-1');
+</script>          
+
+  </asp:Literal>
+
+  <link href="/EvoStyles/stylesheets/ui.daterangepicker.css" rel="stylesheet" type="text/css" />
+  <link href="/EvoStyles/stylesheets/superfish.css" rel="stylesheet" media="screen" type="text/css">
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body runat="server" id="bodyTag" class="standalone_page">
+  <form id="aspnetForm" runat="server" method="post" submitdisabledcontrols="true">
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true"
+      EnablePageMethods="true" AsyncPostBackTimeout="8000">
+    </cc1:ToolkitScriptManager>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.js"></script>
+    <script type="text/javascript">
+
+      if (Sys.Extended != undefined) {
+        if (Sys.Extended.UI.TabContainer != undefined) {
+          Sys.Extended.UI.TabContainer.prototype._app_onload = function (sender, e) {
+            if (this._cachedActiveTabIndex != -1) {
+              this.set_activeTabIndex(this._cachedActiveTabIndex);
+              this._cachedActiveTabIndex = -1;
+
+              var activeTab = this.get_tabs()[this._activeTabIndex];
+              if (activeTab) {
+                activeTab._wasLoaded = true;
+                //activeTab._setFocus(activeTab); -- disable focus on active tab in the last TabContainer
+              }
+            }
+            this._loaded = true;
+          }
+        }
+      }
+    </script>
+
+    <div class="FixedHeaderBar" runat="server" id="fixedBar">
+    </div>
+    <asp:Literal ID="background_image" runat="server">  
+        <img src="../images/background/11.jpg" alt="" class="bg_image" style="display:none;" />
+    </asp:Literal>
+    <!-- Primary Page Layout ================================================== -->
+    <div class="container" runat="server" id="pageSizing">
+      <!--Start Container-->
+      <div id="container_white_background_div" runat="server" class="sixteen columns white_background_color content_border">
+        <div id="container_border" runat="server">
+          <div class="twelve columns headerHeight" id="WelcomeContainer" runat="server">
+            <div class="six columns">
+              <asp:Image ID="logo" ImageUrl="../../images/spacer.gif" runat="server" CssClass="evolution_logo_standalone" />
+            </div>
+            <div class="six columns specialHeaderEmpty">
+              <asp:Literal runat="server" ID="extra_buttons" Visible="false"></asp:Literal>
+              <asp:Literal runat="server" ID="updateHelp" Visible="false"></asp:Literal>
+              <a href="javascript:window.close();" class="fa fa-home float_right white_text padding_right"
+                id="homeButton" runat="server" visible="false"></a>
+              <asp:Label ID="PageText" runat="server" CssClass="logo_text_title"
+                ForeColor="Black">Page Title</asp:Label>
+            </div>
+          </div>
+          <div id="belowWelcomeContainer" runat="server" class="headerHeightPadding">
+          </div>
+
+          <div class="contentContainer twelve columns remove_margin">
+            <asp:Panel runat="server" ID="hintPopupHolder" CssClass="helpfulHint" Visible="false"><a href="#" id="helpfulHintCloseButton" class="closeButton">Dismiss</a><asp:Label runat="server" ID="hintText"></asp:Label></asp:Panel>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+          </div>
+        </div>
+      </div>
+      <asp:UpdatePanel runat="server" ID="hintUpdatePanel">
+        <ContentTemplate>
+          <asp:Button runat="server" ID="hintUpdateButton" Text="hintUpdateButtonClick" CssClass="display_none" />
+          <asp:Button runat="server" ID="hintUpdateClickLink" Text="hintUpdateLinkClickEvent" CssClass="display_none" />
+          <asp:Label runat="server" ID="hintTextUpdate" CssClass="display_none"></asp:Label>
+        </ContentTemplate>
+      </asp:UpdatePanel>
+      <div class="twelve columns footer displayNoneMobile" runat="server" id="footer">
+        Copyright &copy; 2000 -
+      <%= Now().Year.ToString()%>
+      JETNET LLC All rights reserved
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+    <!-- End Container -->
+    <!-- End Document
+            ================================================== -->
+  </form>
+  <asp:ContentPlaceHolder ID="below_form" runat="server">
+  </asp:ContentPlaceHolder>
+
+  <script type="text/javascript">
+
+    function CreateMobileMenu() {
+      //var linkList = [];
+      jQuery('.DetailsBrowseTable').each(function () {
+
+        var list = jQuery(this), ul = jQuery(document.createElement('ul')).replaceWith(jQuery('#mobileMenu'));
+        ul.empty();
+        ul.addClass("flexnav display_none");
+
+        //Setting up the main links.
+        jQuery('a', this).each(function () {
+          var nodeClass = '';
+          if (jQuery(this).hasClass("subMenuText")) {
+            nodeClass = "indent"
+          }
+
+          if (jQuery(this).text().length > 0) {
+            var target = jQuery(this).attr('target'),
+
+              option = jQuery(document.createElement('li'))
+                .appendTo(ul)
+            var aaa = jQuery('<a/>')
+              .text(jQuery(this).text())
+              .attr('class', nodeClass)
+              .attr('href', jQuery(this).attr("href"))
+              .attr('onclick', jQuery(this).attr("onclick"))
+              .appendTo(option);
+
+
+            //          if (jQuery(this).closest("li").children("ul").length) {
+            //            jQuery(this).closest("li").children("ul").children('li').each(function() {
+            //              option = jQuery(document.createElement('li'))
+            //                  .appendTo(ul)
+            //              var aaa = jQuery('<a/>')
+            //                  .text(jQuery(this).text())
+            //                  .attr('class', "indent")
+            //                  .attr('href', jQuery(this).attr("href"))
+            //                  .attr('onclick', jQuery(this).attr("onclick"))
+            //                  .appendTo(option);
+
+            //             
+            //            });
+
+            //            if (jQuery(this).closest("li").children("ul").length) {
+            //              jQuery(this).closest("li").children("ul").children("span").children("li").each(function() {
+            //                option = jQuery(document.createElement('li'))
+            //                  .appendTo(ul)
+            //                var aaa = jQuery('<a/>')
+            //                  .text(jQuery(this).text())
+            //                  .attr('class', "indent")
+            //                  .attr('href', jQuery(this).attr("href"))
+            //                  .attr('onclick', jQuery(this).attr("onclick"))
+            //                  .appendTo(option);
+            //                
+            //              });
+            //            }
+            //          }
+          };
+        });
+
+
+        ul.slicknav({
+          closeOnClick: true
+        });
+      });
+    }
+    jQuery("#helpfulHintCloseButton").click(function () {
+      jQuery("#<%= hintUpdateButton.ClientID%>").click();
+          jQuery(".helpfulHint").slideUp("slow");
+        });
+
+    jQuery(".helpfulHintLink").click(function () {
+      jQuery("#<%= hintUpdateClickLink.ClientID%>").click();
+          jQuery(".helpfulHint").slideUp("slow");
+        });
+
+    jQuery(function () {
+      if (jQuery('#<%= hintPopupHolder.ClientID %>').length) {
+            jQuery('#<%= hintPopupHolder.ClientID %>').slideDown("slow");
+          }
+          CreateMobileMenu(); //on load
+
+          // if Modernizr detects class "touch"
+          if (jQuery('html').hasClass('touch')) {
+            // for each element with class "make-tel-link"
+            jQuery(".make-tel-link").each(function () {
+              var jPhoneNumber = jQuery(this).text();
+              // wrap phone with href="tel:" and then insert phone number
+              jQuery(this).wrapInner('<a class="jPhoneLink" href=""></a>');
+              jQuery('.jPhoneLink').attr('href', 'tel:' + jPhoneNumber);
+            });
+          }
+        });
+
+    jQuery(document).mouseup(function (e) {
+      var menu = jQuery('.slicknav_menu');
+      if (!menu.is(e.target) // The target of the click isn't the container.
+        && menu.has(e.target).length === 0) // Nor a child element of the container
+      {
+        jQuery('.slicknav_btn').removeClass("slicknav_open");
+        jQuery('.slicknav_btn').addClass("slicknav_collapsed");
+        jQuery('.slicknav_nav').addClass("slicknav_hidden");
+        jQuery('.slicknav_nav').removeAttr("style");
+        jQuery('.slicknav_nav').attr("style", "display:none;");
+      }
+    });
+
+
+  </script>
+  <div id="mobileMenu">
+  </div>
+</body>
+</html>

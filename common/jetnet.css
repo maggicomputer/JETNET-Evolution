@@ -1,0 +1,942 @@
+/* ********************************************************************************
+ Copyright 2004-11. JETNET,LLC. All rights reserved.
+
+$$Archive: /Evolution/JetnetWeb/Test/common/jetnet.css $
+$$Author: Mike $
+$$Date: 11/06/12 3:41p $
+$$Modtime: 11/06/12 3:13p $
+$$Revision: 179 $
+$$Workfile: jetnet.css $
+
+******************************************************************************** */
+A
+{
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+A.underline
+{
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+A.KnowMore_IE
+{
+  position:relative; top:3px;
+}
+A.KnowMore_OTHER
+{
+  position:relative; top:5px;
+}
+
+A.White:active
+{
+  font-size: 8pt;
+  color: white;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+A.White:link
+{
+  font-size: 8pt;
+  color: white;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+A.White:visited
+{
+  font-size: 8pt;
+  color: white;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+A.White:hover
+{
+  font-size: 8pt;
+  color: Yellow;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+A.Black:active
+{
+  font-size: 8pt;
+  color: Black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+A.Black:link
+{
+  font-size: 8pt;
+  color: Black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+A.Black:visited
+{
+  font-size: 8pt;
+  color: Black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+A.Black:hover
+{
+  font-size: 8pt;
+  color: Purple;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+TD.TabInactive
+{
+  padding: 2px;
+  font-weight: normal;
+  font-size: 9.5pt;
+  background-image: url(../images/TabMenu/BlueRect_MenuOffBG.jpg);
+  margin: 2px;
+  vertical-align: middle;
+  overflow: visible;
+  text-transform: capitalize;
+  color: White;
+  background-repeat: repeat-x;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+A.TabInactive:active
+{
+  font-weight: normal;
+  font-size: 9.5pt;
+  cursor: pointer;
+}
+
+
+TD.TabActive
+{
+  padding: 2px;
+  font-weight: bold;
+  font-size: 9.5pt;
+  background-image: url(../images/TabMenu/BlueRect_MenuOnBG.jpg);
+  margin: 2px;
+  vertical-align: middle;
+  overflow: visible;
+  text-transform: capitalize;
+  color: black;
+  background-repeat: repeat-x;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+A.TabActive
+{
+  font-weight: bold;
+  font-size: 9.5pt;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+INPUT
+{
+    FONT-SIZE: 8pt;
+    font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+INPUT.text
+{
+  font-size: 8pt;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  border: 1px solid;
+  padding: 2px;
+}
+
+DIV.textLocalNote
+{
+  font-size: 8pt;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  border: 1px solid #CCD6DB;
+  padding: 2px;
+  text-decoration: underline;
+  float: left;
+  width: 300px;
+  cursor: pointer;
+}
+
+SELECT
+{
+  border: 1px solid black;
+  font-size: 8pt;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  width: auto;
+  background-color: white;
+}
+
+SELECT.txtNotesList
+{
+  font-weight: bold;
+  font-size: 9pt;
+  width: auto;
+  color: black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  background-color: white;
+  text-decoration: underline;
+  border: 1px solid black;
+}
+
+TD
+{
+  FONT-SIZE: 8pt;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+TH
+{
+  font-weight: bolder;
+  font-size: 8.5pt;
+  color: black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  background-color: #CCCCCC;
+  text-align: center;
+  vertical-align:middle;
+}
+
+DIV
+{
+  font-weight: bolder;
+  font-size: 8pt;
+  color: #0d409a;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+DIV.TimeZone
+{
+  font-weight: normal;
+  font-size: 8pt;
+  color: black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+DIV.criteriaHeading
+{
+  font-weight: bolder;
+  font-size: 9.2pt;
+  color: #0d409a;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-align: left;
+}
+
+DIV.homepageHeading
+{
+  font-weight: bolder;
+  font-size: 10.2pt;
+  color: #0d409a;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-align: left;
+}
+
+DIV.abiFilterLink
+{
+  font-weight: bolder;
+  font-size: 9.2pt;
+  cursor: pointer;
+  color: #0d409a;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+
+TD.notesIcon
+{
+  text-align: left;
+}
+
+TD.printIcon
+{
+  text-align: right;
+  cursor: pointer;
+}
+
+DIV.advancedHeading
+{
+  text-align: left;
+}
+
+.bg_image_ie
+{
+  min-width: 1800px;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -5000;
+}
+
+.bg_image_moz
+{
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -5000;
+}
+
+.Label
+{
+  color: black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-align: right;
+}
+
+.Normal
+{
+  font-size: 8pt;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.NormalTable
+{
+  border-right: #949494 thin;
+  border-top: #949494 thin;
+  border-left: #949494 thin;
+  border-bottom: #949494 thin;
+}
+
+table.centerTable
+{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table.centerTableShadow
+{
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .5);
+  background-color: #FFFFFF;
+}
+
+table.leftTableShadow
+{
+  margin-right: auto;
+  margin-left: 0;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .5);
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  text-align: left;
+  vertical-align: middle;
+}
+
+table.centerTableButtonBar
+{
+  border-style: none;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(../images/gray_menu.jpg);
+  background-repeat: repeat-x;
+  height: 43px;
+}
+
+table.leftTableButtonBar
+{
+  border-style: none;
+  margin-right: auto;
+  margin-left: 0;
+  background-image: url(../images/gray_menu.jpg);
+  background-repeat: repeat-x;
+  height: 43px;
+}
+
+.welcome_window
+{
+  font-size: 11px;
+}
+
+.welcome_window .logout
+{
+  color: #333333;
+}
+
+.welcome_window .my_evolution
+{
+  color: #255681;
+}
+
+.welcome_window .subscriber_name
+{
+  color: #333333;
+}
+
+.my_evolution
+{
+  background-image: url('../images/myevo_tools.jpg');
+  background-repeat: no-repeat;
+  padding-left: 18px;
+  text-decoration: underline;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.rounded_left_repeat
+{
+  background-image: url('../images/rounded_left_repeat.png');
+  background-repeat: repeat-y;
+}
+
+.rounded_right_repeat
+{
+  background-image: url('../images/rounded_right_repeat.png');
+  background-repeat: repeat-y;
+}
+
+.rounded_bottom_repeat
+{
+  background-image: url('../images/rounded_bottom_repeat.png');
+  background-repeat: repeat-x;
+}
+
+.rounded_content
+{
+  background-color: #d9d9d9;
+}
+
+TD.Star_White
+{
+  font-size: 10pt;
+  color: white;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  padding-right: 3px;
+  font-weight: bold;
+}
+
+TD.White
+{
+  font-size: 8pt;
+  color: white;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+TD.Copyright
+{
+  font-size: 9.5pt;
+  color: black;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: #EEEEEE;
+}
+
+A.Copyright
+{
+  color: black;
+  font-size: 9.5pt;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+textarea.Input
+{
+  padding: 2px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  font-size: 8pt;
+  overflow: auto;
+  border-left: 1px solid;
+  width: 130px;
+  border-bottom: 1px solid;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  height: 21px;
+  background-color: white;
+  border-color: black;
+  text-align: left;
+}
+
+textarea.Project
+{
+  padding: 3px;
+  font-size: 10pt;
+  overflow: auto;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  background-color: white;
+  border-color: black;
+}
+
+textarea.ProjectMessage
+{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 3px;
+  padding-left: 3px;
+  cursor: default;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: Bold;
+  background-color: white;
+  border-color: black;
+  overflow: auto;
+}
+
+textarea.StatusMessage
+{
+  border-style: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 3px;
+  padding-left: 3px;
+  color: Black;
+  cursor: default;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  font-size: 8pt;
+  font-weight: Bold;
+  overflow: auto;
+  background-color: #CCCCCC;
+  opacity: 85;
+}
+
+textarea.InputIATAICAO
+{
+  padding: 2px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  font-size: 8pt;
+  overflow: auto;
+  text-transform: uppercase;
+  border-left: 1px solid;
+  width: 150px;
+  border-bottom: 1px solid;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  height: 21px;
+  background-color: white;
+  border-color: black;
+}
+    
+textarea.InputCity
+{
+  padding: 2px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  font-size: 8pt;
+  overflow: auto;
+  border-left: 1px solid;
+  width: 150px;
+  border-bottom: 1px solid;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  height: 21px;
+  background-color: white;
+  border-color: black;
+}
+
+textarea.InputCompanyName
+{
+  padding: 2px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  font-size: 8pt;
+  overflow: auto;
+  border-left: 1px solid;
+  width: 150px;
+  border-bottom: 1px solid;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  height: 21px;
+  background-color: white;
+  border-color: black;
+}
+
+textarea.txtAllNoteArea
+{
+  padding: 3px;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  background-color: white;
+  cursor: default;
+  font-size: 11px;
+  font-weight: Bold;
+  overflow: scroll;
+  border-color: black;
+}
+
+textarea.txtNoteArea
+{
+  padding: 3px;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  background-color: white;
+  cursor: default; 
+  font-size: 11px;
+  font-weight: Bold;
+  overflow: auto;
+  border-color: black;
+}
+
+textarea.txtRawNoteArea
+{
+  padding: 3px;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  background-color: white;
+  cursor: default; 
+  font-size: 11px;
+  font-weight: Bold;
+  overflow: scroll;
+  border-color: black;
+}
+
+textarea.txtJetnetNews
+{
+  padding: 3px;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  background-color: white;
+  cursor: default; 
+  font-size: 11px;
+  font-weight: Bold;
+  overflow: auto;
+  border-color: black;
+}
+
+textarea.InputZipCode
+{
+  padding: 2px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  font-size: 8pt;
+  overflow: auto;
+  border-left: 1px solid;
+  width: 80px;
+  border-bottom: 1px solid;
+  font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+  height: 21px;
+  background-color: white;
+  border-color: black;
+}
+
+.module
+{
+  border: 1px solid #86AEC7;
+  background-color: #ffffff;
+}
+
+.border
+{
+  border: 1px solid #86AEC7;
+  background-color: #eeeeee;
+}
+
+.module .header
+{
+  background-image: url(../images/evo_header.jpg);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #CCD6DB;
+  color: #ffffff;
+}
+
+.module .aeroheader
+{
+  background-image: url(../images/aero_header.jpg);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid #CCD6DB;
+  color: #ffffff;
+}
+
+table.list {
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 0px;
+	border-style: solid solid solid solid;
+	border-color: #CCD6DB #CCD6DB #CCD6DB #CCD6DB;
+}
+
+table.list td {
+	border-width: 1px 1px 1px 1px;
+	padding: 4px;
+	border-style: solid solid solid solid;
+	border-color: #CCD6DB #CCD6DB #CCD6DB #CCD6DB;
+}
+
+table.salesPrice
+{
+  border-width: 1px 1px 1px 1px;
+  border-spacing: 0px;
+  border-style: solid solid solid solid;
+  border-color: #000000 #000000 #000000 #000000;
+  background-color: #eeeeee;
+  border-collapse: collapse;
+}
+
+table.salesPrice td {
+	border-width: 1px 1px 1px 1px;
+	padding: 2px;
+	border-style: solid solid solid solid;
+	border-color: #000000 #000000 #000000 #000000;
+}
+
+.module strong
+{
+  font-size: 11px;
+  color: #063747;
+}
+
+.float_right
+{
+  float: right;
+  border: 1px solid #4D6C82;
+}
+
+.header a
+{
+  color: #ffffff;
+}
+
+.tabheader
+{
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: #CCD6DB;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+.tabheader_sel
+{
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #999999;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+.tabheader_unsel
+{
+  border-width: 1px 1px 1px 0px;
+  border-style: solid;
+  border-color: #CCD6DB;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.border_bottom
+{
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #CCD6DB;
+}
+
+.border_bottom_right
+{
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color: #CCD6DB;
+}
+
+.leftside
+{
+  border-width: 0px 0px 0px 1px;
+  border-style: solid;
+  border-color: #CCD6DB;
+  text-align: left;
+}
+
+.rightside
+{
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color: #eeeeee #CCD6DB;
+}
+
+.leftside_right
+{
+  border-width: 0px 0px 0px 1px;
+  border-style: solid;
+  border-color: #CCD6DB;
+  text-align: right;
+}
+
+.seperator
+{
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #eeeeee;
+}
+
+.forSaleCellBorder
+{
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: #CCD6DB;
+}
+
+.forSaleCellBorderNoNotes
+{
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #CCD6DB;
+}
+
+.featuresCellBorder
+{
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #CCD6DB;
+}
+
+.featuresCellNoBorder
+{
+  border-width: 0px 0px 0px 0px;
+  border-style: none;
+}
+
+.tiny
+{
+  font-size: 9px;
+  font-style: italic;
+}
+
+.tiny:hover
+{
+  font-size: 9px;
+  font-style: italic;
+}
+
+.sample
+{
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.picture
+{
+  overflow: auto;
+  width: 310px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.picture_small
+{
+  overflow: auto;
+  width: 300px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.float_left
+{
+  float: left;
+}
+
+.container
+{
+  height: 215px;
+}
+
+.container_small
+{
+  height: 120px;
+}
+
+.bullet
+{
+  padding-top: 3px;
+}
+
+.papers a
+{
+  background-image: url(../images/papers.jpg);
+  background-repeat: no-repeat;
+  padding-left: 26px;
+  padding-top: 3px;
+  line-height: 15px;
+  display: block;
+}
+
+.cover
+{
+  background-image: url(../images/star_cover.jpg);
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 350px;
+  float: right;
+}
+
+.cover a
+{
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.cover a:hover
+{
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.cover .title
+{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.pageHeaderEvo
+{
+  font-family: Verdana;
+  text-align: right;
+  font-size: 35px;
+  font-weight:normal;
+  color: #000000;
+  vertical-align:bottom;
+}
+
+div.pageHeaderAero
+{
+  font-family: Verdana;
+  text-align: right;
+  font-size: 35px;
+  font-weight:normal;
+  color: #000000;
+  vertical-align:bottom;
+}
+
+div.pageHeaderHelo
+{
+  font-family: Verdana;
+  text-align: right;
+  font-size: 35px;
+  font-weight:normal;
+  color: #000000;
+  vertical-align:bottom;
+}
+
+div.pageHeaderRoto
+{
+  font-family: Verdana;
+  text-align: right;
+  font-size: 35px;
+  font-weight:normal;
+  color: #000000;
+  vertical-align:bottom;
+}
+
+div.tmpStyle
+{
+  border: 2px solid #7E7E94;
+  background-image: none;
+  background-color: #C0C0C0;
+  overflow: auto;
+}

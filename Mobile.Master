@@ -1,0 +1,57 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Mobile.master.vb" Inherits="crmWebClient.Mobile" %>
+
+<%@ Import Namespace="crmWebClient.clsGeneral" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head" runat="server">
+  <meta name="viewport" content="width=320" />
+  <title>
+    <asp:Literal runat="server" ID="Literal1">Marketplace Manager Mobile</asp:Literal></title>
+  <link href="common/style.css" rel="stylesheet" type="text/css" />
+  <asp:ContentPlaceHolder ID="header" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+  <!-- The following loads a blank page that refreshes 60 seconds before the session timeout to keep session from expiring -->
+  <iframe id="ifrmBlank" frameborder="0" width="0" height="0" runat="server" src="sessionKeepAlive.aspx"></iframe>
+  <form id="form2" runat="server">
+    <div class="container">
+      <div class="header">
+        <asp:Label ID="user_welcome_label" runat="server" Text="" class="user_welcome_label">Welcome Rick Wanner</asp:Label>
+        <asp:Label ID="time_menu" runat="server" Visible="true" class="user_product_label"></asp:Label>
+        <asp:LinkButton ID="user_logout_button" runat="server" class="user_logout_button">Logout</asp:LinkButton>
+        <asp:Label ID="user_database_label" runat="server" class="user_database_label"><strong>Live Database</strong></asp:Label>
+      </div>
+      <asp:Label ID="home_menu" CssClass="menu" runat="server" Visible="true">
+        <asp:Label ID="home_link" runat="server" Visible="false"><a href="mobile_listing.aspx"><img src="images/home_button.png" alt="Home" border="0" /></a></asp:Label>
+        <asp:Label ID="companies_link" runat="server" Visible="false" EnableViewState="true"><a href="mobile_listing.aspx?type=1">Company</a></asp:Label>
+        <asp:Label ID="contacts_link" runat="server" Visible="false"><a href="mobile_listing.aspx?type=2">Contact</a></asp:Label>
+        <asp:Label ID="aircraft_link" runat="server" Visible="false"><a href="mobile_listing.aspx?type=3">Aircraft</a></asp:Label>
+        <asp:Label ID="transaction_link" runat="server" Visible="false"><a href="mobile_listing.aspx?type=8">Transactions</a></asp:Label>
+        <asp:Label ID="market_link" runat="server" Visible="false"><a href="mobile_listing.aspx?type=10">Market</a></asp:Label>
+        <asp:Label ID="notes_link" runat="server" Visible="false"><a href="mobile_listing.aspx?type=6">Notes</a></asp:Label>
+        <asp:Label ID="actions_link" runat="server" Visible="false"><a href="mobile_listing.aspx?type=4">Actions</a></asp:Label>
+        <asp:Label ID="docs_link" runat="server" Visible="false"><a href="mobile_listing.aspx?type=7">Docs</a></asp:Label>
+      </asp:Label>
+      <asp:Label ID="sub_menu_folders" CssClass="sub_menu" runat="server" Visible="true">
+        <asp:Label ID="search_new" runat="server" Visible="false">New Search</asp:Label>
+        <asp:Label ID="folder_search" runat="server" Visible="false">Folder Search</asp:Label>
+        <asp:LinkButton ID="new_note" runat="server" Visible="false" PostBackUrl="edit_note.aspx?type=note&action=new">New Note</asp:LinkButton>
+        <asp:LinkButton ID="new_action" runat="server" Visible="false" PostBackUrl="edit_note.aspx?type=action&action=new">New Action Item</asp:LinkButton>
+        <asp:LinkButton ID="new_document" runat="server" Visible="false" PostBackUrl="edit_note.aspx?type=documents&action=new">New Document</asp:LinkButton>
+        <asp:LinkButton ID="new_opportunity" runat="server" Visible="false" PostBackUrl="edit_note.aspx?type=opportunity&action=new">New Opportunity</asp:LinkButton>
+        <asp:Label runat="server" ID="edit_link" Visible="false"><a href="#" class="edit_links">Edit</a></asp:Label>&nbsp;
+            <asp:Label runat="server" ID="record_count" Visible="false" CssClass="float_right"
+              ForeColor="black" Font-Bold="true">(0) Record(s) Returned</asp:Label>
+      </asp:Label>
+      <div class="content">
+        <asp:ContentPlaceHolder ID="content" runat="server">
+          content
+        </asp:ContentPlaceHolder>
+      </div>
+    </div>
+  </form>
+  <asp:ContentPlaceHolder ID="below_form" runat="server">
+  </asp:ContentPlaceHolder>
+</body>
+</html>

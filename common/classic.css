@@ -1,0 +1,126 @@
+/**
+ * default development theme for jQRangeSlider
+ * Using fam fam icon set from Mark James, http://www.famfamfam.com/lab/icons/silk/ (Creative Commons Attribution 2.5 License)
+ */
+
+.ui-rangeSlider
+{
+  height: 10px;
+}
+
+.ui-rangeSlider .ui-rangeSlider-innerBar
+{
+  height: 10px;
+  margin: 3px 6px;
+  background: #FFF;
+  border: 1px solid #B0B0B0;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.ui-rangeSlider .ui-rangeSlider-handle
+{
+  width: 15px;
+  height: 15px; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f6f6+0,e1e1e1+49,d3d3d3+50,d3d3d3+100 */
+  background: #f6f6f6; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f6f6f6 0%, #e1e1e1 49%, #d3d3d3 50%, #d3d3d3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #f6f6f6 0%,#e1e1e1 49%,#d3d3d3 50%,#d3d3d3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #f6f6f6 0%,#e1e1e1 49%,#d3d3d3 50%,#d3d3d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */ /*cursor: col-resize;*/
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
+  border-color: rgb(211,211,211);
+  border-style: solid;
+  border-width: 1px;
+}
+.ui-rangeSlider .ui-rangeSlider-handle:hover{border-color: rgb(157,157,157) !important;}
+.ui-rangeSlider .ui-rangeSlider-handle:hover{background:#fff !important;}
+.ui-rangeSlider-leftHandle
+{
+  margin-left: -2px !important;
+}
+.ui-rangeSlider .ui-rangeSlider-bar
+{
+  margin: 3px 0;
+  background-image: none; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#77daf7+0,37c1e8+50,55c8e8+51,77daf7+100 */
+  background: #77daf7 !important; /* Old browsers */
+  background: -moz-linear-gradient(top,  #77daf7 0%, #37c1e8 50%, #55c8e8 51%, #77daf7 100%) !important; /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #77daf7 0%,#37c1e8 50%,#55c8e8 51%,#77daf7 100%) !important; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #77daf7 0%,#37c1e8 50%,#55c8e8 51%,#77daf7 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77daf7', endColorstr='#77daf7',GradientType=0 ) !important; /* IE6-9 */
+  height: 12px; /* cursor: move;   cursor: grab;   cursor: -moz-grab;*/
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar.ui-draggable-dragging
+{
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.ui-rangeSlider-arrow
+{
+  height: 16px;
+  margin: 2px 0;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.ui-rangeSlider-arrow.ui-rangeSlider-leftArrow
+{
+  background-image: url('icons-classic/resultset_previous.png');
+  background-position: center left;
+}
+
+.ui-rangeSlider-arrow.ui-rangeSlider-rightArrow
+{
+  background-image: url('icons-classic/resultset_next.png');
+  background-position: center right;
+}
+
+.ui-rangeSlider-arrow-inner
+{
+  display: none;
+}
+
+.ui-rangeSlider-container
+{
+  height: 22px;
+}
+
+.ui-rangeSlider-withArrows .ui-rangeSlider-container
+{
+  margin: 0 11px;
+}
+
+.ui-rangeSlider-noArrow .ui-rangeSlider-container
+{
+  margin: 0;
+}
+
+.ui-rangeSlider-label
+{
+  margin: 0 2px 2px;
+  background-image: url('icons-classic/label.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  bottom: 20px;
+  padding: 3px 6px 7px;
+  cursor: col-resize;
+}
+
+.ui-rangeSlider-label-inner
+{
+  display: none;
+}
+
+/*
+ * Edit slider
+ */
+
+input.ui-editRangeSlider-inputValue
+{
+  width: 3em;
+  vertical-align: middle;
+  text-align: center;
+}

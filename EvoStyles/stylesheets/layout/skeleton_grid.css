@@ -1,0 +1,270 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+
+
+/* #Base 960 Grid
+================================================== */
+
+.container {
+    position: relative;
+    width: calc(100%);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 0px;
+    box-sizing: border-box;
+}
+    .container .column,
+    .container .columns                         { width: 100%;float: left;box-sizing: border-box; }
+    .row                                        { margin-bottom: 20px; }
+    
+     /* For devices larger than 400px */
+      @media (max-width: 200px) {
+        .mobile_display_off_cell {display:none;}
+        .container {
+          margin:0px -2px 0px 0px; }
+          .{width:82%;}
+          .valueTabs .one.column,
+          .valueTabs .one.columns                    { width: 4.66666666667%; }
+          .valueTabs .two.columns                    { width: 13.3333333333%; }
+          .valueTabs .three.columns                  { width: 22%;            }
+          .valueTabs .four.columns                   { width: 30.6666666667%; }
+          .valueTabs .five.columns                   { width: 39.3333333333%; }
+          .valueTabs .six.columns                    { width: 100%;           }
+          .valueTabs .row .dark-theme            90% { width: 82max-width:400px;% 
+         .valueTabs .dark-theme .ajax__tab_header .ajax__tab_outer{width:28%;height:35px;}
+         .valueTabs .dark-theme .ajax__tab_header .ajax__tab_outer{text-align:left;}
+         .valueTabs .dark-theme .ajax__tab_inner{width:100%;height:35px;}
+         .valueTabs .maxwidth {width:100% !important;}
+         .valueTabs .dark-theme .ajax__tab_header .ajax__tab_tab{text-align:left;}     !important; }
+
+
+      }
+      
+      
+      /* For devices larger than 550px */
+@media (min-width: 550px) {
+
+  .column,
+  .columns {
+    margin-left: 4%; }
+    
+  .viewBoxMargin .column,
+  .viewBoxMargin .columns {
+    margin-left: 2% !important; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+  .sixteen.columns                { width: 100%; margin-left: 0; }
+  
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+
+    /* Base Grid */
+    .container .five_half.columns               { width: 300px; }
+    .container .six_half.columns                { width: 370px; }
+    .container .sevenhalf.columns               { width: 440px; }
+    .container .eight-half.columns              { width: 510px; }
+    .container .threehalf.columns               { width: 200px; }
+    .container .threeColumnPercentage.columns   {width:33%;}
+
+
+    .mobile_display_on_cell{display:none;}
+    .mobile_display_off_cell{display:table-cell;}
+    .maxwidth_200{max-width:200px;width:200px;}
+    .minwidth_70{min-width:70px;}
+    .maxwidth_180{max-width:180px;width:180px;}
+     .enableMarginColumn{margin-left:2% !important;}
+
+@media only screen and (min-width: 960px) and (max-width: 982px) 
+ {
+   .headerHeight .sevenhalf.columns {width:600px !important;float:left !important;}
+   .headerHeight .slideOutTip {margin-left:-20px;}
+   .headerHeight .welcome_user_class_ie{display:none;}
+ }
+
+ 
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .container .three-half.columns              { width: 144px; }
+        .container .five_half.columns               { width: 244px; }
+        .container .sevenhalf.columns               { width: 340px; }
+        .container .eight-half.columns              { width: 384px; }
+        .container .threeColumnPercentage.columns   { width:100%; }
+        .container .threehalf.columns            { width: 164px; }
+
+        .toggleTablet {display:none;}
+        .evolution_logo_standalone {margin-left:5px !important;}
+        .logo_text_title{margin-left:0px;margin-bottom:15px;text-align:center;}
+        .mobile_display_on_cell{display:table-cell;}
+        .mobile_display_off_cell{display:none;}
+       /*   .sliderwrapper{width:354px !important;}
+         .sliderwrapper img{max-width:354px !important;}
+       .stepcarousel{width:335px !important;}*/
+        .headerHeight .sevenhalf.columns{width:400px !important;}
+        .headerHeight .welcome_user_class_ie{display:none;}
+        /*Details Tablet*/
+        .DetailsBrowseTable td{vertical-align:top;}
+        /*.DetailsBrowseTable ul{padding-bottom:15px;}*/
+        .airframeTab td{word-break:break-all;}
+        
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 767px) {
+        .toggleSmallScreen {display:none !important;}
+        .fullWidthMobile{width:100% !important;}
+
+         .evolution_logo_standalone {margin-left:5px !important;}
+         .logo_text_title{margin-left:0px;margin-bottom:15px;display:block;text-align:center;}
+        .mobile_display_on_cell{display:table-cell;}
+        .mobile_display_off_cell{display:none;}
+        .mobile_display_block{display:block;}
+        .green_background_height{height:auto;}
+        .mobile_align_left{text-align:left;}
+        .criteria_text{font-size:.8em;}
+        .criteria_spacer{width:auto;}
+        .mobile_padding{padding:5px;}
+        .mobile_vertical_align_bottom{vertical-align:bottom;}
+        
+        .modalPopup {
+	          background-color:#ffffdd;
+	          border-width:3px;
+	          border-style:solid;
+	          border-color:Gray;
+	          padding:3px;
+	          width:80%;
+	          margin:auto;
+          }
+    }
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .toggleSmallScreen {display:none;}
+        .evolution_logo_standalone {margin-left:5px !important;}
+        .logo_text_title{margin-left:0px;margin-bottom:15px;display:block;text-align:center;}
+        .mobile_display_on_cell{display:table-cell;}
+        .mobile_display_off_cell{display:none;}
+        .green_background_height{height:auto;}
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+

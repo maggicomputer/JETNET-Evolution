@@ -1,0 +1,52 @@
+﻿body{font-family:Arial;font-size:11px;}
+/*My CRM Styles*/
+/*general styles*/
+
+.attention{font-weight:bold;color:#ff0000 !important;}
+.border{border:1px solid #000000 !important;}
+.ajax__tab_panel{font-size:11px !important;color:#222222;}
+.tabs_container{margin-left:auto;margin-right:auto;margin-top:0px;padding:15px 55px 55px 55px;width:670px;}
+.button_bottom{background-color:#F2F6FC;border-right:1px solid #999999;border-left:1px solid #999999;border-bottom:1px solid #999999;padding:5px;}
+.red{color:Red;}
+.blue{color:Blue;}
+.important_text{background-color:#eef4fa;border:1px solid #c8daf0;padding:5px;}
+	.important_text b{color:#4774aa;}
+
+/*horizontal rules*/
+h1,h2{font-size:13px;}
+
+/*html tags*/
+a{color:#000080;}
+body{background-repeat:no-repeat;background-image:url('../images/background_image.jpg');}
+
+/*seperators*/
+.seperator_line{border-bottom:1px solid #222222;padding-top:4px;}
+hr {background: transparent;color: transparent;border-left: none;border-right: none;border-top: none;border-bottom: 2px solid #dddddd; padding:0px;}
+
+/*headings*/
+.subheading{background-color:#eeeeee;}
+
+/*font styles*/
+.tiny{font-size:10px;color:#999999;}
+
+/*display styles*/
+.float_right{float:right;}
+
+/*flyout*/
+.info_box {color:#000000;background-image:url('../images/info.png');background-repeat:no-repeat;background-position:bottom right;background-color:#FFF9DE;border:solid 1px #2c586e;padding:8px;width:200px;}
+/*non flyout info box*/
+.nonflyout_info_box {color:#000000;background-image:url('../images/info.png');background-repeat:no-repeat;background-position:bottom right;background-color:#FFF9DE;border:solid 1px #2c586e;padding:8px;}
+
+/*my services - events to monitor styles*/
+.my_services_row_top{background-color:#eeeeee;border-top:2px solid #dddddd;border-bottom:2px solid #dddddd;}
+
+.watermarked {border:1px solid #BEBEBE;background-color:#F0F8FF;color:gray;font-family:Arial;font-size:12px;}	
+.unwatermarked {border:1px solid #dddddd;background-color:#ffffff;color:black;font-family:Arial;font-size:12px;}	
+
+/* table container style */
+.mobile{background-image:url('../images/mobile_watermark.jpg');background-repeat:no-repeat;background-position:bottom right;}
+.email{background-image:url('../images/email_watermark.jpg');background-repeat:no-repeat;background-position:bottom right;}
+.text{background-image:url('../images/text_watermark.jpg');background-repeat:no-repeat;background-position:bottom right;}
+.relationship{background-image:url('../images/relationship_watermark.jpg');background-repeat:no-repeat;background-position:bottom right;}
+.notes{background-image:url('../images/notes_watermark.jpg');background-repeat:no-repeat;background-position:bottom right;}
+.house{background-image:url('../images/house_watermark.jpg');background-repeat:no-repeat;background-position:bottom right;}

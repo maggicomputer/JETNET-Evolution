@@ -1,0 +1,136 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EmptyHomebaseTheme.Master.vb"
+  Inherits="crmWebClient.EmptyHomebaseTheme" %>
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head id="head1" runat="server">
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8" />
+  <title>JETNET Homebase - Login</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <!-- CSS
+  ================================================== -->
+  <!--Google Material Icons-->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+  <!-- Header Alternate Styles-->
+  <link href="/EvoStyles/stylesheets/slicknav.css" rel="stylesheet" type="text/css" />
+  <!--Grid/Layout Styles-->
+  <link href="/EvoStyles/stylesheets/layout/base_html_elements.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="/EvoStyles/stylesheets/layout/skeleton_grid.css" rel="stylesheet" type="text/css" />
+  <!--Jquery Datatables-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="/common/chosen.css" />
+  <link rel="stylesheet" href="/common/classic.css" type="text/css" />
+  <link href="/EvoStyles/stylesheets/print.css" rel="stylesheet" media="print" type="text/css" />
+  <!--Masonry-->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://rawgithub.com/desandro/classie/master/classie.js"></script>
+
+  <!-- Favicons ================================================== -->
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/EvoStyles/images/apple-touch-icon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/EvoStyles/images/apple-touch-icon-72x72.png?v=2" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/EvoStyles/images/apple-touch-icon-114x114.png?v=2" />
+  <!--Javascript ================================================== -->
+  <style type="text/css">
+    A.underline {
+      font-family: Arial, Times, Verdana, Geneva, Helvetica, sans-serif;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+
+  <link href="/EvoStyles/stylesheets/ui.daterangepicker.css" rel="stylesheet" type="text/css" />
+  <link href="/EvoStyles/stylesheets/superfish.css" rel="stylesheet" media="screen" type="text/css">
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body runat="server" id="bodyTag" class="standalone_page">
+  <form id="form1" runat="server" method="post" submitdisabledcontrols="true">
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true"
+      EnablePageMethods="true" AsyncPostBackTimeout="8000">
+    </cc1:ToolkitScriptManager>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.js"></script>
+
+    <script type="text/javascript">
+
+      if (Sys.Extended != undefined) {
+        if (Sys.Extended.UI.TabContainer != undefined) {
+          Sys.Extended.UI.TabContainer.prototype._app_onload = function (sender, e) {
+            if (this._cachedActiveTabIndex != -1) {
+              this.set_activeTabIndex(this._cachedActiveTabIndex);
+              this._cachedActiveTabIndex = -1;
+
+              var activeTab = this.get_tabs()[this._activeTabIndex];
+              if (activeTab) {
+                activeTab._wasLoaded = true;
+                //activeTab._setFocus(activeTab); -- disable focus on active tab in the last TabContainer
+              }
+            }
+            this._loaded = true;
+          }
+        }
+      }
+    </script>
+
+    <div class="FixedHeaderBar" runat="server" id="fixedBar">
+    </div>
+    <asp:Literal ID="background_image" runat="server">  
+        <img src="../images/background/11.jpg" alt="" class="bg_image" style="display:none;" />
+    </asp:Literal>
+    <!-- Primary Page Layout ================================================== -->
+    <div class="container" runat="server" id="pageSizing">
+      <!--Start Container-->
+      <div id="container_white_background_div" runat="server" class="sixteen columns white_background_color content_border">
+        <div id="container_border" runat="server">
+          <div class="sixteen columns headerHeight" id="WelcomeContainer" runat="server">
+            <div class="one-third column">
+              <asp:Image ID="logo" ImageUrl="../../images/spacer.gif" runat="server" CssClass="evolution_logo_standalone" />
+            </div>
+            <div class="six columns specialHeaderEmpty">
+              <asp:Literal runat="server" ID="updateHelp" Visible="false"></asp:Literal>
+              <asp:Label ID="PageText" runat="server" CssClass="logo_text_title padding_table" ForeColor="Black">Page Title</asp:Label>
+            </div>
+          </div>
+          <div id="belowWelcomeContainer" runat="server" class="headerHeightPadding">
+          </div>
+          <br class="clear" />
+          <div class="contentContainer sixteen columns" runat="server" id="contentContainer" style="text-align: center; margin-left: 0px !important;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+          </div>
+        </div>
+        <div class="sixteen columns footer" runat="server" id="footer" style="margin-left: 0px !important;">
+          Copyright &copy; 2000 -
+      <%= Now().Year.ToString()%>
+      JETNET LLC All rights reserved
+        </div>
+        <div class="clear">
+        </div>
+      </div>
+
+    </div>
+    <!-- End Container -->
+    <!-- End Document -->
+  </form>
+  <asp:ContentPlaceHolder ID="below_form" runat="server">
+  </asp:ContentPlaceHolder>
+</body>
+</html>

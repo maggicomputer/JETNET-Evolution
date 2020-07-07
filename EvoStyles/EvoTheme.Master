@@ -1,0 +1,297 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EvoTheme.master.vb"
+  Inherits="crmWebClient.EvoTheme" %>
+
+<%@ Register Src="~/controls/WelcomeUser.ascx" TagName="WelcomeUser" TagPrefix="uc3" %>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head id="head1" runat="server">
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8" />
+  <title>JETNET - Login</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- CSS -->
+  <!--Google Material Icons-->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- Header Alternate Styles-->
+  <link href="/EvoStyles/stylesheets/slicknav.css" rel="stylesheet" type="text/css" />
+
+  <!--Grid/Layout Styles-->
+  <link href="/EvoStyles/stylesheets/layout/base_html_elements.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="/EvoStyles/stylesheets/layout/skeleton_grid.css" rel="stylesheet" type="text/css" />
+  <!--Jquery Datatables-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="/common/chosen.css" />
+  <link rel="stylesheet" href="/common/classic.css" type="text/css" />
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/EvoStyles/images/apple-touch-icon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/EvoStyles/images/apple-touch-icon-72x72.png?v=2" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/EvoStyles/images/apple-touch-icon-114x114.png?v=2" />
+  <!--Javascript -->
+  <link href="/EvoStyles/stylesheets/print.css" rel="stylesheet" media="print" type="text/css" />
+
+  <!--Masonry-->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://rawgithub.com/desandro/classie/master/classie.js"></script>
+
+  <asp:Literal runat="server" ID="hotjarScriptTestEvo" Visible="false">
+        <!-- Hotjar Tracking Code for https://www.testjetnetevolution.com/ -->
+        <script>
+          (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1433190, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+          })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
+  </asp:Literal>
+  <asp:Literal runat="server" ID="hotjarScriptLiveEvo" Visible="false">
+        <!-- Hotjar Tracking Code for https://www.jetnetevolution.com/ -->
+        <script>
+          (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1419295, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+          })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
+  </asp:Literal>
+  <asp:Literal runat="server" ID="googleAnalyticsScript" Visible="false">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117332538-1"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117332538-1');
+</script> 
+
+  </asp:Literal>
+
+  <link href="/EvoStyles/stylesheets/ui.daterangepicker.css" rel="stylesheet" type="text/css" />
+  <link href="/EvoStyles/stylesheets/superfish.css" rel="stylesheet" media="screen" type="text/css">
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+
+</head>
+<body>
+  <form id="aspnetForm" runat="server" method="post" submitdisabledcontrols="true">
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true"
+      EnablePageMethods="true" AsyncPostBackTimeout="8000">
+    </cc1:ToolkitScriptManager>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.js"></script>
+
+    <div style="text-align: left; visibility: hidden;">
+      <asp:Panel ID="notifyChatUserPanel" runat="server" Visible="false">
+        <cht:evoChatNotify ID="notifyChatUserCtrl" runat="server" />
+      </asp:Panel>
+    </div>
+    <div class="FixedHeaderBar" runat="server" id="fixedBar">
+    </div>
+    <asp:Literal ID="background_image" runat="server">  
+        <!--<img src="../images/background/11.jpg" alt="" class="bg_image" style="display:none;" />-->
+    </asp:Literal>
+    <!-- Primary Page Layout-->
+    <div class="container" runat="server" id="pageSizing">
+      <!--Start Container-->
+      <uc3:WelcomeUser ID="WelcomeUser1" runat="server" />
+      <iframe id="ifrmBlank" frameborder="0" width="0" height="0" runat="server" src="sessionKeepAlive.aspx"></iframe>
+      <div class="sixteen columns">
+        <ul id="replaceMenu" class="ulMenu" runat="server">
+          <li runat="server" id="homeLinkButton"><a href="/home.aspx">Home</a></li>
+          <li runat="server" id="viewLinkButton"><a href="#" onclick="javascript:void(0);">Views</a>
+            <asp:Panel runat="server" ID="bulletedContainer">
+            </asp:Panel>
+          </li>
+          <li runat="server" id="acLinkButton"><a href="/Aircraft_Listing.aspx">Aircraft</a></li>
+          <li runat="server" id="historyLinkButton"><a href="/Aircraft_Listing.aspx?h=1">History</a></li>
+          <li runat="server" id="companyLinkButton"><a href="/Company_Listing.aspx">Company</a></li>
+          <li runat="server" id="perfLinkButton"><a href="/Performance_Listing.aspx">Performance
+          Specs</a></li>
+          <li runat="server" id="opLinkButton"><a href="/Operating_Listing.aspx">Operating
+          Costs</a></li>
+          <li runat="server" id="eventsLinkButton"><a href="/Aircraft_Listing.aspx?e=1">Events</a></li>
+          <li runat="server" id="marketLinkButton"><a href="/MarketSummary.aspx">Market Summary</a></li>
+          <li runat="server" id="wantedLinkButton"><a href="/Wanted_Listing.aspx">Wanted</a></li>
+          <li id="resourcesLinkButton"><a href="#" onclick="javascript:void(0);">Resources</a>
+            <ul runat="server" id="resourcesSubMenu">
+              <li runat="server" id="globalLinkButton"><a href="http://www.jetnetglobal.com/" target="blank">JETNET Global</a></li>
+              <li runat="server" id="bulletLinkButton"><a href="/help.aspx?t=1" target="_blank">Bulletin Board</a></li>
+              <li runat="server" id="featuresLinkButton"><a href="/help.aspx?t=0" target="_blank">Release Notes/Features</a></li>
+              <li runat="server" id="industryLinkButton"><a href="/evonews.aspx" target="_blank">Industry News </a></li>
+              <li runat="server" id="calendarLinkButton"><a href="/help.aspx?t=4" target="_blank">JETNET Calendar</a></li>
+              <li runat="server" id="helpLinkButton"><a href="/help.aspx?t=2" target="_blank">Help</a></li>
+              <li runat="server" id="newsLinkButton"><a href="/help.aspx?t=3" target="_blank">JETNET News</a></li>
+              <li runat="server" id="masterLinkButton"><a href="/MasterLists.aspx" target="_blank">Master Lists</a></li>
+              <li runat="server" id="modelResoucesLinkButton"><a href="/help.aspx?t=5" target="_blank">Model Resources</a></li>
+              <li runat="server" id="aircraftGlossaryLinkButton"><a href="/help.aspx?t=6" target="_blank">Aircraft Glossary</a></li>
+              <li runat="server" id="yachtGlossaryLinkButton"><a href="/help.aspx?t=7" target="_blank">Yacht Glossary</a></li>
+              <li runat="server" id="noteExportLinkButton" visible="false"><a href="/help.aspx?t=1&export=Y" target="_blank">Note Export</a></li>
+              <li runat="server" id="debugMenuLinkButton" visible="false"><a href="/Debug.aspx" target="_blank">Debug Menu</a></li>
+              <li runat="server" id="projectLinkButton" visible="false"><a href="/evoprojectconversion.aspx" target="_blank">Project Conversion</a></li>
+            </ul>
+          </li>
+        </ul>
+        <asp:Menu ID="Menu1" CssClass="Menu" runat="server" Orientation="Horizontal" DynamicHorizontalOffset="0"
+          DynamicVerticalOffset="0" Width="100%" StaticEnableDefaultPopOutImage="false" EnableViewState="true"
+          SkipLinkText="" Visible="false">
+          <StaticHoverStyle CssClass="selected" />
+          <StaticSelectedStyle CssClass="selected" />
+          <LevelMenuItemStyles>
+            <asp:MenuItemStyle CssClass="main_level" />
+            <asp:MenuItemStyle CssClass="sub_level" />
+          </LevelMenuItemStyles>
+          <Items>
+            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="/home.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Views" Value="Views" NavigateUrl="../#"></asp:MenuItem>
+            <asp:MenuItem Text="Aircraft" Value="Aircraft" NavigateUrl="/Aircraft_Listing.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="History" Value="History" NavigateUrl="/Aircraft_Listing.aspx?h=1"></asp:MenuItem>
+            <asp:MenuItem Text="Company" Value="Company" NavigateUrl="/Company_Listing.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Performance Specs" Value="Performance Specs" NavigateUrl="/Performance_Listing.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Operating Costs" Value="Operating Costs" NavigateUrl="/Operating_Listing.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Events" Value="Events" NavigateUrl="/Aircraft_Listing.aspx?e=1"></asp:MenuItem>
+            <asp:MenuItem Text="Market Summary" Value="Market Summary" NavigateUrl="/MarketSummary.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Wanted" Value="Wanted" NavigateUrl="/Wanted_Listing.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Resources" Value="Resources" NavigateUrl="../#">
+              <asp:MenuItem Text="Quick Search" Value="Quick Search" NavigateUrl="/Home.aspx?tab=search"></asp:MenuItem>
+              <asp:MenuItem Text="JETNET Global" Value="JETNET Global" NavigateUrl="http://www.jetnetglobal.com/"
+                Target="blank"></asp:MenuItem>
+              <asp:MenuItem Text="Bulletin Board" Value="Bulletin Board" NavigateUrl="/help.aspx?t=1" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="New Features" Value="New Features" NavigateUrl="/help.aspx?t=0" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="Industry News" Value="Industry News" NavigateUrl="/evonews.aspx" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="JETNET Calendar" Value="JETNET Calendar" NavigateUrl="/help.aspx?t=4" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="Help" Value="Help" NavigateUrl="/help.aspx?t=2" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="JETNET News" Value="JETNET News" NavigateUrl="/help.aspx?t=3" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="Master Lists" Value="Master Lists" NavigateUrl="/MasterLists.aspx" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="Model Resources" Value="Model Resources" NavigateUrl="/help.aspx?t=5" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="Aircraft Glossary" Value="Aircraft Glossary" NavigateUrl="/help.aspx?t=6" Target="_blank"></asp:MenuItem>
+              <asp:MenuItem Text="Yacht Glossary" Value="Yacht Glossary" NavigateUrl="/help.aspx?t=7" Target="_blank"></asp:MenuItem>
+            </asp:MenuItem>
+          </Items>
+        </asp:Menu>
+      </div>
+      <div class="sixteen columns gray_menu_repeat" runat="server" id="gray_bar_container">
+        <asp:Label ID="gray_menu_title" runat="server" Text="" CssClass="gray_title_text float_left"></asp:Label><asp:Label
+          ID="gray_menu_buttons" runat="server" Text="" CssClass="float_right gray_title_buttons"></asp:Label>
+        &nbsp;
+      </div>
+      <div id="container_white_background_div" runat="server" class="sixteen columns white_background_color content_border">
+        <div id="container_border" runat="server" class="content_padding">
+          <asp:Panel runat="server" ID="hintPopupHolder" CssClass="helpfulHint" Style="display: none;" Visible="false"><a href="#" id="helpfulHintCloseButton" class="closeButton">Dismiss</a><asp:Label runat="server" ID="hintText"></asp:Label></asp:Panel>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            Content Controls<br />
+          </asp:ContentPlaceHolder>
+          <div runat="server" id="content_clear" class="div_clear">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <asp:UpdatePanel runat="server" ID="hintUpdatePanel">
+        <ContentTemplate>
+          <asp:Button runat="server" ID="hintUpdateButton" Text="hintUpdateButtonClick" CssClass="display_none" />
+          <asp:Button runat="server" ID="hintUpdateClickLink" Text="hintUpdateLinkClickEvent" CssClass="display_none" />
+          <asp:Label runat="server" ID="hintTextUpdate" CssClass="display_none"></asp:Label>
+        </ContentTemplate>
+      </asp:UpdatePanel>
+      <div class="sixteen columns footer">
+        Copyright &copy; 2000 -
+      <%= Now().Year.ToString()%>
+      JETNET LLC all rights reserved
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+
+    <!-- End Container -->
+    <!-- End Document -->
+    <div style="display: none;">
+      <asp:Button ID="status_notification_button" runat="server" OnClick="RemoveStatusNotification" />
+    </div>
+
+    <script type="text/javascript">
+    // we run in the footer so no need to use onload -->
+    // $(document).ready(function() {
+    //  if ("<%= Me.WelcomeUser1.evo_message_text.text %>" != "") {
+      //       $("#message").fadeIn("slow");
+      //   }
+      //});
+
+      // function closeNotice() {
+      //    $("#message").fadeOut("slow");
+      // }
+
+
+
+      $("#helpfulHintCloseButton").click(function () {
+        $("#<%= hintUpdateButton.ClientID%>").click();
+        $(".helpfulHint").slideUp("slow");
+      });
+
+      $(".helpfulHintLink").click(function () {
+        $("#<%= hintUpdateClickLink.ClientID%>").click();
+        $(".helpfulHint").slideUp("slow");
+      });
+
+
+      $(document).ready(function () {
+
+        if ($('#<%= hintPopupHolder.ClientID %>').length) {
+          $('#<%= hintPopupHolder.ClientID %>').slideDown("slow");
+        }
+
+        var menuTable = document.getElementById('<%= Menu1.ClientID %>');
+        if ((typeof menuTable !== 'undefined') && (menuTable !== null)) {
+          var menuLinks = menuTable.getElementsByTagName('a');
+          for (i = 0; i < menuLinks.length; i++) {
+            menuLinks[i].onclick = function () { ChangeTheMouseCursorOnItemParentDocument('cursor_wait'); }
+          }
+          setOnClickForNextLevelMenuItems(menuTable.nextSibling);
+        }
+      });
+
+
+      function setOnClickForNextLevelMenuItems(currentMenuItemsContainer) {
+        var id = currentMenuItemsContainer.id;
+        if ((typeof id !== 'undefined') && (id !== null)) {
+          var len = id.length;
+          if (id != null && typeof (id) != 'undefined' && id.substring(0, parseInt(len) - 7) == '<%= Menu1.ClientID %>' && id.substring(parseInt(len) - 5, parseInt(len)) == 'Items') {
+            var subMenuLinks = currentMenuItemsContainer.getElementsByTagName('a');
+            for (i = 0; i < subMenuLinks.length; i++) {
+              if (subMenuLinks[i].innerText == 'Values') {
+              } else {
+                subMenuLinks[i].onclick = function () { ChangeTheMouseCursorOnItemParentDocument('cursor_wait'); }
+              }
+            }
+            setOnClickForNextLevelMenuItems(currentMenuItemsContainer.nextSibling);
+          }
+        }
+      }
+    </script>
+  </form>
+  <asp:ContentPlaceHolder ID="below_form" runat="server">
+  </asp:ContentPlaceHolder>
+</body>
+</html>

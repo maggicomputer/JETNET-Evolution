@@ -1,0 +1,173 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="YachtTheme.master.vb"
+  Inherits="crmWebClient.YachtTheme" %>
+
+<%@ Register Src="~/controls/WelcomeUser.ascx" TagName="WelcomeUser" TagPrefix="uc3" %>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head id="head1" runat="server">
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8" />
+  <title>Yacht</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- CSS
+  ================================================== -->
+  <!--Google Material Icons-->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+  <!-- Header Alternate Styles-->
+  <link href="/EvoStyles/stylesheets/slicknav.css" rel="stylesheet" type="text/css" />
+  <!--Grid/Layout Styles-->
+  <link href="/EvoStyles/stylesheets/layout/base_html_elements.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="/EvoStyles/stylesheets/layout/skeleton_grid.css" rel="stylesheet" type="text/css" />
+  <!--Jquery Datatables-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="/common/chosen.css" />
+  <link rel="stylesheet" href="/common/classic.css" type="text/css" />
+  <link href="/EvoStyles/stylesheets/print.css" rel="stylesheet" media="print" type="text/css" />
+  <!--Masonry-->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://rawgithub.com/desandro/classie/master/classie.js"></script>
+
+  <!-- Favicons ================================================== -->
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/EvoStyles/images/apple-touch-icon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/EvoStyles/images/apple-touch-icon-72x72.png?v=2" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/EvoStyles/images/apple-touch-icon-114x114.png?v=2" />
+  <!--Javascript ================================================== -->
+
+  <style>
+    #Menu1 ul a {
+      color: #000 !important;
+    }
+
+      #Menu1 ul a.highlighted {
+        color: #000 !important;
+      }
+
+      #Menu1 ul a.level2 {
+        color: #000 !important;
+      }
+
+    #Menu1 a.static.selected {
+      border-bottom: 2px solid #2b2b2b
+    }
+
+    .sub_level {
+      background-color: transparent !important;
+    }
+
+    a.selected.static:hover {
+    }
+
+    .yachtMainLogo {
+      filter: invert(1);
+    }
+    .yachtHide{visibility:hidden;display:none;}
+    .ulMenu ul a{border-bottom:2px solid #fff !important;}
+    .ulMenu ul ul a{border-bottom:0px !important;}
+  </style>
+
+  <link href="/EvoStyles/stylesheets/ui.daterangepicker.css" rel="stylesheet" type="text/css" />
+  <link href="/EvoStyles/stylesheets/superfish.css" rel="stylesheet" media="screen" type="text/css">
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="form1" runat="server" method="post" submitdisabledcontrols="true">
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true"
+      EnablePageMethods="true" AsyncPostBackTimeout="8000">
+    </cc1:ToolkitScriptManager>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.js"></script>
+
+    <div style="text-align: left; visibility: hidden;">
+      <asp:Panel ID="notifyChatUserPanel" runat="server" Visible="false">
+        <cht:evoChatNotify ID="notifyChatUserCtrl" runat="server" />
+      </asp:Panel>
+    </div>
+    <div class="FixedHeaderBar" runat="server" id="fixedBar"></div>
+    <asp:Literal ID="background_image" runat="server">  
+        <img src="../images/background/11.jpg" alt="" class="bg_image display_none" />
+    </asp:Literal>
+    <!-- Primary Page Layout
+	            ================================================== -->
+    <div class="container MaxWidthRemove" runat="server" id="pageSizing">
+      <!--Start Container-->
+      <uc3:WelcomeUser ID="WelcomeUser1" runat="server" />
+      <iframe id="ifrmBlank" frameborder="0" width="0" height="0" runat="server" src="sessionKeepAlive.aspx"></iframe>
+      <div class="sixteen columns">
+        <asp:Menu ID="Menu1" CssClass="ulMenu" runat="server" Orientation="Horizontal" DynamicHorizontalOffset="0"
+          DynamicVerticalOffset="0" Width="100%" StaticEnableDefaultPopOutImage="false"
+          SkipLinkText="">
+          <StaticHoverStyle CssClass="selected" />
+          <StaticSelectedStyle CssClass="selected" />
+          <LevelMenuItemStyles>
+            <asp:MenuItemStyle CssClass="main_level" />
+            <asp:MenuItemStyle CssClass="sub_level" />
+          </LevelMenuItemStyles>
+          <Items>
+            <asp:MenuItem Text="Home" Value="Home" Selected="true" NavigateUrl="../home.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Views" Value="Views" NavigateUrl="../yacht_view_template.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Yachts" Value="Yachts" NavigateUrl="../YachtListing.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Company" Value="Company" NavigateUrl="../Company_Listing.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="History" Value="History" NavigateUrl="../YachtListing.aspx?h=1"></asp:MenuItem>
+            <asp:MenuItem Text="Events" Value="Events" NavigateUrl="../YachtListing.aspx?e=1"></asp:MenuItem>
+            <asp:MenuItem Text="Resources" Value="Resources">
+              <asp:MenuItem Text="Bulletin Board" Value="Bulletin Board" NavigateUrl="../#"></asp:MenuItem>
+              <asp:MenuItem Text="New Features" Value="New Features" NavigateUrl="../#"></asp:MenuItem>
+              <asp:MenuItem Text="News" Value="News" NavigateUrl="../#"></asp:MenuItem>
+              <asp:MenuItem Text="Help" Value="Help" NavigateUrl="javascript:load('../help.aspx?t=1&s=1','','scrollbars=yes,menubar=no,height=900,width=1050,resizable=yes,toolbar=no,location=no,status=no');"></asp:MenuItem>
+              <asp:MenuItem Text="Debug Menu" Value="Debug" NavigateUrl="../Debug.aspx" Target="new"></asp:MenuItem>
+              <asp:MenuItem Text="Aircraft Glossary" Value="Aircraft Glossary" NavigateUrl="javascript:load('help.aspx?t=6','','scrollbars=yes,menubar=no,height=900,width=1050,resizable=yes,toolbar=no,location=no,status=no');"></asp:MenuItem>
+              <asp:MenuItem Text="Yacht Glossary" Value="Yacht Glossary" NavigateUrl="javascript:load('help.aspx?t=7','','scrollbars=yes,menubar=no,height=900,width=1050,resizable=yes,toolbar=no,location=no,status=no');"></asp:MenuItem>
+            </asp:MenuItem>
+          </Items>
+        </asp:Menu>
+      </div>
+      <div class="sixteen columns gray_menu_repeat" runat="server" id="gray_bar_container">
+        <asp:Label ID="gray_menu_title" runat="server" Text="" CssClass="gray_title_text float_left"></asp:Label><asp:Label
+          ID="gray_menu_buttons" runat="server" Text="" CssClass="float_right gray_title_buttons"></asp:Label>
+        &nbsp;
+      </div>
+      <div id="container_white_background_div" runat="server" class="sixteen columns gray_background">
+        <div id="container_border" runat="server" class="content_padding content_border">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            Content Controls<br />
+          </asp:ContentPlaceHolder>
+          <div runat="server" id="content_clear" class="div_clear">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="sixteen columns gray_menu_repeat">
+        &nbsp;
+      </div>
+      <div class="sixteen columns footer">
+        Copyright &copy; 2000 - <%= Now().Year.ToString()%> JETNET LLC all rights reserved
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+    <!-- End Container -->
+    <!-- End Document
+            ================================================== -->
+  </form>
+  <asp:ContentPlaceHolder ID="below_form" runat="server">
+  </asp:ContentPlaceHolder>
+</body>
+</html>

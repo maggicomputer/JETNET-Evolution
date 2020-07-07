@@ -1,0 +1,306 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ContactCompany" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">JETNET, LLC</Value>
+    </Setting>
+    <Setting Name="UseCookies" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseDatabase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WhatDataLayer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MYSQL</Value>
+    </Setting>
+    <Setting Name="IsStandaloneMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sessionKeepAliveTime" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="IsDebugMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="hasLocalSQLServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BKUP_SQL_SRV_NAME" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WWW.JETNETSQL2.COM</Value>
+    </Setting>
+    <Setting Name="LIVE_SQL_SRV_IP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">172.30.5.39</Value>
+    </Setting>
+    <Setting Name="LIVE_SQL_SRV_NAME" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WWW.JETNETSQL1.COM</Value>
+    </Setting>
+    <Setting Name="BKUP_SQL_SRV_IP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">172.30.5.42</Value>
+    </Setting>
+    <Setting Name="enableEULA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ResizeImageSize" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">100000</Value>
+    </Setting>
+    <Setting Name="ResizeImageWidth" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
+    <Setting Name="enableChat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showOffLine" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="useBackupSQL_SRV" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LIVE_MYSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=172.30.5.38;User Id=supercrm;password=fubar01;database=crm_central&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=172.30.5.38;User Id=supercrm;password=fubar01;database=crm_central</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LOCAL_MYSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=jetnetcrm.jetnet.com;User Id=crmtestdb;password=fubar01;database=crmtest_client_db&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=jetnetcrm.jetnet.com;User Id=crmtestdb;password=fubar01;database=crmtest_client_db</Value>
+    </Setting>
+    <Setting Name="crmWebClient_com_jetnet_aiservice_www_AssetInsightService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.aiservice.jetnet.com/Service1.svc</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LIVE_MYSQL2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=172.30.5.47;User Id=supercrm;password=fubar#01;database=crm_central&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=172.30.5.47;User Id=supercrm;password=fubar#01;database=crm_central</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LIVE_MYSQL2_DEBUG" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=jetnetcrm2.jetnet.com;User Id=supercrm;password=fubar#01;database=crm_central&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Connect Timeout=90;Allow User Variables=True;Default Command Timeout=3600;Persist Security Info=True;server=jetnetcrm2.jetnet.com;User Id=supercrm;password=fubar#01;database=crm_central</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LIVE_MSSQL_DEBUG" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=72.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=crmlive;Password=r6x28v26&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=72.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=crmlive;Password=r6x28v26</Value>
+    </Setting>
+    <Setting Name="SCRIPT_VERSION" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">?v=3.5</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LIVE_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="CLOUD_LIVE_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="STAR_LIVE_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=star_reports;Persist Security Info=True;User ID=star;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=star_reports;Persist Security Info=True;User ID=star;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_LIVE_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evotest;Password=eg5knq26;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evotest;Password=eg5knq26;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="USER_LIVE_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LIVE_MSSQL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="CLOUD_LIVE_MSSQL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="STAR_LIVE_MSSQL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=star_reports;Persist Security Info=True;User ID=star;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=star_reports;Persist Security Info=True;User ID=star;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_LIVE_MSSQL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evotest;Password=eg5knq26;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evotest;Password=eg5knq26;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="USER_LIVE_MSSQL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=evolution;Password=vbs73az8;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="DEFAULT_LOCAL_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=MVINTECH10\MSSQLSERVER2008;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=MVINTECH10\MSSQLSERVER2008;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="LIVE_INHOUSE_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.10.254.54;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=moejive;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.10.254.54;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=moejive;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_INHOUSE_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.10.254.56;Initial Catalog=jetnet_ra_test;Persist Security Info=True;User ID=sa;Password=moejive;Asynchronous Processing=True;MultipleActiveResultSets=True;Connect Timeout=90&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.10.254.56;Initial Catalog=jetnet_ra_test;Persist Security Info=True;User ID=sa;Password=moejive;Asynchronous Processing=True;MultipleActiveResultSets=True;Connect Timeout=90</Value>
+    </Setting>
+    <Setting Name="TEST_LOCAL_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_LOCAL_MSSQL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=72.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=72.30.5.42;Initial Catalog=jetnet_ra;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_CLOUD_LOCAL_MSSQL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_CLOUD_LOCAL_MSSQL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=72.30.5.42;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=72.30.5.42;Initial Catalog=jetnet_ra_cloud_notes;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="SQL_SESSION_STATE" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="SQL_SESSION_STATE_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_SQL_SESSION_STATE" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_SQL_SESSION_STATE_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=ASPState;Persist Security Info=True;User ID=sa;Password=krw32n89;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="LIVE_CRM_CENTRAL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="LIVE_CRM_CENTRAL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.42;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.42;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_CRM_CENTRAL" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.30.5.39;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.30.5.39;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+    <Setting Name="TEST_CRM_CENTRAL_BK" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=www.172.30.5.42;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=www.172.30.5.42;Initial Catalog=crm_central;Persist Security Info=True;User ID=svc-crm-prod-rwe;Password=crm074$h6;MultipleActiveResultSets=True;Connect Timeout=90;Asynchronous Processing=True;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

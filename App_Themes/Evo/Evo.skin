@@ -1,0 +1,44 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView 
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+ <asp:DataGrid runat="server" runat="server"   
+    AutoGenerateColumns="False"  
+    GridLines="None"  
+    AllowPaging="false"
+    allowcustompaging="true"  
+    CssClass="mGrid"  
+    PagerStyle-CssClass="pgr" 
+    AlternatingItemStyle-CssClass="alt"
+    ItemStyle-CssClass="item_row"  ItemStyle-VerticalAlign="Top"
+    HeaderStyle-CssClass="th"
+    PagerStyle-Mode="NextPrev"
+    PagerStyle-NextPageText="" PagerStyle-PrevPageText="">
+ </asp:DataGrid>
+ 
+
+
+<asp:TreeView runat="server" SkinID="project_tree_view" CssClass="" SkipLinkText=""
+    NodeIndent="-15" ExpandImageUrl="~/images/expandable.png" CollapseImageUrl="~/images/expanded.png" width="100%">
+     <RootNodeStyle ChildNodesPadding="3px" cssClass="header_row"  font-size="1em" />
+     <NodeStyle  HorizontalPadding="2px" NodeSpacing="0px" VerticalPadding="0px"/>  
+ </asp:TreeView> 
+ 
+ <asp:TreeView runat="server" SkinID="project_recent_view" CssClass="aircraft_folder" SkipLinkText=""
+    NodeIndent="-15" ExpandImageUrl="~/images/expandable.png" CollapseImageUrl="~/images/expanded.png" width="100%">
+     <RootNodeStyle ChildNodesPadding="3px"  cssClass="header_row"  />
+     <NodeStyle HorizontalPadding="2px" NodeSpacing="0px" VerticalPadding="0px" /> 
+          <SelectedNodeStyle ChildNodesPadding="3px" cssClass="header_row" font-size="1em" />
+ </asp:TreeView> 

@@ -1,0 +1,88 @@
+﻿@media print
+{
+  /*All your print styles go here */
+  body
+  {
+    height: auto !important;
+    font-size: 11px !important;
+  }
+  .container, .column, .columns, .contentContainer
+  {
+    width: 100% !important; /** 100% of 85% container */
+    margin-left: 0% !important;
+    float: none !important;
+    display: block !important;
+  }
+  .bg_image
+  {
+    display: none;
+  }
+  .headerHeightPadding
+  {
+    display: none !important;
+  }
+  .standalone_page .headerHeight
+  {
+    position: absolute;
+  }
+  .backgroundShade
+  {
+    display: none !important;
+  }
+  
+  .standalone_page .headerHeight .eight, .standalone_page .headerHeight .one-third{display:inline !important;float:left !important;width:260px !important;color:#fff;}
+  .standalone_page .headerHeight
+  {
+    padding-left: 30px;
+  }
+  .headerHeight:before
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0; /* and here it is, the background color */
+    border: 26px #1F4F77 solid;
+    z-index: 0; /* was required in my situation */
+  }
+
+  .headerHeight
+  {
+    background-color: #1F4F77 !important;
+    -webkit-print-color-adjust: exact; /* was required in my situation */
+    position: relative;
+    z-index: 1;
+    padding-left: 9px;
+  }
+  .headerHeight div
+  {
+    position: relative;
+    z-index: 500;
+  }
+  .headerHeight .welcome_text
+  {
+    padding: 0px;
+    background-color: rgba(150, 150, 150, 0) !important;
+  }
+  .welcome_text
+  {
+    display: none;
+  }
+  .mGrid .th, .dark_header
+  {
+    text-shadow: 0px 0px 0px rgba(150, 150, 150, 0) !important;
+  }
+  .selected a, .main_level a, .main_level a:visited, .main_level a:hover, .main_level a:active
+  {
+    padding: .2em;
+  }
+  #TellJetnetChangesContainer, .searchBox, .evo_help_button
+  {
+    display: none;
+  }
+  .dark_header img, .criteria_text input
+  {
+    display: none !important;
+  }
+
+}

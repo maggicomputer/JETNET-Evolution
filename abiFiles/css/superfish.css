@@ -1,0 +1,187 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation {
+    position: relative;
+}
+
+    .navigation .sf-menu {
+        position: relative;
+        overflow: visible;
+        clear: both;
+        height: auto !important;
+    }
+
+
+        .navigation .sf-menu:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        .navigation .sf-menu.in {
+            height: auto !important;
+        }
+
+    .navigation .btn-sf-menu {
+        display: none;
+        float: left;
+    }
+
+.scroll-to-fixed-fixed {
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
+.navigation .select-menu {
+    width: 100%;
+    display: none;
+    margin: 0;
+}
+
+.sf-menu li {
+    position: relative;
+}
+
+.sf-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+.sf-menu > li {
+    float: left;
+}
+
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+    display: block;
+}
+
+.sf-menu a {
+    display: block;
+    position: relative;
+}
+
+.sf-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+@media (max-width: 767px) {
+
+    /*navigation*/
+
+    .navigation .btn-navbar {
+        display: block;
+    }
+
+    .navigation .select-menu {
+        display: block;
+    }
+
+    .navigation ul.sf-menu {
+        overflow: hidden;
+        height: 0 !important;
+        float: none;
+    }
+
+        .navigation ul.sf-menu > li {
+            float: none;
+            width: 100%;
+            margin: 0;
+        }
+
+            .navigation ul.sf-menu > li ul {
+                padding: 0 0 0 15px;
+                width: auto;
+                position: static;
+            }
+}
+
+
+/* adding sf-vertical class in addition to sf-menu creates a vertical menu */
+/* eg. <ul class="sf-menu sf-vertical"> ... */
+.sf-vertical {
+    width: 100%;
+    /* If you want the width of the closed menu to expand to its
+  widest top-level menu item (like its "Supersubs" submenus do),
+  replace the width rule above with the following two rules. */
+    /*
+  min-width: 12em;
+  *width: 12em;
+  */
+}
+
+    .sf-vertical ul {
+        left: 100%;
+        top: 0;
+        background-color: white;
+        width: 100%;
+        border: 1px solid #c2c2c2;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+        padding-left: 10px;
+    }
+
+    .sf-vertical > li {
+        float: none;
+    }
+
+    .sf-vertical ul li {
+        border-bottom: 2px solid #e3e5e8;
+    }
+
+        .sf-vertical ul li:last-of-type {
+            border-bottom: 0px;
+        }
+
+    .sf-vertical li {
+        width: 100%;
+    }
+
+        .sf-vertical li.active {
+            background-color: #e3e5e8;
+            border-left: 15px solid #078fd7;
+        }
+
+    .sf-vertical ul li a:hover {
+        color: #078fd7 !important
+    }
+
+.sf-vertical ul .sfHover:active, .sf-vertical ul .sfHover:hover {
+    background-color: transparent !important;
+}
+
+.sf-vertical ul:after {
+    content: " ";
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid white;
+    border-left: none;
+    border-bottom: 8px solid transparent;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical.sf-arrows > li > .sf-with-ul:after {
+    margin-top: -5px;
+    margin-right: -3px;
+    border-color: transparent;
+    border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+    border-left-color: rgba(255,255,255,.5);
+}
+
+.sf-vertical.sf-arrows li > .sf-with-ul:focus:after,
+.sf-vertical.sf-arrows li:hover > .sf-with-ul:after,
+.sf-vertical.sf-arrows .sfHover > .sf-with-ul:after {
+    border-left-color: white;
+}

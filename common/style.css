@@ -1,0 +1,132 @@
+﻿body{margin-top:0px;margin-left:0px;margin-right:0px;margin-bottom:0px;font-family:Tahoma;font-size:11px;background-color:#ffffff;}
+.container {border-left:1px solid #1e5aa5;border-right:1px solid #1e5aa5;background-color:#ffffff;}
+.header{background-color:#48afff;padding:5px;height:55px;}
+.small_purple{color:#8C4BA0;font-weight:600;font-size:11px;}
+.small_orange{color:#F99533;font-weight:600;font-size:11px;}
+.bold_small{font-weight:600;font-size:10px;}
+.small{font-size:11px;}
+.tiny_tiny{font-size:8px;}
+.smaller{font-size:10px;}
+.user_database_label{color:#ffffff;font-weight:bold;font-size:14px;padding:0px;margin:0px;padding:0px 0px 10px 0px;clear:both;}
+.user_database_label .tiny{font-size:10px;color:#000000;}
+.user_welcome_label,.user_product_label,.user_logout_button{float:right;clear:right;color:#000000;}
+.user_logout_button{font-size:12px;font-weight:bold;}
+    .edit_panel {padding:5px 4px 4px 4px;background-color:#E6E6E6;}
+    .edit_panel h4 {color:#4d7997;font-size:12px;border-bottom:4px solid #C3D7E4;text-transform:uppercase;}
+.jetnet_row{color:#023657 !important;font-weight:bold;}
+.client_row{color:#7a3733 !important;font-weight:bold;} 
+table.engine {border-width: 1px 1px 1px 1px;border-spacing: 0px;border-style: solid solid solid solid;border-color: gray gray gray gray;border-collapse: collapse;font-size:11px;margin-top:3px;}
+table.engine td {border-width: 1px 1px 1px 1px;padding: 3px;border-style: solid solid solid solid;border-color: gray gray gray gray;-moz-border-radius: 0px 0px 0px 0px;}
+table.engine_client {border-width: 1px 1px 1px 1px;border-spacing: 0px;border-style: solid solid solid solid;border-color: #7a3733;border-collapse: collapse;font-size:11px;margin-top:3px;}
+table.engine_client td {border-width: 1px 1px 1px 1px;padding: 3px;border-style: solid solid solid solid;border-color: #7a3733;-moz-border-radius: 0px 0px 0px 0px;}
+/*Subclasses used for Table .engine display */
+    .alt_row_client {background-color:#f8e8da;}
+    .dark_red {background-color:#cd918d;}
+    .blue_jetnet{color:Navy;}
+    .red_client{color:#7a3733;}
+    .dark_blue {background-color:#A8C1DD;}
+	.light_blue{background-color:#BBD7F6;}
+	
+	.tiny{font-size:9px;}
+
+.aircraft_seperator{background-color:#dadbdd;margin:0px;padding:4px;display:block;}
+.aircraft_seperator h3{float:left;color:#878787;margin:0px;padding:0px;clear:both;margin-right:5px;}
+
+.aircraft_seperator_alt{background-color:#e5e6e6;margin:0px;padding:4px;display:block;}
+.aircraft_seperator_alt h3{float:left;color:#878787;margin:0px;padding:0px;clear:both;margin-right:5px;}
+	
+.display_tab {margin:0px;padding:0px 0px 0px 22px;}
+.display_tab li {margin:3px 0px 3px 0px;}
+.display_tab b {color:#11117A;}
+
+.display_tab_client {margin:0px;padding:0px 0px 0px 22px;}
+.display_tab_client li {margin:3px 0px 3px 0px;}
+.display_tab_client b {color:#B32939;}
+
+.display_tab_other {margin:0px;padding:0px 0px 0px 22px;}
+.display_tab_other li {margin:3px 0px 3px 0px;}
+.display_tab_other b {color:#386752;}
+
+.footer{background-color:#0b437b;text-align:center;color:#ffffff;padding-top:5px;padding-bottom:5px;}
+.footer_button{color:#ffffff;padding:3px;text-decoration:none;}
+.footer_button:hover{color:#8ffff8;text-decoration:underline;}
+.content{padding:5px 5px 15px 5px;}
+.icon{padding:4px;}
+.notes h2{font-size:11px;margin:10px 0px 0px 0px;padding:3px;color:#ffffff;background-color:#5a717a;}
+.notes h2 a{color:#ffffff;text-decoration:none;}
+.notes h2 a:hover{color:#ff0808;text-decoration:underline;}
+ .specialH3{display: block;border-bottom: 1px solid #dddddd;font-size: 12px;font-weight: bold;margin: 5px;color: #4d7997;}
+ .specialH4{display: block;border-bottom: 1px solid #dddddd;font-size: 12px;font-weight: bold;margin: 5px;color: #53854e;}
+    
+.menu{background-color:#0b437b;color:#ffffff;display:block;font-size:11px; vertical-align:middle;padding:5px 5px 0px 5px;}
+.menu a{color:#ffffff;text-decoration:none;font-weight:400;padding:6px;margin:2px;}
+.menu a:hover{text-decoration:underline;}
+.today_date{padding:5px;display:block;padding-left:8px;}
+.today_calendar{padding:3px;display:block;padding-left:3px;font-weight:bold;}
+.no_pad{padding:0px;margin:0px;}
+.cal_header{font-weight:bold;border-bottom:1px solid #dddddd;margin:5px;font-size:14px;}
+
+
+.alt_contact_row{background-color:#dbdcdd;display:block;padding:4px;border-bottom:1px solid #bababa;border-top:1px solid #bababa;}
+.contact_row{background-color:#eaeaea;display:block;padding:4px;}
+
+.sub_menu{background-color:#8cc7dd;color:#000000;display:block;padding-left:35px;padding:2px;}
+.sub_menu a{color:#000000;padding:6px;}
+/*aircraft list on company ac tab on details */
+.aircraft_list {background-color:#67A0D9;border:1px solid #15374d;font-weight:bold;color:#ffffff;font-size:11px;}
+.aircraft_list_offset {background-color:#67A0D9;border:1px solid #15374d;font-weight:bold;color:#ffffff;font-size:11px;}
+.contacts_company{background-color:#003c7f;color:#ffffff;padding:4px;font-weight:bold;text-transform:uppercase;width:99%;font-size:13px;}
+.search_bar{text-align:left;vertical-align:top;background-color:#d4faeb;border:1px solid #0c437c;padding:3px;margin-top:0px;}
+.input{padding:0px;margin:0px;float:left;height:20px;margin-top:2px;margin-right:2px;}
+.search_bar span{float:left;padding-top:4px;padding-left:5px;padding-right:5px;}
+.alt_row{background-color:#e3edf7;}
+.notes a{color:#0b437b;}
+.grid {font-size:11px;border-width: 1px 1px 1px 1px;border-spacing: 0px;border-style: solid solid solid solid;border-color:#dddddd;border-collapse: collapse;font-size:11px;margin-top:3px;}
+.grid td {border-width: 1px 1px 1px 1px;padding: 3px;border-style: solid solid solid solid;border-color: #dddddd;-moz-border-radius: 0px 0px 0px 0px;}
+.grid a{font-weight:bold;font-size:12px;color:#09325b;}
+.float_right{float:right;}
+.float_left{float:left;}
+.client_block{border:1px solid #999999;padding:4px;background-image:url('../images/client_water.png');background-repeat:no-repeat;background-position:75% 5%;background-color:#f7edec;}
+.jetnet_block{border:1px solid #aab0e4;padding:4px;background-image:url('../images/evo_water.png');background-repeat:no-repeat;background-position:75% 5%;background-color:#e9ebff;}
+.jetnet_block h2, .client_block h2, .block h2{margin:0px;padding:0px 0px 5px 0px;font-size:12px;font-weight:bold;color:#0b437b;}
+.jetnet_block b, .client_block b, .client_block a, .jetnet_block a, .block a{margin:0px;padding:0px 0px 5px 0px;font-size:11px;color:#0b437b;}
+.block{border:1px solid #999999;background-color:#ebedff;font-size:10px;}
+.block b{font-size:11px;}
+.block a{color:#000000;font-size:10px;}
+.block .bold{font-weight:bold;font-size:11px;color:#00378a;}
+
+.aircraft .head{background-color:#0b437b;font-weight:bold;color:#ffffff;}
+.aircraft td{padding:3px;}
+.aircraft a{font-weight:bold;color:#000000;}
+.attention{font-weight:bold;color:#ff0000;}
+ 
+ .notes_list,.notes_list_no_width,.notes_list_edit {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;list-style-type:none;}
+
+.notes_list li{margin-top:3px;margin-bottom:3px;border:1px solid #B6B6B2;padding:3px 3px 3px 20px;display:block;background-color:#FFF7C0;background-image:url('../images/document.png');background-repeat:no-repeat;background-position:left top;}
+.notes_list_no_width li{margin-top:3px;margin-bottom:3px;border:1px solid #B6B6B2;padding:3px 3px 3px 20px;display:block;background-color:#FFF7C0;background-image:url('../images/document.png');background-repeat:no-repeat;background-position:left top;}
+.notes_list_edit li{width:330px !important;margin-top:3px;margin-bottom:3px;border:1px solid #B6B6B2;padding:3px 3px 3px 20px;display:block;background-color:#FFF7C0;background-image:url('../images/document.png');background-repeat:no-repeat;background-position:left top;}
+
+.notes_list_div{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;list-style-type:none;}
+.notes_list_div {margin-top:3px;margin-bottom:3px;border:1px solid #B6B6B2;padding:3px 3px 3px 20px;display:block;background-color:#FFF7C0;background-image:url('../images/document.png');background-repeat:no-repeat;background-position:left top;}
+
+.notes_list_div_main{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;list-style-type:none;}
+.notes_list_div_main {margin-top:3px;margin-bottom:3px;border:1px solid #B6B6B2;padding:3px 3px 3px 20px;display:block;background-color:#FFF7C0;background-image:url('../images/document.png');background-repeat:no-repeat;background-position:left top;}
+.email_list_div_main{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;list-style-type:none;}
+.email_list_div_main {margin-top:3px;margin-bottom:3px;border:1px solid #afb8ee;padding:3px 3px 3px 20px;display:block;background-color:#e1f4ff;background-image:url('../images/mail_compose.png');background-repeat:no-repeat;background-position:left top;}
+
+
+.none {border-width: 0px 0px 0px 0px;border-spacing: 0px;border-style: solid solid solid solid;border-color:inherit;border-collapse: collapse;font-size:11px;margin-top:0px;}
+.none td {border-width: 0px 0px 0px 0px;padding: 0px;border-style: solid solid solid solid;border-color:inherit;-moz-border-radius: 0px 0px 0px 0px;}
+.container_grid{border:1px solid #c0cfe0;margin:4px;padding:4px;background-color:#f4f8fd;}
+.container_grid_alt{border:1px solid #c0cfe0;margin:4px;padding:4px;background-color:#d4dfec;}
+.container_grid a, .container_grid_alt a{color:#023657 !important;}
+
+.container_grid_client{border:1px solid #e6b4b4;margin:4px;padding:4px;background-color:#ffe1e1;font-size:11px;}
+.container_grid_alt_client{border:1px solid #f0bcbc;margin:4px;padding:4px;background-color:#ffd8d8;}
+.container_grid_client a, .container_grid_alt_client a{color:#7a3733 !important;font-size:11px !important;}
+/*flyout styles */
+.rounded_right{background-image:url('../images/rounded_popup_right.gif');background-repeat:repeat-y;}
+.rounded_left{background-image:url('../images/rounded_popup_left.gif');background-repeat:repeat-y;}
+.rounded_bottom{background-image:url('../images/rounded_popup_bottom.gif');background-repeat:repeat-x;}
+.rounded_top{background-image:url('../images/rounded_popup_top.gif');background-repeat:repeat-x;}
+.smallest{font-size:9px !important;}

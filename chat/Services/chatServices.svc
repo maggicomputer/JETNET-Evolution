@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="VB" Debug="true" Service="crmWebClient.chatServices" CodeBehind="chatServices.svc.vb" Factory="crmWebClient.MyWebServiceHostFactory" %>

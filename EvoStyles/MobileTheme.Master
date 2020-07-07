@@ -1,0 +1,271 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MobileTheme.master.vb"
+  Inherits="crmWebClient.MobileTheme" %>
+
+<%@ Register Src="~/controls/WelcomeUser.ascx" TagName="WelcomeUser" TagPrefix="uc3" %>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head id="head1" runat="server">
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8" />
+  <title>JETNET - Login</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- CSS
+  ================================================== -->
+  <!--Google Material Icons-->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+  <!-- Header Alternate Styles-->
+  <link href="/EvoStyles/stylesheets/slicknav.css" rel="stylesheet" type="text/css" />
+  <!--Grid/Layout Styles-->
+  <link href="/EvoStyles/stylesheets/layout/base_html_elements.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="/EvoStyles/stylesheets/layout/skeleton_grid.css" rel="stylesheet" type="text/css" />
+  <!--Jquery Datatables-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="/common/chosen.css" />
+  <link rel="stylesheet" href="/common/classic.css" type="text/css" />
+
+  <!--Masonry-->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://rawgithub.com/desandro/classie/master/classie.js"></script>
+
+  <!-- Favicons ================================================== -->
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/EvoStyles/images/apple-touch-icon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/EvoStyles/images/apple-touch-icon-72x72.png?v=2" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/EvoStyles/images/apple-touch-icon-114x114.png?v=2" />
+  <!--Javascript ================================================== -->
+
+  <link href="/EvoStyles/stylesheets/ui.daterangepicker.css" rel="stylesheet" type="text/css" />
+  <link href="/EvoStyles/stylesheets/superfish.css" rel="stylesheet" media="screen" type="text/css">
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body runat="server" id="bodyTag" class="lowerLevel">
+  <form id="form1" runat="server" method="post" submitdisabledcontrols="true">
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true"
+      EnablePageMethods="true" AsyncPostBackTimeout="8000">
+    </cc1:ToolkitScriptManager>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sl-1.3.1/datatables.min.js"></script>
+
+    <div class="FixedHeaderBar" runat="server" id="fixedBar">
+    </div>
+    <asp:Literal ID="background_image" runat="server">  
+        <img src="../images/background/11.jpg" alt="" class="bg_image" style="display:none;" />
+    </asp:Literal>
+    <iframe id="ifrmBlank" frameborder="0" width="0" height="0" runat="server" src="EmptySessionRefresh.aspx"
+      class="display_none"></iframe>
+    <!-- Primary Page Layout
+	            ================================================== -->
+    <div class="container" runat="server" id="pageSizing">
+      <!--Start Container-->
+      <uc3:WelcomeUser ID="WelcomeUser1" runat="server" />
+      <div class="sixteen columns">
+        <!--Start Navigation Tag-->
+        <div class="ClosenavBG" id="ClosenavBG" runat="server">
+          <a href="javascript:void(0);" id="clickme" class="Closenav" runat="server"><i class="fa fa-caret-square-o-up"
+            aria-hidden="true"></i>Close Navigation</a>
+          <div id="book">
+            <nav class="moduletable navigation secondNavigation">
+              <ul>
+                <li runat="server" id="aircraftLink"><span><a href="/Aircraft_Listing.aspx">
+                  <img src="/images/aircraftMobileButton.png" alt="Aircraft Listing" /></a><a href="/Aircraft_Listing.aspx" class="textLink">Aircraft</a></span></li>
+                <li runat="server" id="companyLink"><span><a href="/Company_Listing.aspx">
+                  <img src="/images/companyMobileButton.png" alt="Company Listing" /></a><a href="/Company_Listing.aspx" class="textLink">Companies</a></span></li>
+                <li runat="server" id="airportsLink"><span><a href="/Airport_Listing.aspx" title="Airports">
+                  <img src="/images/airportMobileButton.png" alt="Airport Listing" /></a><a href="#" title="Airports" class="textLink">Airports</a></span></li>
+              </ul>
+              <ul class="darkGray">
+                <li runat="server" id="modelMarketLink"><span><a href="/view_template.aspx?ViewID=1&ViewName=Model%20Market%20Summary" title="Model Market Summary">
+                  <img src="/images/modelMobileButton.png" alt="Model Market Summary" /></a><a href="/view_template.aspx?ViewID=1&ViewName=Model%20Market%20Summary" title="Model Market Summary" class="textLink">Model Market Summary</a></span></li>
+                <li runat="server" id="modelMarketListLink" visible="false"><span><a href="/view_template.aspx?ViewID=11&ViewName=Model Market List" title="Model Market List"><i class="fa fa-bar-chart" aria-hidden="true"></i></a><a href="/view_template.aspx?ViewID=1&ViewName=Model%20Market%20Summary" title="Model Market List" class="textLink">Model Market List</a></span></li>
+                <li runat="server" id="modelOpCostsLink"><span><a href="/Operating_Listing.aspx" title="Operating Costs">
+                  <img src="/images/operatingMobileButton.png" alt="Operating Listing" /></a><a href="/Operating_Listing.aspx" title="Operating Costs" class="textLink">Operating Costs</a></span></li>
+                <li runat="server" id="modelPerfSpecsLink"><span><a href="/Performance_Listing.aspx" title="Performance Specs">
+                  <img src="/images/performanceMobileButton.png" alt="Performance Listing" /></a><a href="/Performance_Listing.aspx" title="Performance Specs" class="textLink">Performance Specs</a></span></li>
+              </ul>
+              <ul>
+                <li runat="server" id="eventActivityLink"><span><a href="/Aircraft_Listing.aspx?e=1" title="Event Activity">
+                  <img src="/images/eventMobileButton.png" alt="Event Listing" /></a><a href="/Aircraft_Listing.aspx?e=1" title="Event Activity" class="textLink">Event Activity</a></span></li>
+                <li runat="server" id="starLink" visible="false"><span><a href="/view_template.aspx?ViewID=1&ViewName=Model+Market+Summary&onStarReportTab=true&tabStarReportID=0" title="Star Reports"><i class="fa fa-tasks" aria-hidden="true"></i></a><a href="/view_template.aspx?ViewID=1&ViewName=Model+Market+Summary&onStarReportTab=true&tabStarReportID=0" title="Star Reports" class="textLink">Star Reports</a></span></li>
+                <li runat="server" id="modelValuesLink" visible="false"><span><a href="/view_template.aspx?ViewID=27&ViewName" title="Values">
+                  <img src="/images/valuesMobileButton.png" alt="Values" /></a><a href="/view_template.aspx?ViewID=27&ViewName" title="Values" class="textLink">Values</a></span></li>
+              </ul>
+              <ul class="sf-menu sticky display_none" id="module-93">
+                <asp:Button ID="Button1" runat="server" Text="Aircraft" ToolTip="Aircraft" CssClass="button-darker button_width" />
+                <asp:Button ID="Button2" runat="server" PostBackUrl="/view_template.aspx?ViewID=1&ViewName=Model%20Market%20Summary" Text="Model Market Summary" ToolTip="Model Market Summary" CssClass="button-darker button_width" />
+                <asp:Button ID="Button3" runat="server" PostBackUrl="/view_template.aspx?ViewID=11&ViewName=Model Market List" Text="Model Market List" ToolTip="Model Market List" CssClass="button-darker button_width" />
+                <asp:Button ID="Button4" runat="server" PostBackUrl="/view_template.aspx?ViewID=27&ViewName" Text="Values" CssClass="button-darker button_width" ToolTip="Values" />
+                <asp:Button ID="Button5" runat="server" PostBackUrl="/Operating_Listing.aspx" Text="Operating Costs" CssClass="button-darker button_width" ToolTip="Operating Costs" />
+                <asp:Button ID="Button6" runat="server" PostBackUrl="/Performance_Listing.aspx" Text="Performance Specs" CssClass="button-darker button_width" ToolTip="Performance Specs" />
+                <asp:Button ID="Button7" runat="server" PostBackUrl="/Aircraft_Listing.aspx?e=1" Text="Event Activity" CssClass="button-darker button_width" ToolTip="Event Activity" />
+                <asp:Button ID="Button8" runat="server" PostBackUrl="/view_template.aspx?ViewID=1&ViewName=Model+Market+Summary&onStarReportTab=true&tabStarReportID=0" ToolTip="Star Reports" Text="Star Reports" CssClass="button-darker button_width" />
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="sixteen columns gray_menu_repeat" runat="server" id="gray_bar_container">
+        <asp:Label ID="gray_menu_title" runat="server" Text="" CssClass="gray_title_text float_left"></asp:Label><asp:Label
+          ID="gray_menu_buttons" runat="server" Text="" CssClass="float_right gray_title_buttons"></asp:Label>
+        &nbsp;
+      </div>
+      <div id="container_white_background_div" runat="server" class="sixteen columns white_background_color content_border">
+        <div id="container_border" runat="server" class="content_padding IOSScrollFix">
+          <a name="back"></a>
+          <asp:ContentPlaceHolder ID="content" runat="server">
+          </asp:ContentPlaceHolder>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder>
+          <div runat="server" id="content_clear" class="div_clear">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <asp:TextBox runat="server" ID="isView" CssClass="display_none"></asp:TextBox>
+      <div class="clear">
+      </div>
+    </div>
+    <!-- End Container -->
+    <!-- End Document
+            ================================================== -->
+    <div style="display: none;">
+      <asp:Button ID="status_notification_button" runat="server" OnClick="RemoveStatusNotification" />
+    </div>
+
+    <script type="text/javascript">
+      // we run in the footer so no need to use onload -->
+
+      $(document).ready(function () {
+
+        $(".lowerLevel .searchBox").hide();
+        $(".lowerLevel .searchPopupButton").on("tap click", function (event) {
+          $(".lowerLevel .searchBox").toggle();
+        });
+
+        $(".Closenav").click(function () {
+          var strTest = $(".Closenav").text();
+          if (strTest.indexOf('Open Navigation') != -1) {
+            $(".Closenav").html('<i class="fa fa-caret-square-o-up" aria-hidden="true"></i>Close Navigation');
+          } else {
+            $(".Closenav").html('<i class="fa fa-caret-square-o-down" aria-hidden="true"></i>Open Navigation');
+          };
+          $("#book").slideToggle("slow", function () {
+            // Animation complete.
+          });
+        });
+
+        if ("<%= Me.WelcomeUser1.evo_message_text.text %>" != "") {
+                $("#message").fadeIn("slow");
+              }
+            });
+
+      function closeNotice() {
+        $("#message").fadeOut("slow");
+      }
+    </script>
+
+  </form>
+  <asp:ContentPlaceHolder ID="below_form" runat="server">
+  </asp:ContentPlaceHolder>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      CreateMobileMenu(); //on load
+    });
+
+    function CreateMobileMenu() {
+      var isView = false;
+
+      if (jQuery('#<%= isView.clientID %>').val() != '') {
+            isView = true;
+          }
+
+          //$(".DetailsBrowseTable").prepend("<a href='#back'>Back to Top</a>");
+          $(".DetailsBrowseTable").prepend("<a href='/home.aspx'>Home</a>");
+          if (isView) {
+            $(".DetailsBrowseTable").prepend("<a href='#star'>Star Reports</a>");
+            $(".DetailsBrowseTable").prepend("<a href='#sales'>Retail Sales</a>");
+       <%= IIF( HttpContext.Current.Session.Item("localSubscription").crmAerodexFlag = false, "$("".DetailsBrowseTable"").prepend(""<a href='#forsale'>For Sale</a>"");$("".DetailsBrowseTable"").prepend(""<a href='#trends'>Trends</a>"");","") %>
+              $(".DetailsBrowseTable").prepend("<a href='#op'>Operating Costs</a>");
+              $(".DetailsBrowseTable").prepend("<a href='#perf'>Performance Specs</a>");
+              $(".DetailsBrowseTable").prepend("<a href='#fleet'>Fleet</a>");
+        <%= IIF( HttpContext.Current.Session.Item("localSubscription").crmAerodexFlag = false, "$("".DetailsBrowseTable"").prepend(""<a href='#market'>Market Status</a>"");","") %>
+              $(".DetailsBrowseTable").prepend("<a href='#desc'>Description</a>");
+            } else {
+             <%= IIF( HttpContext.Current.Session.Item("localSubscription").crmAerodexFlag = false, "$("".DetailsBrowseTable"").prepend(""<a href='/view_template.aspx?ViewID=27&ViewName'>Values</a>"");","") %>
+        $(".DetailsBrowseTable").prepend("<a href='/Aircraft_Listing.aspx?e=1'>Event Activity</a>");
+        $(".DetailsBrowseTable").prepend("<a href='/Performance_Listing.aspx'>Performance Specs</a>");
+        $(".DetailsBrowseTable").prepend("<a href='/Operating_Listing.aspx'>Operating Costs</a>");
+        $(".DetailsBrowseTable").prepend("<a href='/view_template.aspx?ViewID=1&ViewName=Model%20Market%20Summary'>Model Market Summary</a>");
+        $(".DetailsBrowseTable").prepend("<a href='/Airport_Listing.aspx'>Airports</a>");
+        $(".DetailsBrowseTable").prepend("<a href='/Company_Listing.aspx'>Companies</a>");
+        $(".DetailsBrowseTable").prepend("<a href='/Aircraft_Listing.aspx'>Aircraft</a>");
+      }
+
+      jQuery('.DetailsBrowseTable').each(function () {
+        var list = jQuery(this), ul = jQuery(document.createElement('ul')).replaceWith(jQuery('#mobileMenu'));
+        ul.empty();
+        ul.addClass("flexnav display_none");
+
+        //Setting up the main links.
+        jQuery('a', this).each(function () {
+          var target = jQuery(this).attr('target'),
+            option = jQuery(document.createElement('li'))
+              .appendTo(ul)
+          var aaa = jQuery('<a/>')
+            .text(jQuery(this).text() == '' ? jQuery(this).attr("title") : jQuery(this).text())
+            .attr('href', jQuery(this).attr("href"))
+            .attr('class', jQuery(this).attr("class"))
+            .attr('onclick', jQuery(this).attr("onclick"))
+            .appendTo(option);
+        });
+
+        ul.slicknav({
+          closeOnClick: true
+        });
+      });
+    }
+
+    jQuery(function () {
+      CreateMobileMenu(); //on load
+    });
+
+    jQuery(document).mouseup(function (e) {
+      var menu = jQuery('.slicknav_menu');
+      if (!menu.is(e.target) // The target of the click isn't the container.
+        && menu.has(e.target).length === 0) // Nor a child element of the container
+      {
+        jQuery('.slicknav_btn').removeClass("slicknav_open");
+        jQuery('.slicknav_btn').addClass("slicknav_collapsed");
+        jQuery('.slicknav_nav').addClass("slicknav_hidden");
+        jQuery('.slicknav_nav').removeAttr("style");
+        jQuery('.slicknav_nav').attr("style", "display:none;");
+      }
+    });
+
+  </script>
+
+  <div id="mobileMenu">
+  </div>
+  <!--<div id="back-top">
+    <a href="#"><span></span></a>
+  </div>-->
+</body>
+</html>

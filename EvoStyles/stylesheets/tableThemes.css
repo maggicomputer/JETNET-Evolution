@@ -1,0 +1,2108 @@
+﻿/* ******************************************************************************** 
+ Copyright 2004-11. JETNET,LLC. All rights reserved.
+
+ $$Archive: /commonWebProject/EvoStyles/stylesheets/tableThemes.css $
+ $$Author: Amanda $
+ $$Date: 3/11/20 4:15p $
+ $$Modtime: 3/11/20 11:29a $
+ $$Revision: 15 $
+ $$Workfile: tableThemes.css $
+
+ ******************************************************************************** */
+
+/*widget theme import:*/
+@import url('widget_themes.css');
+/*font Awesome Import:*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/abiFiles/fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('/abiFiles/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/abiFiles/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('/abiFiles/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('/abiFiles/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*main table styles*/
+.formatTable {
+  padding: 0px;
+  border-collapse: collapse;
+  color: #3b3b3b;
+  font-size: 14px;
+
+}
+
+  .formatTable th, .formatTable td {
+    padding: 4px;
+  }
+
+  /*Highlight Styles*/
+  .formatTable tbody tr.highlight {
+    font-style: italic;
+  }
+
+
+
+  /*Footer styles*/
+  .formatTable tfoot tr td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /*.formatTable tfoot tr td:first-child{border-radius:0px 0px 0px 5px;}
+.formatTable tfoot tr td:last-child{border-radius:0px 0px 5px 0px;}*/
+
+  /*header styles*/
+  .formatTable th {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+/*.formatTable th:first-child{border-radius:5px 0px 0px 0px;}
+.formatTable th:last-child{border-radius:0px 5px 0px 0px;}*/
+
+.dark-theme .ajax__tab_body {
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.newViewStyle {
+  margin: -3px;
+}
+
+  .newViewStyle .tab_container_div_small {
+    width: 100%;
+    padding: 0px;
+  }
+
+
+
+/*Custom Table Font Formatting*/
+.formatTable .upperCase, .formatTable.upperCase {
+  text-transform: uppercase;
+}
+
+.formatTable .noCase {
+  text-transform: none;
+}
+
+.formatTable .mediumText {
+  font-size: 1.15em !important;
+}
+
+.formatTable .largeText {
+  font-size: 1.5em;
+}
+
+.formatTable .center {
+  text-align: center;
+}
+
+.formatTable .left {
+  text-align: left;
+}
+
+.formatTable .right {
+  text-align: right;
+}
+
+.formatTable .bottom {
+  vertical-align: bottom !important;
+}
+/*Table Specific Colors */
+/*blue*/
+.blue_text, .blue .sub_section_title_text {
+  color: #174a72;
+}
+
+.blue .airframeTable .gray.label {
+  color: #737373 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right
+}
+
+.blue .mainHeading, .mainHeading {
+  color: #676767;
+}
+
+  .blue .mainHeading strong, .blue .emphasisColor, .emphasisColor {
+    color: #078fd7 !important;
+  }
+
+  .mainHeading strong {
+    color: #078fd7;
+  }
+
+.subHeader strong.emphasisColor {
+  font-weight: bold !important;
+  color: #078fd7 !important;
+}
+
+.formatTable.blue th {
+  background-color: #174a72;
+  color: #fff;
+}
+
+.formatTable.blue tbody tr:nth-child(even) {
+  background: #f2f2f2
+}
+
+.formatTable.blue tbody tr:nth-child(odd) {
+  background: #B7DCF6
+}
+
+.formatTable.blue tbody tr.highlight {
+  background: #024f6c;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.blue tbody tr.highlight, .valueSpec.Simplistic .formatTable.blue tbody tr.highlight .sub_text {
+  color: #078fd7;
+  font-style: italic;
+}
+
+.formatTable.blue tfoot tr td {
+  background-color: #174a72;
+  color: #fff;
+}
+
+/*green*/
+.green_text, .green .sub_section_title_text {
+  color: #51513d;
+}
+
+.green .mainHeading {
+  color: #676767;
+}
+
+  .green .mainHeading strong {
+    color: #42724e;
+  }
+
+.formatTable.green th {
+  background-color: #51513d;
+  color: #fff;
+}
+
+.formatTable.green tbody tr:nth-child(even) {
+  background: #e3dc95
+}
+
+.formatTable.green tbody tr:nth-child(odd) {
+  background: #a6a867
+}
+
+.formatTable.green tbody tr.highlight {
+  background: #2d2d22;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.green tbody tr.highlight, .valueSpec.Simplistic .formatTable.green tbody tr.highlight .sub_text {
+  color: #42724e;
+  font-style: italic;
+}
+
+.formatTable.green tfoot tr td {
+  background-color: #51513d;
+  color: #fff;
+}
+
+.green.mainHeading {
+  color: #676767;
+}
+
+  .green.mainHeading strong {
+    color: #42724e;
+  }
+
+
+
+/*gray*/
+.gray_text, .gray .sub_section_title_text {
+  color: #676767;
+}
+
+.gray .mainHeading {
+  color: #000;
+}
+
+  .gray .mainHeading strong {
+    color: #676767;
+  }
+
+.formatTable.gray th {
+  background-color: #676767;
+  color: #fff;
+}
+
+.formatTable.gray tbody tr:nth-child(even) {
+  background: #f6f6f6
+}
+
+.formatTable.gray tbody tr:nth-child(odd) {
+  background: #d2d2d2
+}
+
+.formatTable.gray tbody tr.highlight {
+  background: #171717;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.gray tbody tr.highlight, .valueSpec.Simplistic .formatTable.gray tbody tr.highlight .sub_text {
+  color: #676767;
+  font-style: italic;
+}
+
+.formatTable.gray tfoot tr td {
+  background-color: #676767;
+  color: #fff;
+}
+
+/*orange*/
+.orange_text, .orange .sub_section_title_text {
+  color: #ff6b02;
+}
+
+.orange .mainHeading {
+  color: #676767;
+}
+
+  .orange .mainHeading strong {
+    color: #ff6b02;
+  }
+
+.formatTable.orange th {
+  background-color: #ff6b02;
+  color: #fff;
+}
+
+.formatTable.orange tbody tr:nth-child(even) {
+  background-color: #ffdda1
+}
+
+.formatTable.orange tbody tr:nth-child(odd) {
+  background-color: #ffbf51
+}
+
+.formatTable.orange tbody tr.highlight {
+  background: #db5b00;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.orange tbody tr.highlight, .valueSpec.Simplistic .formatTable.orange tbody tr.highlight .sub_text {
+  color: #ff6b02;
+  font-style: italic;
+}
+
+.formatTable.orange tfoot tr td {
+  background-color: #ff6b02;
+  color: #fff;
+}
+
+
+/*red*/
+.red_text, .red .sub_section_title_text {
+  color: #5e130b;
+}
+
+.red .mainHeading {
+  color: #676767;
+}
+
+  .red .mainHeading strong {
+    color: #b52415;
+  }
+
+.formatTable.red th {
+  background-color: #5e130b;
+  color: #fff;
+}
+
+.formatTable.red tbody tr:nth-child(even) {
+  background: #fcefef
+}
+
+.formatTable.red tbody tr:nth-child(odd) {
+  background: #e7dddd
+}
+
+.formatTable.red tbody tr.highlight {
+  background: #af0a0a;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.red tbody tr.highlight, .valueSpec.Simplistic .formatTable.red tbody tr.highlight .sub_text {
+  color: #b52415;
+  font-style: italic;
+}
+
+.formatTable.red tfoot tr td {
+  background-color: #5e130b;
+  color: #fff;
+}
+
+/*yellow*/
+.yellow_text, .yellow .sub_section_title_text {
+  color: #e98d00;
+}
+
+.yellow .mainHeading {
+  color: #676767;
+}
+
+  .yellow .mainHeading strong {
+    color: #e98d00;
+  }
+
+.formatTable.yellow th {
+  background-color: #e98d00;
+  color: #fff;
+}
+
+.formatTable.yellow tbody tr:nth-child(even) {
+  background: #fcf5c7
+}
+
+.formatTable.yellow tbody tr:nth-child(odd) {
+  background: #f8e479
+}
+
+.formatTable.yellow tbody tr.highlight {
+  background: #b7a164;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.yellow tbody tr.highlight, .valueSpec.Simplistic .formatTable.yellow tbody tr.highlight .sub_text {
+  color: #e98d00;
+  font-style: italic;
+}
+
+.formatTable.yellow tfoot tr td {
+  background-color: #e98d00;
+  color: #fff;
+}
+
+
+/*brown*/
+.brown_text, .brown .sub_section_title_text {
+  color: #592814;
+}
+
+.brown .mainHeading {
+  color: #676767;
+}
+
+  .brown .mainHeading strong {
+    color: #592814;
+  }
+
+.formatTable.brown th {
+  background-color: #592814;
+  color: #fff;
+}
+
+.formatTable.brown tbody tr:nth-child(even) {
+  background: #ffefe2;
+}
+
+.formatTable.brown tbody tr:nth-child(odd) {
+  background: #eac09c;
+}
+
+.formatTable.brown tbody tr.highlight {
+  background: #ac6548;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.brown tbody tr.highlight, .valueSpec.Simplistic .formatTable.brown tbody tr.highlight .sub_text {
+  color: #592814;
+  font-style: italic;
+}
+
+.formatTable.brown tfoot tr td {
+  background-color: #592814;
+  color: #fff;
+}
+
+
+/*light_blue*/
+.light_blue_text, .light_blue_text .sub_section_title_text {
+  color: #9bc2e6;
+}
+
+.light_blue .mainHeading {
+  color: #676767;
+}
+
+  .light_blue .mainHeading strong {
+    color: #9bc2e6;
+  }
+
+
+
+.formatTable.light_blue th {
+  background-color: #9bc2e6;
+  color: #113454;
+}
+
+.formatTable.light_blue tbody tr:nth-child(even) {
+  background: #fffefd;
+}
+
+.formatTable.light_blue tbody tr:nth-child(odd) {
+  background: #ddebf7;
+}
+
+.formatTable.light_blue tbody tr.highlight {
+  background: #2a679c;
+  color: #fff;
+  font-style: italic;
+}
+
+.valueSpec.Simplistic .formatTable.light_blue tbody tr.highlight, .valueSpec.Simplistic .formatTable.light_blue tbody tr.highlight .sub_text {
+  color: #9bc2e6;
+  font-style: italic;
+}
+
+.formatTable.light_blue tfoot tr td {
+  background-color: #9bc2e6;
+  color: #113454;
+}
+
+
+.marginSpacerPDF {
+  width: 25px;
+}
+
+.viewValueExport .overlaySep {
+  padding: 20px;
+}
+
+.viewValueExport .dateName {
+  display: inline-block;
+  font-size: 22px;
+  padding-top: 10px;
+}
+
+.viewValueExport .makeModel {
+  padding-top: 15px;
+  font-size: 26px;
+  display: inline-block;
+}
+
+.viewValueExport .companyName {
+  font-family: Arial;
+  font-size: 24px;
+  display: inline-block;
+  padding: 0px;
+  font-weight: normal;
+  color: rgb(39, 44, 50);
+  text-transform: uppercase;
+}
+
+.viewValueExport .webAddress {
+  color: #024f77;
+}
+
+.valueSpec .whiteText .sub_text, .overlaySep .sub_text {
+  font-family: Arial;
+  font-size: 18px;
+}
+
+.overlaySep .sub_text {
+  color: #737373 !important;
+}
+
+.valueSpec .sub_section_title_text.left {
+  text-align: left;
+}
+
+.valueSpec {
+  background-image: url('');
+  background-size: 100% 1438px;
+  width: 100%;
+  min-height: 1438px;
+  page-break-before: always;
+  background-color: #dbdbdb;
+}
+
+
+  .valueSpec.word {
+    background-image: url('') !important;
+    background-size: 100% 1138px;
+    width: 100%;
+    min-height: 1138px;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+    background-color: #dbdbdb !important;
+  }
+
+.formatTable.large, .formatTable.large .sub_text {
+  font-size: 16px;
+}
+
+.companyContainer .valueSpec.aircraftSpec.Simplistic {
+  padding-top: 0px;
+}
+
+.companyContainer .valueSpec.aircraftSpec.Simplistic, .companyContainer .valueSpec.Simplistic, .aircraftContainer .valueSpec.aircraftSpec.Simplistic, .aircraftContainer .valueSpec.Simplistic, .aircraftListing.valueSpec.aircraftSpec.Simplistic, .aircraftListing.valueSpec.Simplistic {
+  background-image: none;
+  min-height: 20px;
+  height: auto;
+}
+
+.portfolioManager.valueSpec.Simplistic {
+  background-image: none;
+  min-height: 3px !important;
+  height: auto;
+  background-color: #eee;
+}
+
+  .portfolioManager.valueSpec.Simplistic .rowAdjustedHeight .row {
+    margin-bottom: 10px;
+  }
+
+.portfolioManager .portfolioLinks {
+  font-size: 13px;
+  color: #4f5050;
+}
+
+.portfolioManager h2 {
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+.aircraftListing.valueSpec.Simplistic, .aircraftListing.valueSpec.Simplistic .formatTable td {
+  background-color: #fff;
+}
+
+  aircraftListing.valueSpec.Simplistic, .aircraftListing.valueSpec.Simplistic .formatTable td .Box {
+    padding: 5px 5px 0px 5px;
+  }
+
+    .aircraftListing.valueSpec.Simplistic .formatTable td .Box .border_bottom {
+      border-bottom: 1px solid #eee;
+      margin-bottom: 5px;
+    }
+
+    .aircraftListing.valueSpec.Simplistic .formatTable td .Box .mobileAFTT a {
+      padding-top: 0px;
+    }
+
+  aircraftListing.valueSpec.Simplistic, .aircraftListing.valueSpec.Simplistic .formatTable .ac_company_bullet {
+    background-image: none;
+    background-position: 0;
+    background-repeat: no-repeat;
+    padding: 2px 2px 2px 0px;
+  }
+
+  .aircraftListing.valueSpec.Simplistic, .aircraftListing.valueSpec.Simplistic .formatTable {
+    border-collapse: separate !important;
+    background-color: #eee;
+    border-spacing: 10px;
+  }
+
+.formatTable.large th, .formatTable.large th .sub_text, .formatTable.large th .bold_sub_text {
+  font-size: 16px;
+}
+
+.viewValueExport .mainHeading {
+  font-size: 28px;
+  text-align: left;
+  text-indent: 0px;
+  font-weight: normal;
+  font-family: 'Maax Standard','Avenir Next','Helvetica','sans-serif';
+  text-transform: uppercase;
+}
+
+.valueSpec.Simplistic .right .bold_sub_text {
+  margin-right: 0px;
+}
+
+.valueSpec.Simplistic .bold_sub_text u {
+  text-decoration: none;
+}
+
+.valueSpec.Simplistic .right.margin_right .bold_sub_text, .valueSpec.Simplistic .margin_right .sub_text {
+  margin-right: 15px;
+}
+
+.bold_sub_text.gray {
+  color: #676767;
+  font-weight: normal;
+}
+
+.valueSpec.Simplistic .emphasis {
+  color: #676767;
+  font-weight: bold;
+}
+
+.viewValueExport .mainHeading span {
+  display: block;
+  font-size: 15px;
+}
+
+.valueSpec.Simplistic .formatTable tbody tr.highlight .sub_text, .valueSpec.Simplistic .formatTable tbody tr.highlight {
+  font-weight: bold;
+  font-style: normal !important;
+}
+/*Simplistic Test Style:*/
+.withoutCover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 0px;
+}
+
+  .withoutCover .valueSpec:first-child {
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
+
+.valueSpec.Simplistic {
+  background-color: #ffffff; /*f5f5f5;background-image:none;*/
+  background-image: url('');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 1324px;
+}
+
+  /*Class used as container for inside of tabcontainer.*/
+  .valueSpec.Simplistic.grayTabContainer {
+    background-color: #eee !important;
+    background-image: none;
+    margin: -3px;
+    padding: 15px;
+  }
+
+    .valueSpec.Simplistic.grayTabContainer .Box {
+      width: 92%;
+    }
+
+.valueSpec.AirportViewSpec.Simplistic {
+  min-height: 1440px;
+  max-height: 1440px;
+}
+
+.valueSpec.aircraftSpec.Simplistic {
+  min-height: 1448px;
+  background-repeat: no-repeat;
+}
+
+.valueSpec.valueSpec.Simplistic.aircraftSpec .bold_sub_text {
+  color: #737373;
+  font-weight: normal;
+}
+
+.valueSpec.aircraftSpec.Simplistic .containingTable {
+}
+
+.valueSpec.Simplistic .Box {
+  background-color: white;
+  padding: 15px;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.valueSpec.Simplistic .tickerBox .Box {
+  padding: 0px 15px 15px 15px;
+}
+
+.valueSpec.Simplistic .formatTable th {
+  background-color: #fff;
+  color: #4f5050;
+}
+
+  .valueSpec.Simplistic .formatTable th.center {
+    background-color: #fff;
+    text-align: left;
+  }
+
+
+/*.valueSpec.Simplistic .formatTable.blue thead tr th:first-child {padding-left:15px;}
+.valueSpec.Simplistic .formatTable.blue tbody tr td:first-child {text-indent:25px;}*/
+.valueSpec.Simplistic .formatTable td.upperCase {
+  text-transform: none;
+}
+
+.valueSpec.Simplistic .sub_section_title_text2, .valueSpec.Simplistic .subHeader, .valueSpec.Simplistic .subHeaderBoldTable b {
+    color: #4f5050;
+    text-align: left;
+    font-family: 'Noto Sans JP','Avenir Next','Helvetica','sans-serif';
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+  .valueSpec.Simplistic .subHeader strong {
+    font-weight: normal;
+    color: #676767;
+  }
+
+.valueSpec.Simplistic .subHeaderBoldTable table {
+  width: 100% !important;
+}
+
+.valueSpec.Simplistic .formatTable .subHeaderBoldTable tr, .valueSpec.Simplistic .formatTable .subHeaderBoldTable table tr {
+  border-bottom: 0px !important;
+}
+
+.valueSpec.Simplistic .formatTable tbody tr:nth-child(even), .valueSpec.Simplistic .formatTable tbody tr:nth-child(odd) {
+  background: #fff
+}
+
+.valueSpec.Simplistic .gaugeCanvas {
+  margin-bottom: -135px;
+  text-align: center;
+}
+
+#evalueCount {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.valueSpec.Simplistic .gaugeImage img {
+  margin-bottom: -97px;
+  width: 340px;
+}
+
+.valueSpec.Simplistic .gaugeImage.Special img {
+  margin-bottom: -90px;
+  width: 100%;
+}
+
+.valueSpec.Simplistic .Box.gaugeImage {
+  text-align: center !important;
+  padding-top: 6px;
+}
+
+.valueSpec.Simplistic .marginAuto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.valueSpec.Simplistic .formatTable, .valueSpec.Simplistic .formatTable .sub_text {
+  color: #737373;
+}
+
+.valueSpec.Simplistic .overlaySep .whiteText .sub_text {
+  color: #737373 !important;
+}
+
+.valueSpec.Simplistic .Box .sub_section_title_text2 strong {
+  display: block;
+  font-size: .8em;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: #737373;
+}
+
+.valueSpec.Simplistic .formatTable #flightActivityTable {
+  color: #737373 !important;
+}
+
+.valueSpec.Simplistic .Box.marginTop {
+  margin-top: -3px !important;
+}
+
+.valueSpec.Simplistic .Box.borderBottom {
+  border-bottom: 3px solid #eaeaea;
+}
+
+.valueSpec .thirdSep {
+  width: 31%;
+  float: left;
+  text-align: left;
+  margin-right: 8px;
+}
+
+  .valueSpec .thirdSep span {
+    display: block;
+    padding: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+  }
+
+.valueSpec .Box.removeTopPadding {
+  padding-top: 0px;
+}
+
+.valueSpec table {
+  border-spacing: 0;
+}
+
+.valueSpecWhite {
+  background-color: #fff;
+  padding: 0px;
+}
+
+.sub_section_title_text2 strong {
+  display: block;
+  font-weight: normal;
+  font-size: .9em;
+}
+
+.removeMargins {
+  margin: 0px;
+}
+
+.valueSpec.Simplistic .sub_text.right {
+  float: right;
+}
+
+.viewValueExport.Simplistic .airframeTable table {
+  border-collapse: collapse;
+}
+
+  .viewValueExport.Simplistic .airframeTable table tr {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+.valueSpec.Simplistic .formatTable .airframeTable table tr:first-child td {
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: bold;
+  color: #4f5050;
+}
+
+.valueSpec.Simplistic .formatTable .airframeTable table tr td:first-child, .valueSpec.Simplistic .formatTable .airframeTable table tr:first-child td {
+  font-size: 16px;
+}
+
+.valueSpec.Simplistic .formatTable .airframeTable table tr td:first-child {
+  width: 120px;
+}
+
+.valueSpec.Simplistic .formatTable.maintenanceTable {
+  font-size: 12px;
+}
+
+  .valueSpec.Simplistic .formatTable.maintenanceTable tr:first-child td .bold_sub_text.subHeader, .valueSpec.Simplistic .formatTable.historyTable .bold_sub_text.subHeader {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4f5050;
+    font-size: 16px;
+  }
+
+.subtextNoMargin.maintenanceTable tr td:first-child {
+  width: 200px;
+}
+
+.viewValueExport.Simplistic .airframeTable table tr td {
+  color: #737373;
+  font-size: 16px;
+  padding: 4px;
+  vertical-align: top;
+}
+
+  .viewValueExport.Simplistic .airframeTable table tr td.emphasisColor {
+    background-color: #fff;
+  }
+
+.viewValueExport.Simplistic .airframeTable table td.header .searchCriteria.slideoutToolTip {
+  display: none;
+}
+
+.Main_Aircraft_Display_Table .viewValueExport.Simplistic.aircraftSpec .formatTable .searchCriteria {
+  display: inline-block;
+}
+
+  .Main_Aircraft_Display_Table .viewValueExport.Simplistic.aircraftSpec .formatTable .searchCriteria .slideOutTip.isOpened {
+    padding-bottom: 15px;
+  }
+
+.Main_Aircraft_Display_Table .viewValueExport.Simplistic.aircraftSpec table td.header .searchCriteria.slideoutToolTip {
+  display: inline-block;
+  color: #fff;
+}
+
+.Main_Aircraft_Display_Table .viewValueExport.Simplistic.aircraftSpec table .slideOutContent .emphasisColor {
+  color: #fff !important;
+}
+
+.Main_Aircraft_Display_Table .viewValueExport.Simplistic .airframeTable table td.header .searchCriteria.slideoutToolTip {
+  display: inline-block;
+  color: #fff;
+}
+
+.Main_Aircraft_Display_Table .viewValueExport.Simplistic .airframeTable table .slideOutContent .emphasisColor {
+  color: #fff !important;
+}
+
+.Main_Aircraft_Display_Table .slideOutTip.blue a {
+  color: #fff !important;
+}
+
+.viewValueExport.Simplistic .airframeTable table .acSpecShow.display_none {
+  display: block !important;
+}
+
+
+
+.viewValueExport.aircraftSpec .formatTable.blue .subHeader a, .companyContainer .subHeader a {
+  float: right;
+  text-decoration: underline !important;
+  font-weight: normal;
+}
+
+.viewValueExport.aircraftSpec .formatTable.blue .subHeader .pipeDelimeter {
+  padding-left: 8px;
+  font-weight: normal;
+}
+
+.viewValueExport.aircraftSpec .subHeader .greenText, .aircraftListing .green_background, .formatTable .greenText {
+  padding: 0px;
+  margin: 0px;
+  min-height: auto;
+  color: #509c23;
+  background-color: transparent !important;
+}
+
+.valueSpec .formatTable .greenText .li {
+  line-height: 16px;
+}
+
+.companyContainer .light_purple_background {
+  background-color: transparent !important;
+  font-weight: normal;
+}
+
+.companyContainer .valueSpec .formatTable.blue a {
+  text-decoration: underline !important;
+}
+
+.viewValueExport.aircraftSpec .mainHeading {
+  margin: 10px 0px 20px 0px;
+}
+
+  .viewValueExport.aircraftSpec .mainHeading.padded_left {
+    padding-left: 10px;
+    margin-bottom: 0px;
+  }
+
+.viewBoxes .padded_left {
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+.viewBoxes .row {
+  margin-bottom: 10px;
+}
+
+.formatTable .bold_sub_text.remove_margin {
+  margin: 0px !important;
+}
+
+.resizeMax450 img {
+  max-width: 450px;
+}
+
+.valueSpec.Simplistic .formatTable.contactTable tr {
+  border-bottom: 0px solid #fff;
+}
+
+.valueSpec .formatTable .data_aircraft_grid, .valueSpec .formatTable .data_aircraft_grid_cell .sub_table {
+  border: 0px;
+}
+
+.valueSpec.aircraftSpec.Simplistic.plain, .valueSpec.Simplistic.plain, .valueSpec.plain {
+  min-height: auto;
+  background-image: none;
+  background-color: #eee;
+  height: none;
+}
+
+.valueSpec .formatTable .data_aircraft_grid .li, .valueSpec .formatTable .li {
+  background-image: none;
+  margin: 0px;
+  padding: 0px;
+  line-height: 18px;
+}
+
+  .valueSpec .formatTable .li .label {
+    font-weight: normal;
+  }
+
+.valueSpec.Simplistic .subHeader .smallLink {
+  font-size: 12px;
+}
+
+.valueSpecWhite .formatTable .hideValuePDF {
+  display: none;
+}
+
+.valueSpec.Simplistic .bold_sub_text {
+  text-transform: uppercase;
+  font-size: 15px;
+  display: block;
+  margin: 19px 15px 0px 0px;
+}
+
+.valueSpec.Simplistic .large .bold_sub_text {
+  font-size: 16px;
+}
+
+.valueSpec.Simplistic .large.contactTable td {
+  padding-top: 25px;
+}
+
+.valueSpec.Simplistic .large.contactTable .bold_sub_text {
+  display: block;
+  margin-bottom: -3px;
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.valueSpec.Simplistic .subtextNoMargin .bold_sub_text {
+  margin: 0px;
+  display: inline;
+  text-transform: none;
+}
+
+.subtextNoMargin tr td:first-child {
+  width: 150px;
+}
+
+.subtextNoMargin.historyTable tr td:first-child {
+  width: 100px;
+}
+
+.valueSpec.Simplistic .subtextNoMargin td {
+  padding: 7px;
+}
+
+.valueSpec.Simplistic .noBoldUpper .bold_sub_text {
+  text-transform: none;
+}
+
+.valueSpec.Simplistic .Label {
+  width: 15%;
+  text-align: left;
+}
+
+.Simplistic.viewValueExport .overlaySep {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 5px;
+  background-color: transparent;
+  padding: 20px 0px 20px 0px;
+  width: 99%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+  .Simplistic.viewValueExport .overlaySep table.whiteText:first-child {
+    padding: 15px 15px 6px 14px;
+  }
+
+  .Simplistic.viewValueExport .overlaySep table {
+    background-color: #fff;
+  }
+
+    .Simplistic.viewValueExport .overlaySep table img {
+      padding-right: 15px;
+    }
+
+.Simplistic.viewValueExport .formatTable td.titleCase {
+  text-transform: capitalize !important;
+}
+
+.Simplistic.viewValueExport .formatTable td.center, .Simplistic.viewValueExport .formatTable th.center, .valueSpec.Simplistic .center .bold_sub_text {
+  text-align: center;
+}
+
+.Simplistic.viewValueExport .TrendBox {
+  padding: 15px 1em 15px 10px;
+}
+
+.valueSpec.Simplistic .formatTable th {
+  vertical-align: top;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.valueSpec.Simplistic .formatTable tr, .valueSpec.Simplistic .formatTable table tr {
+  border-bottom: 1px solid #eeeeee;
+}
+
+  .valueSpec.Simplistic .formatTable tr.noBorder, .noBorder, .valueSpec.Simplistic .formatTable th.noBorder {
+    border-bottom: 0px solid #eeeeee !important;
+    border-top: 0px solid #eeeeee !important;
+    border-left: 0px solid #eeeeee !important;
+    border-right: 0px solid #eeeeee !important;
+  }
+
+  .valueSpec.Simplistic .formatTable tr:last-child {
+    border-bottom: 0px solid #eeeeee;
+  }
+
+.valueSpec.Simplistic .clear {
+  clear: both;
+}
+
+.aircraftContainer .valueSpec.Simplistic .sub_section_title_text2, .aircraftContainer .valueSpec.Simplistic .subHeader, .companyContainer .valueSpec.Simplistic .sub_section_title_text2, .companyContainer .valueSpec.Simplistic .subHeader {
+  font-size: 16px;
+  padding-bottom: 0px;
+}
+
+.aircraftContainer .formatTable.maintenanceTable .subHeader, .formatTable.ownershipTable, .formatTable.ownershipTable a {
+  font-size: 13px !important;
+}
+
+.aircraftContainer .sixteen.columns .Main_Information {
+  margin-left: 2%;
+}
+
+.aircraftContainer .sixteen.columns .slideshowContainer {
+  margin-top: 10px;
+  display: block;
+  border: 9px solid #fff;
+  background-color: #fff;
+}
+
+.aircraftContainer .sixteen.columns .Box {
+  overflow: hidden;
+}
+
+.aircraftContainer .sixteen.columns .six.columns .Box, .companyContainer .row .seven.columns .Box {
+  display: block;
+}
+
+.aircraftContainer .formatTable.blue {
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.aircraftContainer .sixteen.columns {
+  background-color: #eee;
+  margin-top: -12px;
+  margin-bottom: -10px;
+}
+
+.aircraftContainer .historyPage .sixteen.columns {
+  background-color: #eee;
+}
+  /*.aircraftContainer .historyPage .sixteen.columns .mainHeading{color:#fff;} */
+  .aircraftContainer .historyPage .sixteen.columns .mainHeading strong {
+    color: #a3dcff;
+  }
+
+  .aircraftContainer .historyPage .sixteen.columns .mainHeading .historyTag, .aircraftContainer .historyPage .historyTag {
+    font-style: normal;
+    color: #df4f4f !important;
+  }
+
+  .aircraftContainer .historyPage .sixteen.columns .historyTag a.underline {
+    text-decoration: underline !important;
+  }
+
+.aircraftContainer .formatTable.eventTable {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.aircraftContainer .formatTable.propTable .header {
+  color: #4f5050;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.aircraftContainer .formatTable.propTable .toggleSmallScreen {
+  display: none;
+}
+
+.aircraftContainer .formatTable.blue .medium_text {
+  font-size: 14px !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-left: 8px;
+}
+
+.aircraftContainer .maintenanceTable td {
+  vertical-align: top;
+}
+
+.aircraftContainer .formatTable.blue.analyticsTable .title, .aircraftContainer .formatTable.blue.valuesTable .dark_blue td font b {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.valueSpec .formatTable .featuresHeader {
+  color: #737373;
+  display: table-cell;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 2px 0px 2px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  margin-left: 2px;
+  font-weight: bold;
+}
+
+.aircraftContainer .subtextNoMargin tr td:first-child {
+  width: 120px;
+}
+
+.aircraftContainer .formatTable.blue.flightActivity .smallText, .aircraftContainer .formatTable.blue.flightActivity .smallText a {
+  font-size: 13px;
+}
+
+.valueSpec .formatTable.blue.companyTable {
+  line-height: 19px;
+}
+
+  .valueSpec .formatTable.blue.companyTable .company_title {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #737373;
+  }
+
+  .valueSpec .formatTable.blue.companyTable.small .company_title {
+    font-size: 13px;
+    text-transform: none;
+  }
+
+  .valueSpec .formatTable.blue.companyTable .li_no_bullet {
+    padding: 0px 0px 0px 0px;
+  }
+
+.aircraftContainer .formatTable.blue.flightActivity td strong {
+  color: #737373;
+}
+
+.aircraftContainer .formatTable.blue.flightActivity td {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  vertical-align: top;
+  font-size: 13px;
+}
+
+.aircraftContainer .formatTable.blue.flightActivity table {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  font-size: 12px;
+  border-bottom: 0px;
+}
+
+.aircraftContainer .formatTable.blue.flightActivity .url_link a, .aircraftContainer .formatTable.blue.flightActivity a {
+}
+
+.aircraftContainer .formatTable.blue .url_link a, .aircraftContainer .formatTable.blue a, .companyContainer .formatTable.blue .url_link a, .companyContainer .formatTable.blue a {
+  font-size: 14px;
+}
+
+.formatTable.blue.small a {
+  font-size: 13px;
+}
+
+.companyContainer .formatTable.blue.small a {
+  font-size: 12px;
+}
+
+.valueSpec .formatTable.blue .url_link a, .valueSpec .formatTable.blue a {
+  text-decoration: none !important;
+  color: #737373;
+}
+
+  .valueSpec .formatTable.blue .url_link a.text_underline, .valueSpec .formatTable.blue a.text_underline {
+    text-decoration: underline !important;
+  }
+
+  .valueSpec .formatTable.blue .url_link a:hover, .valueSpec .formatTable.blue a:hover, .valueSpec .formatTable.blue.valuesTable a {
+    text-decoration: underline !important;
+    color: #4f5050;
+  }
+
+.aircraftContainer .sliderwrapper {
+  width: 100%;
+}
+
+.valueSpec .companyTable.formatTable.blue .underline, .aircraftContainer .companyTable.formatTable.blue b {
+  font-weight: normal;
+  text-decoration: underline !important;
+}
+
+.aircraftContainer .formatTable.blue b {
+  font-weight: bold;
+}
+
+.aircraftContainer .Box hr, .hrPadding {
+  margin-bottom: 8px;
+}
+
+.boldHR {
+  border: solid #bdbdbd;
+  border-width: 2px 0 0;
+}
+
+.aircraftContainer .sixteen.columns .six.columns.Main_Information .Box {
+  margin-left: 0px;
+}
+
+.aircraftContainer .stepcarousel {
+  width: 100%;
+  border: 0px solid #606060;
+}
+
+.slideShowContainer table{width:100%;}
+.aircraftContainer .overlay_bottom_gray {
+    background-color: #000;
+    background-image: none;
+    font-family:'Noto Sans JP';
+    font-size:14px;
+    text-transform:uppercase;
+}
+
+.gray_background {
+  background-color: #eeeeee;
+  background-image: none;
+}
+
+.viewBoxes .Box {
+  margin-left: 10px;
+}
+
+.viewBoxes .columns.three .Box {
+  width: 98%
+}
+
+.viewBoxes .columns.nine .Box {
+  width: 93%
+}
+
+.viewBoxes .columns.six .Box {
+  width: 88%;
+  overflow: hidden;
+}
+
+.aircraftContainer .sliderwrapper {
+  border: 0px;
+}
+
+.aircraftContainer .viewValueExport .mainHeading {
+  font-size: 26px;
+}
+
+.aircraftContainer .valueSpec.Simplistic .Box {
+
+}
+
+.aircraftContainer .valueSpec.Simplistic .formatTable .airframeTable table tr td:first-child, .aircraftContainer .valueSpec.Simplistic .formatTable .airframeTable table tr:first-child td {
+  font-size: 14px;
+}
+
+.aircraftContainer .valueSpec.Simplistic .formatTable #chart_div_value_history {
+  max-width: 475px;
+  overflow: hidden;
+  padding-top: 18px;
+  margin-left: -10px;
+}
+
+
+
+
+.aircraftContainer .formatTable.large.valuesTable td font, .aircraftContainer .formatTable.valuesTable td a {
+  font-size: 13px !important;
+}
+
+.aircraftContainer .formatTable.large, .aircraftContainer .formatTable.large td font, .aircraftContainer .formatTable.large .sub_text, .aircraftContainer .formatTable.large .bold_sub_text, .aircraftContainer .data_aircraft_grid, .data_aircraft_grid_cell .sub_table, .companyContainer .formatTable td {
+  font-size: 14px !important;
+}
+
+.viewValueExport.Simplistic .formatTable.blue td {
+  color: #737373 !important
+}
+
+.companyContainer .formatTable td {
+  line-height: 17px;
+}
+
+.aircraftContainer .viewValueExport.Simplistic .airframeTable table tr td {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+  .aircraftContainer .valueSpec.Simplistic .formatTable .airframeTable table tr td:first-child, .aircraftContainer .valueSpec.Simplistic .formatTable .airframeTable table tr:first-child td {
+    font-size: 10px;
+  }
+
+  .aircraftContainer .viewValueExport.Simplistic .airframeTable table tr td, span[id$="values_label"] table tr td {
+    font-size: 11px;
+  }
+}
+
+.aircraftContainer .Box.airframeTable, .aircraftContainer span[id$="values_label"] .Box {
+  overflow: auto !important;
+}
+
+.slideshowContainer {
+  overflow: auto !important;
+}
+
+
+.companyContainer .small tr td, .companyContainer .valueSpec .formatTable.small li, .companyContainer .valueSpec .formatTable.blue.companyTable.small .company_title {
+  font-size: 12px !important;
+}
+
+.companyContainer .small .header_row td {
+  text-transform: uppercase;
+  color: #737373 !important;
+  font-weight: bold;
+  font-size: 11px !important;
+}
+
+  .companyContainer .small .header_row td.mediumText {
+    font-size: 13px !important;
+    font-weight: bold;
+    text-transform: uppercase
+  }
+
+.companyContainer .header_row td {
+  text-transform: uppercase;
+  color: #737373 !important;
+  font-weight: bold;
+}
+
+.companyContainer .forsaleBold {
+  font-weight: bold;
+}
+
+.lineHeight20 {
+  line-height: 20px !important;
+}
+
+.historyTable.formatTable.blue a, .historyTable.formatTable.blue .url_link a, .aircraftContainer .formatTable.blue.flightActivity .smallText a {
+  text-decoration: underline !important;
+}
+
+.formatTable .float_left.padded_right {
+  padding-right: 3%;
+}
+
+.companyContainer .formatTable.aircraftTable .alt_row, .aircraftListing .formatTable.datagrid .alt_row, .aircraftListing .formatTable.datagrid .alt_row td {
+  background-color: #F8F8F8 !important;
+}
+
+.aircraftContainer .formatTable .button {
+  font-size: 12px !important;
+  color: #444 !important;
+}
+
+.aircraftListing .mainHeading, .companyContainer .mainHeading {
+  font-size: 18px;
+  margin: 0px;
+}
+
+.valueSpec.aircraftListing .formatTable.blue .mainHeading a, .valueSpec.aircraftListing .formatTable.blue .ac_company_bullet a {
+  text-decoration: underline !important;
+}
+
+.greenText.bold {
+  font-weight: bold !important
+}
+
+.aircraftListing .mobileAFTT {
+  padding-left: 5px;
+}
+
+  .aircraftListing .mobileAFTT .label {
+  }
+
+.aircraftListing .cssMenu li {
+  line-height: 14px;
+}
+
+.aircraftListing .formatTable, .aircraftListing.valueSpec .formatTable .li {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+  .aircraftListing.valueSpec .formatTable .li .label {
+    font-weight: bold;
+  }
+
+.aircraftListing ul.cssMenu, .aircraftListing ul.cssMenu ul {
+}
+
+.aircraftListing .ac_company_bullet .label {
+  font-weight: bold;
+}
+
+.aircraftListing .expandedLinks a {
+  padding: 10px 5px 0px 0px;
+  display: inline-block;
+}
+
+  .aircraftListing .expandedLinks a.remove_padding {
+    padding-top: 10px !important;
+  }
+
+.aircraftListing .green_background {
+  background-color: #fff;
+  font-weight: bold;
+}
+
+  .aircraftListing .green_background .emphasis_text {
+    font-style: normal;
+  }
+
+.aircraftListing .expand_more {
+  padding-left: 5px !important;
+}
+
+.aircraftListing.valueSpec .formatTable.blue .no_text_underline:hover {
+  text-decoration: none !important;
+}
+
+
+.fa-refresh::before {
+  font-style: normal;
+  content: "\f021";
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 5px;
+  color: #078fd7;
+}
+
+.fa-warning::before {
+  font-style: normal;
+  content: "\f071";
+  font-family: 'FontAwesome';
+  font-size: 12px;
+  line-height: 20px;
+  padding-left: 0px;
+  padding-right: 3px;
+  color: #ff0000;
+}
+
+.fa-lightbulb-o::before {
+  font-style: normal;
+  content: "\f0eb";
+  font-family: 'FontAwesome';
+  font-size: 19px;
+  line-height: 20px;
+  padding-left: 5px;
+  color: #078fd7;
+}
+
+.fa-file-pdf-o::before {
+  font-style: normal;
+  content: "\f1c1";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+.fa-camera::before {
+  font-style: normal;
+  content: "\f030";
+  font-family: 'FontAwesome';
+  font-size: 13px;
+  line-height: 14px;
+  padding-left: 5px;
+  color: #078fd7;
+}
+
+.fa-plane::before {
+  font-style: normal;
+  content: "\f072";
+  font-family: 'FontAwesome';
+  font-size: 19px;
+  line-height: 14px;
+  padding-left: 5px;
+  color: #078fd7;
+}
+
+.datagrid .fa-plane::before {
+  padding-left: 0px;
+}
+
+.fa-thumb-tack::before {
+  font-style: normal;
+  content: "\f08d";
+  font-family: 'FontAwesome';
+  font-size: 19px;
+  line-height: 20px;
+  padding-left: 5px;
+  color: #078fd7;
+}
+
+.fa-usd::before {
+  font-style: normal;
+  content: "\f155";
+  font-family: 'FontAwesome';
+  font-size: 17px;
+  line-height: 14px;
+  padding-left: 5px;
+  color: #078fd7;
+  position: relative;
+  top: -1px;
+}
+
+
+.historyTable .fa-file-pdf-o::before {
+  color: #078fd7;
+}
+
+.fa-file-word-o::before {
+  font-style: normal;
+  content: "\f1c2";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+.fa-file-excel-o::before {
+  font-style: normal;
+  content: "\f1c3";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+.fa-file-powerpoint-o::before {
+  font-style: normal;
+  content: "\f1c4";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+.fa-file-image-o::before {
+  font-style: normal;
+  content: "\f1c5";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+.fa-trash-o::before {
+  font-style: normal;
+  content: "\f014";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+.fa-save-o {
+  font-style: normal;
+  content: "\f0c7";
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+  padding-right: 5px;
+}
+
+
+.aircraftListing ul.cssMenu li:hover, .aircraftListing ul.cssMenu li ul li {
+  background-color: #eee
+}
+
+.aircraftListing ul.cssMenu li ul li {
+  border-bottom: 1px solid #b2b2b2
+}
+
+.aircraftListing ul.cssMenu ul {
+  box-shadow: 1px 2px 1px 1px rgb(139, 139, 139)
+}
+
+.aircraftListing .mainHeading strong {
+  font-weight: normal;
+}
+
+.companyContainer {
+  background-color: #eee;
+  margin-top: -17px;
+}
+
+    .companyContainer .Box {
+        /*margin-top: 10px !important;*/
+    }
+
+  .companyContainer .columns .Box {
+    margin-top: 0px;
+  }
+
+
+  .companyContainer .five.columns.main, .contactContainer .secondColumn {
+    margin-left: 2%;
+    margin-top: -10px;
+  }
+
+    .contactContainer .valueSpec.Simplistic .subHeader, .companyContainer .valueSpec.Simplistic .subHeader {
+        font-size: 14px;
+    }
+
+
+    .contactContainer .valueSpec.Simplistic .subHeader span *, .companyContainer .valueSpec.Simplistic .subHeader span * {
+      font-size: 12px;
+    }
+
+  .companyContainer .seven.columns.main {
+    margin-top: -10px !important;
+    margin-left: 0px !important
+  }
+
+.contactContainer .firstColumn {
+  margin-top: -10px !important;
+  margin-left: 10px !important
+}
+
+.contactContainer .secondColumn, .contactContainer .firstColumn {
+    margin-left: 2%;
+    margin-top: 15px !important;
+}
+.contactContainer .firstColumnWidth {
+  width: 98%;margin-left:.5% !important;
+}
+
+.companyContainer .aircraftTable {
+  margin-left: -4px;
+}
+
+.companyContainer .valueSpec.Simplistic {
+  background-color: Transparent;
+}
+
+.companyContainer .mainHeading {
+  font-size: 24px;
+  margin: 0px !important;
+  padding-left: 10px;
+}
+
+.companyContainer .rollupLink {
+  display: block;
+  padding-left: 3%;
+  background-color: #fff;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #078fd7 !important;
+  padding-bottom: 9px;
+}
+
+  .companyContainer .rollupLink a, .companyContainer .rollupLink font {
+    color: #078fd7 !important;
+  }
+
+.companyContainer .company_title .emphasisColor {
+}
+
+.companyContainer .rollupLink.subHeader {
+  padding-left: 3%;
+  background-color: #fff;
+  margin-left: 0px;
+  padding-bottom: 9px !important;
+  margin-bottom: -10px;
+  margin-top: 10px;
+  padding-top: 8px;
+  padding-right: 0px;
+  margin-right: 0px;
+  width: 97% !important;
+}
+
+.overflow_hidden {
+  overflow: hidden
+}
+
+.companyContainer .mapPanel #chart_div_tab1_all div {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.companyContainer .imageCompany {
+  max-width: 200px;
+  /*position: absolute;
+	top: 40px;
+	right: 17px;*/
+  float: right;
+}
+
+.aircraftListing {
+  padding-top: 0px;
+  background-color: #eee;
+  padding-bottom: 0px;
+}
+
+  .aircraftListing.valueSpec.Simplistic .formatTable.datagrid {
+    border-collapse: collapse !important;
+    border-spacing: 0px !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+  }
+
+.aircraftContainer .valueSpec .formatTable.blue .subHeader a.no_text_underline {
+  text-decoration: none !important;
+  margin-top: -1px;
+}
+
+.utilizationSummaryTable .right {
+  text-align: right !important;
+}
+
+.utilizationSummaryTable td {
+  border-bottom: 1px solid #eee;
+}
+
+.specialTableContainer .dataTable thead tr {
+  background-color: #eee;
+}
+
+.specialTableContainer .dataTable thead {
+  font-weight: bold;
+}
+
+.specialTableContainer .dataTables_scrollBody thead td {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.specialTableContainer .dataTables_scrollBody .formatTable.blue thead {
+  margin-bottom: 10px;
+}
+
+.viewBoxes.valueSpec.Simplistic .subHeader {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.viewBoxes.aircraftListing {
+  padding-bottom: 2px;
+}
+
+.C-statusColor td {
+  background-color: #ebf6e2 !important;
+}
+
+.I-statusColor td {
+  background-color: #f8f8f8 !important;
+}
+
+.smallSpaceText .formatTable th, .smallSpaceText .formatTable td {
+  padding: 1px;
+}
+
+.aircraftListing.smallSpaceText .formatTable, .aircraftListing.valueSpec.smallSpaceText .formatTable .li, .smallSpaceText .formatTable td, .smallSpaceText .formatTable th {
+  font-size: 11px;
+}
+
+.aircraftListing .formatTable.datagrid .CLIENTCRMRow td {
+  background-color: #ffece7 !important;
+}
+
+.removeBorderSpacing {
+  border-spacing: 0px !important;
+}
+
+.aircraftListing .noAlt .formatTable.datagrid .alt_row td, .aircraftListing .noAlt .seperator {
+  border-color: #eee !important
+}
+
+.aircraftListing .noAlt .formatTable.datagrid .rightside {
+  border-width: 0px 0px 0px 0px !important;
+  border-color: #eee !important;
+}
+
+/*Toggle Buttons*/
+/* The switch - the box around the slider */
+.switchToggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  float: right;
+  margin-left: 10px;
+  right:-8px;
+  top:10px;
+}
+
+  /* Hide default HTML checkbox */
+  .switchToggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .switchToggle .toggleText {
+    position: absolute;
+    top: -15px;
+    padding-left: 10px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+/* The slider */
+.sliderToggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff5083;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background-image: url('../../images/x-2x.png');
+  background-repeat: no-repeat;
+  background-position: 85%;
+}
+
+  .sliderToggle:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+input:checked + .sliderToggle:before {
+  left: 12px;
+}
+
+input:checked + .sliderToggle {
+  background-color: #89cc87;
+  background-image: url('../../images/check-2x.png');
+  background-repeat: no-repeat;
+  background-position: 10%;
+}
+
+input:focus + .sliderToggle {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .sliderToggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.sliderToggle.roundToggle {
+  border-radius: 20px;
+}
+
+
+  .sliderToggle.roundToggle:before {
+    border-radius: 50%;
+  }
+
+.salesforce {
+  padding-top: 1px;
+  width: 22px;
+  float: right;
+  cursor: help;
+}
+/*.material-icons.inactive {
+    color: rgba(71, 74, 82, 1);
+    cursor: help;
+}*/
+.material-icons.admin {
+  color: rgba(230, 19, 86, 1);
+  cursor: help;
+}
+
+.material-icons.active {
+  color: rgba(71, 74, 82, 1);
+  cursor: help;
+}
+
+.material-icons.salesforce {
+  color: rgba(0, 161, 225, 1);
+  cursor: help;
+}
+
+.adminContactBorder {
+  border-right: 1px solid #f1f1f1;
+}
+
+td.adminContactBorder.hiddenContact {
+  border: 1px solid #c7c7c7;
+}
+
+.hiddenContact, .hiddenContact td {
+  background-color: #f5f5f5;
+}
+
+  .hiddenContact a, .hiddenContact .company_title a, .hiddenContact {
+    color: #4e4e4e !important;
+  }
+
+
+    .hiddenContact .material-icons.active {
+      color: rgb(148, 148, 148);
+    }
+
+    .hiddenContact .material-icons.admin {
+      color: rgb(239, 130, 164);
+    }
+
+    .hiddenContact img {
+      opacity: .6;
+    }
+
+.circular--square {
+  border-radius: 50%;
+  width: 40px;
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+  .circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -20px;
+  }
+
+.circular--portrait {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+  .circular--portrait img {
+    width: 100%;
+    height: auto;
+  }
+
+

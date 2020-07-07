@@ -1,0 +1,124 @@
+/*Page elements*/
+.valueSpec.Simplistic, .valueSpec {
+    background-image: none !important;
+    background-color: #eeeeee !important;
+}
+
+.headerHeight {
+    max-width: 100%;
+    background-color: #393a3f;
+}
+
+#container_white_background_div {
+    margin-left: 11.4% !important;
+}
+/*Headings*/
+
+.viewValueExport.aircraftSpec .mainHeading {
+    margin: 0px;
+    font-size: 27px;
+}
+
+
+/*Menu*/
+.sf-vertical ul {
+    background-color: #eeeeee;
+    border: 1px solid #757575;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-left: 0px;
+}
+
+
+    .sf-vertical ul li {
+        border-bottom: 0px;
+    }
+
+        .sf-vertical ul li a, .sf-vertical ul li, .sf-vertical ul li a:visited {
+            color: #393a3f;
+        }
+
+.sf-vertical a, .sf-vertical a:visited, .sf-vertical strong {
+    color: #fff;
+}
+
+.sf-vertical li.active {
+    background-color: #eeeeee
+}
+
+.sfHover, .active a {
+    color: #000 !important;
+}
+
+.sf-vertical li {
+    color: #fff;
+}
+
+.menuContainer {
+    background-color: #393a3f;
+    position: absolute;
+    top: 58px;
+    bottom: 0px;
+    height: 100%;
+}
+
+
+.two.columns {
+    width: 11.3333333333%;
+    min-width: 150px;
+}
+
+.ten.columns {
+    width: 88%;
+}
+
+img#WelcomeUser1_logo {
+    margin-left: -30px !important;
+}
+
+.sf-vertical ul li {
+    margin-left: -5px;
+}
+
+.sf-vertical li {
+    padding: 10px 3px 10px 10px;
+    margin-bottom: 0px;
+    text-indent: 8px;
+    width: 255px;
+    margin-left: 11px;
+}
+
+.grid-item .Box, .grid-item.Box, .grid-item .Box .Box, .grid-item.Box .Box {
+    -webkit-box-shadow: 1px 1px 2px 1px #C9C9C9;
+    box-shadow: 1px 1px 2px 1px #C9C9C9;
+}
+
+.valueSpec.Simplistic .Box.grid-item .subHeader {
+    color: #078fd7 !important
+}
+
+.welcome_text a strong, .welcome_text a, .welcome_text a:hover, .helpEvoButton:hover, .welcome_LOGOUT:hover {
+}
+.welcome_text img {
+    filter: invert(1);
+}
+ 
+    .welcome_text a:before {
+        color: #393a3f;
+        filter: invert(0);
+    }
+
+.welcome_text .dropdown-content img{filter: invert(0);}
+.dropdown-content ul li a, .dropdown-content ul li a:hover {
+    color: #000 !important;
+}
+
+.welcome_text a:before {
+    content: ''
+}
+
+img#WelcomeUser1_logo {
+    filter: brightness(100%);
+}

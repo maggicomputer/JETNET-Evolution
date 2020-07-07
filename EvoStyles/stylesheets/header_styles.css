@@ -1,0 +1,303 @@
+﻿/* ******************************************************************************** 
+ Copyright 2004-11. JETNET,LLC. All rights reserved.
+
+ $$Archive: /commonWebProject/EvoStyles/stylesheets/header_styles.css $
+ $$Author: Amanda $
+ $$Date: 5/21/20 10:49a $
+ $$Modtime: 5/21/20 9:37a $
+ $$Revision: 16 $
+ $$Workfile: header_styles.css $
+
+ ******************************************************************************** */
+
+/*Header Styles v2*/ 
+.FixedHeaderBar{display: block;height: 78px;top: 0px;left: 0px;position: absolute;width: 100%;background-color: #fff;}/*needs to be fixed to stay*/
+.headerHeight{} /*needs to be fixed to stay*/
+.MaxWidthRemove .headerHeight{max-width:100% !important;}
+
+
+.headerHeight .helpEvoButton{display:inline;}
+.headerHeight .sevenhalf.columns{width:650px !important;}
+.headerHeight .sevenhalf.columns .white_text{display:inline;}
+.headerHeight .welcome_user_class_ie{padding:0px;float:left;text-transform:none;}
+/*.headerHeight .evolution_logo{margin-left:-37px;width:auto;height:30px;padding-top:7px;}*/
+.headerHeight .evolution_logo {
+	margin-left: 5px;
+	width: auto;
+	height: 40px;
+	padding-top: 8px;
+}
+.headerHeight .evolution_logo.home{margin-left:-32px;width:auto;height:30px;padding-top:11px;padding-bottom:10px;}
+.headerHeight .sevenhalf.columns .white_text:nth-child(2){padding-left:5px;}
+.headerHeight .sevenhalf.columns .white_text:nth-child(1):after{content: ':';}
+.headerHeight .red_text.smaller_text.emphasis_text{text-shadow:0px 0px 0px;font-weight:bold;color:#ff0000 !important;font-size:9px !important;}
+.headerHeight .current_status{display:none;}
+.headerHeight .backgroundTransparentBlue{}
+.standalone_page .DetailsBrowseTable .closeButtonTopRight, .closeButtonTopRight {
+    padding-left: 25px !important;
+}
+.standalone_page .aircraftContainer .DetailsBrowseTable .closeButtonTopRight {
+    margin-right: -15px !important;
+}
+
+.welcome_text .beforeSlot:before {
+    color: #a7a7a7 !important;
+}
+.standalone_page .specialHeaderEmpty{padding-top:35px;text-align:right;float:right !important;padding-right:12px;}
+.standalone_page .specialHeaderNoTopPadding {
+  padding-top: 3px;
+  text-align: right;
+  float: right !important;
+  padding-right: 12px;
+}
+.loginPage .one-third.column{width:100%;margin-left:0% !important;}
+.headerHeight .welcome_text{padding:5px 5px 0px 5px;text-transform:uppercase;margin-right:10px;}
+
+.headerHeight .myCRM_login{font-style:normal;padding-right:8px;margin-right:5px;}
+
+.headerHeight .welcome_text .searchCriteria:before{}
+.airframeTab .searchCriteria{display:inline-block;position:absolute;margin-left:64px;}
+.headerHeight .evolution_ValuesLogo {margin-left: 15px;width: auto;height: 45px;margin-top: 15px;}
+.headerHeight .evolutionEmpty_ValuesLogo {margin-left: 5px;width: auto !important;height: 25px;padding-top: 10px;}
+.standalone_page .DetailsBrowseTable .cssMenu_subpage li a strong{font-weight:normal;}
+
+.airframeTab .searchCriteria .slideOutTip{position:relative;top:-5px;margin-left:133px;}
+.headerHeight .sevenhalf.columns a.white_text{margin:0px !important;padding:0px !important;}
+ .headerHeight .welcome_text a:hover, .headerHeight .helpEvoButton:hover, .headerHeight .welcome_LOGOUT:hover{text-decoration:none !important;}
+ 
+.headerHeight .welcome_text .searchCriteria{margin-top:-5px;color:#fff;display:inline;font-style:normal;position:relative;float:right;padding-right:57px;}
+.headerHeight .helpEvoButton{font-style:normal;margin-right: 5px;text-decoration: none;color: #000;padding: 0px !important;float: right;}
+.ie7 .FixedHeaderBar{font-size:11px !important;}
+.ie7 .headerHeight .welcome_user_class_ie {}
+.ie7 .welcome_user_class_ie {font-size:11px !important;}
+.ie7 .headerHeight .threehalf {display:none;}
+.ie7 .headerHeight .yacht_button{padding-bottom:7px;}
+.zIndexHigh {z-index:99999999;}
+
+
+.slideOutTip{/* The main wrapping div of the slideout tips */position:absolute;margin-left:5px;padding:7px;left:0;background-color:#C52B00;top:0px;width:27px;height:19px;font-size:24px;color:white;overflow:hidden;height:15px;-webkit-border-radius: 0 0 7px 7px;border-radius: 0 0 7px 7px;}
+.slideOutTip.blue{background-color:rgba(0,139,204,.9);height:15px;width:20px;text-align:left;color:#fff;cursor:help;}
+.slideOutTip.blue a{color:#fff;}
+.slideOutTip.blue .slideOutContent{}
+
+/* The holder for the title and the icon: */
+.tipVisible{ cursor:pointer; height:31px; }
+
+.tipTitle{float:left;font-family:'Myriad Pro',Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;white-space:nowrap;line-height:31px;padding-right:5px;display:none;}
+
+.tipIcon{cursor:help;width:20px;height:31px;float:left;margin-right:8px;/* CSS3 Rounded corners */-moz-border-radius:1px;-webkit-border-radius:1px;border-radius:1px;}
+
+/* Three color themes */
+.red .tipIcon{ border:0px; }
+
+.red .plusIcon:before{/* The search icon */width:13px;height:13px;line-height:13px;content:'\f00e';margin:1px;font-size:24px;font-weight:normal;font-family:'FontAwesome';/* Defining a CSS3 animation. Currently only works in Chrome and Safari */-webkit-transition: -webkit-transform 0.2s linear;-moz-transition: -moz-transform 0.2s linear;transition: transform 0.2s linear;}
+.blue .plusIcon:before{/* The info icon */line-height:17px;content:'\f05a';margin:5px;font-size:16px;font-weight:normal;font-family:'FontAwesome';/* Defining a CSS3 animation. Currently only works in Chrome and Safari */-webkit-transition: -webkit-transform 0.2s linear;-moz-transition: -moz-transform 0.2s linear;transition: transform 0.2s linear;}
+
+
+.slideOutTip.isOpened{ z-index:100000;}
+.slideOutTip.isOpened .slideOutContent{padding:0px 30px 0px 30px;width:250px;}
+.slideOutTip.isOpened .slideOutContent p strong {display:block;float:left;color:#fff;font-size:1.2em;position:absolute;top:9px;}
+
+.slideOutTip.isOpened .plusIcon:before{/* Applying a CSS3 rotation  to the opened slideouts*/-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg);}
+
+.slideOutContent{/* Hiding the div with the slide out content: */display:none;padding:10px;font-size:11px;}
+
+/* Hiding the original paragraphs if they have not been replaced (JS disabled): */
+.slideoutToolTip > p{ display:none; }
+
+
+
+/*I need to override this because I need to change the background color without mucking up the page without the styles included*/
+/*.standalone_page is a class tied specifically to the empty theme page, so go ahead and use the designation .standalone_page .class_name to target those specific styles 
+without hitting the main masterpage */
+
+.standalone_page .white_background_color{background-color:Transparent;}
+    .standalone_page .white_background_color .contentContainer {
+        background-color: #fff;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        margin-top:15px !important
+    }
+.standalone_page .headerHeightPadding{height:74px;}
+.standalone_page .content_border {border:0px;}
+.standalone_page .evolution_logo_standalone{z-index:6000;top:0px;position:fixed; margin-left:5px !important;width:auto !important;height:40px !important;padding-top:5px !important;}
+.standalone_page .FixedHeaderBar {
+    z-index: 4000;
+    position: fixed;
+    border-bottom:5px solid #62676d !important
+}/*needs to be fixed to stay*/
+.standalone_page .headerHeight{position:fixed;z-index:4010;} /*needs to be fixed to stay*/
+
+.standalone_page .FixedHeaderBar.noBorder{border-bottom:0px !important;}
+.standalone_page .headerHeightPadding.noBorder  {
+    height: 40px;
+}
+/*.standalone_page .headerHeight .padding_top{padding-top:36px;text-align:right;float:right;}*/
+.standalone_page .headerHeight .padding_top {
+    text-align: right;
+}
+.standalone_page .logo_text_title {
+    font-family: 'Noto Sans JP';font-size:14px !important;
+    text-align: right;text-transform:uppercase;font-weight:bold;
+}
+ .DetailsBrowseTable {position:fixed;top:0px;z-index:5000;width:auto !important;}
+.standalone_page  .DetailsBrowseTable .NotesHeader{display:none;}
+.standalone_page .aircraftContainer .DetailsBrowseTable .NotesHeader{display:inline-block;padding:5px;margin:3px;color:#000 !important;background-color:#fff !important;}
+
+/*.standalone_page  .DetailsBrowseTable a, .standalone_page .DetailsBrowseTable .cssMenu_subpage{float:none !important;}*/
+.standalone_page  .DetailsBrowseTable .cssMenu_subpage li a{float:none;font-size:12px; margin-top:0px !important;}
+
+/*
+.standalone_page  .DetailsBrowseTable a{margin-top:-6px;font-style:normal;text-decoration: none;-webkit-border-radius: 0 0 7px 7px;border-radius: 0 0 7px 7px;color: #fff;float: right;-webkit-box-shadow: 1px 1px 1px 0 #000000;box-shadow: 1px 1px 1px 0 #000000;}
+*/
+.welcome_text a:before {
+    content: "|";
+    font-weight: normal;
+    color: #fff;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+
+.welcome_text a{display:inline-block !important;text-transform:uppercase;font-size:11px;font-style:normal;text-decoration:none;background:transparent !important;border:0px;padding:0px !important;margin:0px 7px 0px 0px !important;}
+
+.standalone_page .DetailsBrowseTable a {
+    display: inline-block !important;
+    text-transform: uppercase;
+    font-family: 'Noto Sans JP';font-style:normal;
+    text-decoration: none;
+    background: transparent !important;
+    border: 0px;
+    padding: 1px !important;
+    margin: 0px 11px 0px 11px !important;
+}
+#previousAC, #nextAC{position:relative;font-size:30px;}
+.welcome_text a {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: none !important;
+    font-weight: normal;
+    color: #000 !important;
+}
+    .welcome_text a:hover, .helpEvoButton:hover, .welcome_LOGOUT:hover {
+        text-decoration: none;
+        color: #000 !important;
+    }
+
+    .welcome_text a strong {
+        font-weight: normal;
+        color: #6b6c72;
+    }
+.welcome_text a strong:hover{text-decoration:underline;}
+
+.headerHeight .gray_button, .blue_button, .light_gray_button, .red_button{padding:0px;}
+
+.standalone_page .DetailsBrowseTable .blue_button strong{text-decoration:underline;font-weight:normal;}
+.standalone_page .DetailsBrowseTable .gray_button strong{font-weight:normal;}
+.standalone_page .DetailsBrowseTable .gray_button strong:hover{text-decoration:underline;}
+
+.standalone_page .companyContainer .DetailsBrowseTable .evo_help_button a{padding-top:4px;}
+.standalone_page .DetailsBrowseTable .evo_help_button a{margin-top:-4px !important;font:10px/14px "Arial" , "Helvetica Neue" , Helvetica, Arial, sans-serif;color:#fff !important;font-weight:normal;display:inline-block;text-shadow:1px 1px 0px #000000 !important;}
+.standalone_page .DetailsBrowseTable .headerHeight .helpEvoButton{font-size:11px;text-shadow:1px 1px 0px #000000 !important;font-style:normal;margin-right: 0px;text-decoration: none;-webkit-border-radius: 0px;border-radius: 0px;background-color: transparent;color: #fff;padding: 0px;float: none;-webkit-box-shadow: 0px 0px 0px 0 #000000;box-shadow: 0px 0px 0px 0 #000000;}
+.standalone_page .DetailsBrowseTable {width:97% !important;max-width:990px !important; border-spacing: 0;border-collapse: collapse;}
+.standalone_page .DetailsBrowseTable td{padding:0px;}
+
+.standalone_page .MaxWidthRemove .DetailsBrowseTable {
+    max-width: 100% !important;
+    float: right !important;
+    width: 100% !important;
+}
+
+.standalone_page .backgroundShade .gray_button:before {
+    content: "|";
+    color: #a7a7a7;
+    text-decoration: none !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.standalone_page .backgroundShade .blue_button:before{opacity: 0.4;filter:Alpha(opacity=40);content: "|";text-decoration:none !important;padding-left:5px;padding-right:7px;}
+.standalone_page .backgroundShade .gray_button.noBefore:before, .standalone_page .backgroundShade .blue_button.noBefore:before, .welcome_text a.noBefore:before{content: "";display:none;}
+.welcome_text a.noBefore:before{content: "";padding:0px;}
+
+ .standalone_page .backgroundShade div{display:inline-block;margin:0px;padding:0px;}
+.standalone_page .DetailsBrowseTable .backgroundShade{float:right;display:inline-block;margin-right:0px;padding:7px 2px 0px 0px;}
+
+.specialActionsLink {
+	margin-top: -1px;
+	margin-right: 4px;
+}
+.specialActionsLink a{font-style:normal !important;}
+
+.specialActionsLink ul.cssMenu_subpage li:hover > ul {
+	margin-left: -80px !important;
+}
+
+.slicknav_menu {display:none;}
+
+
+    @media only screen and (max-width: 767px) 
+    {
+      .slicknav_menu{display:block;}
+      .standalone_page .headerHeightPadding{height:90px;}
+      .standalone_page .logo_text_title{display:none;}
+      .standalone_page .DetailsBrowseTable .backgroundShade {display:none;}
+      .loadingScreenBox{height:auto;width:100%;margin-left:auto;margin-right:auto;margin-top:auto;margin-bottom:auto;padding:15px 0px 15px 0px;}
+
+      }
+    
+    
+    .lazy_container {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background: #ffffff url('') no-repeat 50% 50%;
+}
+.lazy_container.lazyloaded {
+  background: none;
+}
+.lazy_container .lazy_preloader {
+  height: 0;
+  display: inline-block;
+  width: 100%;
+}
+.lazy_container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+
+.viewSearchClass .searchCriteria{display:block !important;}
+.viewSearchClass .slideOutTip {margin-left:560px !important;margin-top:-26px !important;}
+
+.viewSearchClassSale .searchCriteria{display:block !important;}
+.viewSearchClassSale .slideOutTip {margin-left:560px !important;margin-top:-4px !important;}
+
+.JETNETCRMRow {
+
+}
+
+.CLIENTCRMRow, .CLIENTCRMRow.even, .DTFC_LeftBodyWrapper .CLIENTCRMRow td {
+	background-color: #ffece7 !important;
+}
+
+.ulContainer{display:inline-block;float:right;position:relative;}
+.ulContainer:hover .hiddenDropdown_CRMMenu, .ulContainer ul li:hover, .ulContainer ul:hover{display:block;}
+.ulContainer .hiddenDropdown_CRMMenu{display:none;}
+.ulContainer ul li{margin:0px;padding:0px;}
+.ulContainer ul li a{color:#000 !important;}
+.ulContainer ul li a::before {content:"";padding:0px;}
+.ulContainer ul{margin:0px 0px 0px -10px;}
+.hiddenDropdown_CRMMenu{
+	background: #eee;
+	top: 17px;
+	position: absolute;
+	left: 0px;
+	z-index: 100000;
+	width: 150px;
+}

@@ -1,0 +1,367 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="main_site.master.vb"
+  Inherits="crmWebClient.main_site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Assembly="DayPilot" Namespace="DayPilot.Web.Ui" TagPrefix="DayPilot" %>
+<%@ Register Src="controls/aircraftSearch.ascx" TagName="aircraftSearch" TagPrefix="uc1" %>
+<%@ Register Src="controls/companySearch.ascx" TagName="companySearch" TagPrefix="uc2" %>
+<%@ Register Src="controls/WelcomeUser.ascx" TagName="WelcomeUser" TagPrefix="uc3" %>
+<%@ Register Src="controls/ContactSearch.ascx" TagName="ContactSearch" TagPrefix="uc5" %>
+<%@ Register Src="controls/Calendar.ascx" TagName="Calendar" TagPrefix="uc6" %>
+<%@ Register Src="controls/TreeNav.ascx" TagName="TreeNav" TagPrefix="uc7" %>
+<%@ Register Src="controls/SubNav.ascx" TagName="SubNav" TagPrefix="uc8" %>
+<%@ Register Src="controls/NotesSearch.ascx" TagName="NotesSearch" TagPrefix="uc9" %>
+<%@ Register Src="controls/ActionItemsSearch.ascx" TagName="ActionItemsSearch" TagPrefix="uc10" %>
+<%@ Register Src="controls/JobsSearch.ascx" TagName="JobsSearch" TagPrefix="uc11" %>
+<%@ Register Src="controls/OpportunitiesSearch.ascx" TagName="OpportunitiesSearch"
+  TagPrefix="uc12" %>
+<%@ Register Src="controls/DocumentSearch.ascx" TagName="DocumentSearch" TagPrefix="uc15" %>
+<%@ Register Src="controls/TransactionSearch.ascx" TagName="TransactionSearch" TagPrefix="uc13" %>
+<%@ Register Src="controls/market_search.ascx" TagName="market_search" TagPrefix="uc14" %>
+<%@ Register Src="controls/WantedSearch.ascx" TagName="WantedSearch" TagPrefix="uc16" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>Marketplace Manager</title>
+  <link href="/common/crmLeftMenu.css" rel="stylesheet" type="text/css" />
+  <link href="common/redesign.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" media="all and (min-width: 768px) and (orientation:portrait)"
+    href="common/ipad-portrait.css" />
+  <link rel="stylesheet" media="all and (min-width: 768px) and (orientation:landscape)"
+    href="common/ipad-landscape.css" />
+  <link rel="stylesheet" media="all and (min-width: 992px)" href="common/regular.css" />
+  <!--Grid/Layout Styles-->
+  <link href="/EvoStyles/stylesheets/layout/base_html_elements.css" rel="stylesheet" type="text/css" />
+  <link href="/EvoStyles/stylesheets/layout/skeleton_grid.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="common/anylinkmenu.css" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+
+
+  <script type="text/javascript" src="../common/anylinkmenu.js">
+    /***********************************************
+    * AnyLink JS Drop Down Menu v2.0- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+    * This notice MUST stay intact for legal use
+    * Visit Project Page at http://www.dynamicdrive.com/dynamicindex1/dropmenuindex.htm for full source code
+    ***********************************************/
+  </script>
+
+  <script type="text/javascript" src="../common/menucontents.js"></script>
+
+  <script type="text/javascript">
+    window.name = "mainWindow";
+    function On_Change(dropdown) {
+      var myDrop = document.getElementById(dropdown);
+      var myindex = myDrop.selectedIndex
+      var SelValue = myDrop.options[myindex].value
+      top.location.href = SelValue;
+      return true;
+    }
+    function next_prev() {
+      var myform = document.forms['aspnetForm'];
+      if (readCookie('aircraft_marked')) {
+        cookieString = readCookie('temp_marked');
+      } else {
+        cookieString = "";
+      }
+      var len = myform.elements.length;
+      for (var i = 0; i < len; i++) {
+        if (myform.elements[i].type == 'checkbox')
+          if (myform.elements[i].checked == true) {
+            cookieString += myform.elements[i].value + "|";
+
+          }
+      }
+      if (cookieString != "") {
+        createCookie('temp_marked', cookieString, 7);
+        cookieString = "";
+
+
+
+      } else {
+        alert('You have no items selected');
+      }
+    }
+
+    function setHourglass() {
+      document.body.style.cursor = 'wait';
+    }
+  </script>
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+  <!-- The following loads a blank page that refreshes 60 seconds before the session timeout to keep session from expiring -->
+  <iframe id="ifrmBlank" frameborder="0" width="0" height="0" runat="server" src="sessionKeepAlive.aspx"></iframe>
+  <asp:Literal runat="server" ID="javascript_text"></asp:Literal>
+  <form id="form1" runat="server">
+    <asp:Literal ID="background_image" runat="server">  
+        <!--<div style="background-image: url('images/background/4.jpg'); min-height: 1000px;">-->
+    </asp:Literal>
+    <div class="FixedHeaderBar" runat="server" id="fixedBar"></div>
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true"
+      EnablePageMethods="true">
+    </cc1:ToolkitScriptManager>
+    <div style="text-align: left; visibility: hidden;">
+      <asp:Panel ID="notifyChatUserPanel" runat="server" Visible="false">
+        <cht:evoChatNotify ID="notifyChatUserCtrl" runat="server" />
+      </asp:Panel>
+    </div>
+    <div class="gradient-background">
+      <a id="simple-menu" href="#sidr" class="gradient-icon" data-cookie="panel">View Menu</a>
+    </div>
+    <div id="sidr" style="display: none;">
+      <a id="close-menu-button" href="#">Close</a>
+
+      <uc7:TreeNav ID="TreeNav" runat="server" />
+      <uc6:Calendar ID="Calendar" runat="server" />
+    </div>
+    <div class="container">
+      <table cellpadding="0" cellspacing="0" align="center" width="100%">
+        <tr>
+          <td align="left" valign="top">
+            <uc3:WelcomeUser ID="WelcomeUser1" runat="server" />
+          </td>
+        </tr>
+        <tr>
+          <td align="left" valign="top">
+            <table runat="server" width="100%" cellspacing="0" cellpadding="0" align="center"
+              class="container_shadow">
+              <tr>
+                <td colspan="4" align="left" valign="top">
+                  <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td align="right" valign="middle" colspan="3">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td align="left" valign="middle"><a href="home.aspx" runat="server" id="homeLink" class="specialHeaderTab" onclick="javascript:ChangeTheMouseCursorOnItemParentDocument('cursor_wait');">Home</a><a href="#" class="specialHeaderTab menuanchorclass" rel="anylinkmenu_view">Views</a><a href="listing_air.aspx" runat="server" id="airLink" class="specialHeaderTab" onclick="javascript:ChangeTheMouseCursorOnItemParentDocument('cursor_wait');">Aircraft</a><a href="listing_transaction.aspx" runat="server" id="transLink" class="specialHeaderTab" onclick="javascript:ChangeTheMouseCursorOnItemParentDocument('cursor_wait');">History</a><a href="listing.aspx" runat="server" id="compLink" class="specialHeaderTab" onclick="javascript:ChangeTheMouseCursorOnItemParentDocument('cursor_wait');">Company</a><a href="market.aspx" runat="server" id="marketLink" class="specialHeaderTab" onclick="javascript:ChangeTheMouseCursorOnItemParentDocument('cursor_wait');">Events</a></td>
+                            <td align="left" valign="middle" class="dark_header">
+                              <uc8:SubNav ID="SubNav1" runat="server" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" class="gray_menu_repeat" colspan="2">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top" class="white_background">
+                        <div style="margin-top: 3px; margin-left: 3px;">
+                          <!-- Fix for IE bug (One text input and submit, disables submit on pressing "Enter") -->
+                          <div style="display: none">
+                            <input type="text" name="hiddenText" />
+                          </div>
+                          <uc13:TransactionSearch ID="TransactionSearch" runat="server" Visible="false" />
+                          <uc15:DocumentSearch ID="DocumentSearch" runat="server" Visible="false" />
+                          <uc1:aircraftSearch ID="aircraftSearch" runat="server" Visible="false" />
+                          <uc2:companySearch ID="companySearch" runat="server" Visible="false" />
+                          <uc16:WantedSearch ID="WantedSearch" runat="server" Visible="false" />
+                          <uc5:ContactSearch ID="ContactSearch" runat="server" Visible="false" />
+                          <uc10:ActionItemsSearch ID="ActionItemsSearch" runat="server" Visible="false" />
+                          <uc12:OpportunitiesSearch ID="OpportunitiesSearch" runat="server" Visible="false" />
+                          <uc11:JobsSearch ID="JobsSearch" runat="server" Visible="false" />
+                          <uc9:NotesSearch ID="NotesSearch" runat="server" Visible="false" />
+                          <uc14:market_search ID="market_search" runat="server" />
+                          <asp:Panel ID="record_holder" CssClass="gray_repeat" runat="server" Width="95%">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td align="left" valign="top">
+                                  <asp:Label ID="bar_main_text" runat="server" Text=""></asp:Label>
+                                </td>
+                                <td align="left" valign="top">
+                                  <asp:Label ID="record_count" runat="server" CssClass="float_right" Font-Italic="true"
+                                    font-weight="bold" Text=""></asp:Label>
+                                </td>
+                              </tr>
+                            </table>
+                          </asp:Panel>
+                          <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td align="left" valign="top" width="150">
+                                <asp:Button ID="Pre_top" Text="< Previous" CommandArgument="Prev" runat="server"
+                                  OnClick="PagerButtonClick" Visible="false" UseSubmitBehavior="false" />
+                              </td>
+                              <td align="center" valign="middle">
+                                <asp:Label runat="server" ID="label_edit_display" Visible="false"><br /><span class="emphasis_text red">*Click on the pencil icon to edit transactions</span><br /><br /></asp:Label>
+
+                                <asp:Panel runat="server" ID="sortByDynamic" Visible="false" CssClass="float_right">
+                                  Sort By:
+                                <asp:DropDownList ID="special_sort_by_cbo" runat="server" Width="120px" AutoPostBack="true">
+                                </asp:DropDownList>
+                                  <asp:DropDownList ID="special_sort_method_cbo" runat="server" Width="50px" AutoPostBack="true">
+                                    <asp:ListItem Selected="True">Asc</asp:ListItem>
+                                    <asp:ListItem>Desc</asp:ListItem>
+                                  </asp:DropDownList>
+                                </asp:Panel>
+                                <asp:DropDownList ID="jump_to" runat="server" Width="180" Visible="false" onchange="On_Change(this.form.select1)">
+                                </asp:DropDownList>
+                              </td>
+                              <td align="right" valign="top" width="150">
+                                <asp:Button ID="Nex_top" Text="Next >" CommandArgument="Next" runat="server" OnClick="PagerButtonClick"
+                                  Visible="false" UseSubmitBehavior="false" />
+                              </td>
+                            </tr>
+                          </table>
+                          <table width="98%" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td align="left" valign="top"></td>
+                              <td align="right" valign="top"></td>
+                            </tr>
+                          </table>
+                          <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td align="left" valign="top">
+                                <asp:Button ID="btnDayPilotCalendar_Previous" Text="< Previous" CommandArgument="Prev"
+                                  runat="server" OnClick="btnDayPilotCalendar_Calenar_Previous_Click" Visible="false" />
+                              </td>
+                              <td align="right" valign="top">
+                                <asp:Button ID="btnDayPilotCalendar_Next" Text="Next >" CommandArgument="Next" runat="server"
+                                  OnClick="btnDayPilotCalendar_Calendar_Next" Visible="false" />
+                              </td>
+                            </tr>
+                          </table>
+                          <DayPilot:DayPilotCalendar ID="DayPilotCalendar1" runat="server" Days="7" HourHeight="90"
+                            EventClickHandling="JavaScript" EventClickJavaScript="DayPilotCalendar1_EventClick('{0}')"
+                            FreeTimeClickJavaScript="DayPilotCalendar1_NoEventClick('{0}')" Visible="false"
+                            Width="100%" />
+                          <asp:Panel ID="error_pnl" runat="server" Width="100%" HorizontalAlign="center">
+                            <asp:Label runat="server" ID="error_results" Font-Bold="true" ForeColor="Red" Text="" />
+                          </asp:Panel>
+                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            Content Controls<br />
+                          </asp:ContentPlaceHolder>
+                          <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Right">
+                            <asp:Label runat="server" ID="opportunity_summary"></asp:Label>
+                          </asp:Panel>
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left">
+                            <tr>
+                              <td align="left" valign="top">
+                                <asp:Button ID="Pre_bottom" Text="< Previous" CommandArgument="Prev" runat="server"
+                                  OnClick="PagerButtonClick" Visible="false" UseSubmitBehavior="false" />
+                              </td>
+                              <td align="right" valign="top">
+                                <asp:Button ID="Nex_bottom" Text="Next >" CommandArgument="Next" runat="server" OnClick="PagerButtonClick"
+                                  Visible="false" UseSubmitBehavior="false" />
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                      <td align="left" valign="top"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="middle" colspan="4" class="dark_header">&nbsp;
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <br />
+    </div>
+
+    <script language="javascript" type="text/javascript">
+
+      jQuery(document).ready(function ($) {
+        $('#simple-menu').sidr({
+          displace: false,
+          onOpen: function () {
+            $.cookie('panel', 'open');
+          },
+          onClose: function () {
+            $.cookie('panel', 'closed');
+
+          }
+        })
+          .usecookie();
+      });
+      $('.gradient-background').click(function () {
+        $.sidr('open', 'sidr');
+      });
+      $('#overlay, #sidr a').click(function () {
+        $.sidr('close', 'sidr');
+        ChangeTheMouseCursorOnItemParentDocument('cursor_wait');
+      });
+      $('#close-menu-button').click(function () {
+        $.sidr('close', 'sidr');
+        ChangeTheMouseCursorOnItemParentDocument('cursor_default');
+      });
+      (function ($) {
+        $.fn.usecookie = function () {
+          var cookieValue,
+            cookieName = this.data('cookie');
+          cookieValue = $.cookie(cookieName);
+          return this.each(function () {
+            if (cookieValue == 'open') {
+              $(document.body).hide();
+              $.sidr('open', 'sidr', function () {
+                $(document.body).show();
+              });
+            } else if (cookieValue == 'closed') {
+              $.sidr('close', 'sidr')
+            } else { }
+          });
+        };
+      })(jQuery);
+
+      function clear_all(cookie_name) {
+        createCookie(cookie_name, "", 7);
+        alert('Your items have been cleared');
+        window.location.reload(true);
+      }
+
+      function append_cookie(append, cookie_name) {
+
+        if (document.getElementById(append).checked == true) {
+          var astr = readCookie(cookie_name);
+          if (astr == "") {
+            astr = append;
+          } else {
+            astr = astr + "|" + append;
+          }
+        } else {
+          var astr = readCookie(cookie_name);
+          if (astr == "") {
+            //
+          } else {
+            astr = astr.replace(append + "|", "");
+            astr = astr.replace("|" + append, "");
+          }
+
+        }
+        // alert(astr);
+        createCookie(cookie_name, astr, 365);
+      }
+      function createCookie(name, value, days) {
+        //        alert(name + ":" + value);
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          var expires = "; expires=" + date.toGMTString();
+        } else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
+      }
+
+      function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return "";
+      }
+    </script>
+
+  </form>
+  <asp:ContentPlaceHolder ID="below_form" runat="server">
+  </asp:ContentPlaceHolder>
+</body>
+</html>

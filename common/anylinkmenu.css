@@ -1,0 +1,124 @@
+.selectedanchor{ /*CSS class that gets added to the currently selected anchor link (assuming it's a text link)*/
+/*background: #eeeeee;
+color:#ffffff;*/
+}
+
+/* ######### Default class for drop down menus ######### */
+
+.anylinkmenu{
+position: absolute;
+left: 0;
+top: 0;
+visibility: hidden;
+/*border: 1px solid black;*/
+border-bottom-width: 0;
+/*font: normal 11px tahoma;
+line-height: 18px;*/
+z-index: 50000; /* zIndex should be greater than that of shadow's below */
+/*background: #0e5e91;*/
+background: #eeeeee;
+width: 180px; /* default width for menu */
+}
+
+
+
+.anylinkmenu, .anylinkmenuwide, .anylinkmenuwidest{
+position: absolute;
+left: 0;
+top: 0;
+visibility: hidden;
+/*border-bottom: 1px solid black;*/
+border-top:1px solid #dddddd;
+border-bottom-width: 0;
+/*font: normal 11px tahoma;
+line-height: 18px;*/
+z-index: 50000; /* zIndex should be greater than that of shadow's below */
+/*background: #0e5e91;*/
+background: #eeeeee;
+width: 160px; /* default width for menu */
+text-transform:uppercase;
+}
+.anylinkmenuwide{
+width: 290px; /* default width for menu */
+}
+ .anylinkmenuwidest{
+width: 360px; /* default width for menu */
+}
+.anylinkmenu ul,.anylinkmenuwide ul, .anylinkmenuwidest ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+.anylinkmenulower ul li a{text-transform:none;}
+.anylinkmenu ul li, .anylinkmenuwide ul li, .anylinkmenuwidest ul li {margin-bottom:0px !important;}
+
+.anylinkmenu ul li a,.anylinkmenuwide ul li a, .anylinkmenuwidest ul li a{
+width: 100%;
+display: block;
+text-indent: 3px;
+/*border-bottom: 1px solid black;*/
+border-top:1px solid #dddddd;
+padding: 2px 0;
+text-decoration: none;
+/*font-weight: bold;*/
+text-indent: 5px;
+/*text-shadow: 1px 1px 1px #292929;filter: dropshadow(color=#292929, offx=1, offy=1);*/
+}
+/*.anylinkmenu a,.anylinkmenuwide a{ /*hover background color*/
+/*color:#ffffff;
+text-shadow: 1px 1px 1px #292929;filter: dropshadow(color=#292929, offx=1, offy=1);
+}
+.anylinkmenu a:hover,.anylinkmenuwide a:hover{ /*hover background color*/
+/*background: #1f4a78;
+color:#ffffff;
+}*/
+
+.anylinkmenu a,.anylinkmenuwide a, .anylinkmenuwidest a{margin:.2em;padding:.25em .5em .25em .5em;display:block;}
+.anylinkmenu a:hover,.anylinkmenuwide a:hover, .anylinkmenuwidest a:hover{background-color:#4d4d4d  !important;color: #ffffff;}
+
+/* ######### Alternate multi-column class for drop down menus ######### */
+
+
+.anylinkmenucols{
+position: absolute;
+width: 350px;
+left: 0;
+top: 0;
+visibility: hidden;
+border: 1px solid black;
+padding: 10px;
+font: normal 12px Verdana;
+z-index: 50000; /*zIndex should be greater than that of shadow's below*/
+background: #E9E9E9;
+}
+
+.anylinkmenucols li{
+padding-bottom: 3px;
+}
+
+.anylinkmenucols .column{
+float: left;
+padding: 3px 8px;
+margin-right: 5px;
+background: #E0E0E0;
+}
+
+.anylinkmenucols .column ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+
+
+/* ######### class for shadow DIV ######### */
+
+
+.anylinkshadow{ /*CSS for shadow. Keep this as is */
+position: absolute;
+left: 0;
+top: 0;
+z-index: 99; /*zIndex for shadow*/
+background: black;
+visibility: hidden;
+}

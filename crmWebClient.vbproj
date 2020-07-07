@@ -1,0 +1,2803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B169F88B-0B13-4AE3-AF69-81674290B98C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>crmWebClient</RootNamespace>
+    <AssemblyName>crmWebClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SignAssembly>false</SignAssembly>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>crmWebClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>crmWebClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>crmWebClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>crmWebClient.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.6.2, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL" />
+    <Reference Include="DayPilot, Version=3.0.210.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="evohtmltopdf, Version=7.2.0.0, Culture=neutral, PublicKeyToken=e1fcbb86597de299, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="obout_Flyout2_NET, Version=2.0.5.0, Culture=neutral, PublicKeyToken=d6418bad3a294aff, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="System.Xml.Xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminActions.aspx" />
+    <Content Include="adminUserInsight.aspx" />
+    <Content Include="common\anylinkmenu.css" />
+    <Content Include="common\anylinkmenu.js" />
+    <Content Include="common\jquery.sumoselect.js" />
+    <Content Include="common\menucontents.js" />
+    <Content Include="common\style.css" />
+    <Content Include="common\style_new.css" />
+    <Content Include="common\sumoSelect.css" />
+    <Content Include="controls\LogonUser.ascx" />
+    <Content Include="controls\RegisterUser.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="details.aspx" />
+    <Content Include="DisplayCompanyDetailClassic.aspx" />
+    <Content Include="DisplayCompanyDetail.aspx" />
+    <Content Include="edit.aspx" />
+    <Content Include="edit_note.aspx" />
+    <Content Include="EventAlertMaintenance.aspx" />
+    <Content Include="EvoStyles\stylesheets\adminStyles.css" />
+    <Content Include="export.aspx" />
+    <Content Include="forgotPasswordVerify.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="home_tile.aspx" />
+    <Content Include="homebaseCompanyProspect.aspx" />
+    <Content Include="homebaseSubscription.aspx" />
+    <Content Include="homeMenuEditor.aspx" />
+    <Content Include="homeTables.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\1.png" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\2.png" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\3.png" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\4.png" />
+    <Content Include="images\ABAG_Logo.png" />
+    <Content Include="images\add.png" />
+    <Content Include="images\add_new.jpg" />
+    <Content Include="images\AfBAA_Logo.png" />
+    <Content Include="images\AREA_Logo.png" />
+    <Content Include="images\ASA_Logo.png" />
+    <Content Include="images\bar_repeat.jpg" />
+    <Content Include="images\BBGA_Logo.png" />
+    <Content Include="images\bell.svg" />
+    <Content Include="images\blue_bl.gif" />
+    <Content Include="images\blue_br.gif" />
+    <Content Include="images\blue_left.gif" />
+    <Content Include="images\blue_repeat.jpg" />
+    <Content Include="images\blue_right.gif" />
+    <Content Include="images\blue_side.gif" />
+    <Content Include="images\blue_tl.gif" />
+    <Content Include="images\blue_tr.gif" />
+    <Content Include="images\cancel.gif" />
+    <Content Include="images\card.jpg" />
+    <Content Include="images\card_left.jpg" />
+    <Content Include="images\card_right.jpg" />
+    <Content Include="images\card_right_client.jpg" />
+    <Content Include="images\check-2x.png" />
+    <Content Include="images\client.png" />
+    <Content Include="images\defaultBackImage.jpg" />
+    <Content Include="images\document.png" />
+    <Content Include="images\dollar-sign.svg" />
+    <Content Include="images\down.png" />
+    <Content Include="images\download.svg" />
+    <Content Include="images\Easa_Part_Cat.png" />
+    <Content Include="images\EBAA_Logo.png" />
+    <Content Include="images\edit.jpg" />
+    <Content Include="images\edit.svg" />
+    <Content Include="images\evo.png" />
+    <Content Include="images\expandable.jpg" />
+    <Content Include="images\expanded.jpg" />
+    <Content Include="images\export.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\final.jpg" />
+    <Content Include="images\fleetAnalyzer.png" />
+    <Content Include="images\folder.png" />
+    <Content Include="images\GAMA_Logo.png" />
+    <Content Include="images\GLAD_Logo.png" />
+    <Content Include="images\gray_repeat.jpg" />
+    <Content Include="images\HAI_Logo.png" />
+    <Content Include="images\help-circle.svg" />
+    <Content Include="images\homebase_watermark.jpg" />
+    <Content Include="images\IADA_logo.jpg" />
+    <Content Include="images\IADA_logo.png" />
+    <Content Include="images\IATA_Logo.png" />
+    <Content Include="images\IBAC_Logo.png" />
+    <Content Include="images\JETNET_EvoMarketplace_White.png" />
+    <Content Include="images\JETNET_MPMAerodex.png" />
+    <Content Include="images\JETNET_MPMAerodexElite.png" />
+    <Content Include="images\know_more.png" />
+    <Content Include="images\list_icon.jpg" />
+    <Content Include="images\lock.svg" />
+    <Content Include="images\menu.svg" />
+    <Content Include="images\NAFA_Logo.png" />
+    <Content Include="images\NARA_Logo.png" />
+    <Content Include="images\NATA_Logo.png" />
+    <Content Include="images\navigation_header.jpg" />
+    <Content Include="images\nav_bar_bottom.jpg" />
+    <Content Include="images\nav_bar_head.jpg" />
+    <Content Include="images\nav_bottom.jpg" />
+    <Content Include="images\NBAA_logo.png" />
+    <Content Include="images\note.png" />
+    <Content Include="images\Notes.gif" />
+    <Content Include="images\notes_back.jpg" />
+    <Content Include="images\oper_repeat.jpg" />
+    <Content Include="images\orange_arrow.gif" />
+    <Content Include="images\PAAO_Logo.png" />
+    <Content Include="images\person-8x.png" />
+    <Content Include="images\pilot.png" />
+    <Content Include="images\purple_arrow.gif" />
+    <Content Include="images\red_arrow.gif" />
+    <Content Include="images\routeMapDropdown.jpg" />
+    <Content Include="images\salesforce_36dp.png" />
+    <Content Include="images\save.svg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\search.svg" />
+    <Content Include="images\search_button.jpg" />
+    <Content Include="images\settings.svg" />
+    <Content Include="images\top_repeat.jpg" />
+    <Content Include="images\trash.svg" />
+    <Content Include="images\twocard_client.jpg" />
+    <Content Include="images\twocard_flip_client.jpg" />
+    <Content Include="images\twocard_flip_jetnet.jpg" />
+    <Content Include="images\twocard_jet.jpg" />
+    <Content Include="images\update.gif" />
+    <Content Include="images\view_all.jpg" />
+    <Content Include="images\wrench.png" />
+    <Content Include="images\wyvern.jpg" />
+    <Content Include="images\x-2x.png" />
+    <Content Include="images\x.svg" />
+    <Content Include="listing.aspx" />
+    <Content Include="listing_action.aspx" />
+    <Content Include="listing_air.aspx" />
+    <Content Include="listing_contact.aspx" />
+    <Content Include="listing_jobs.aspx" />
+    <Content Include="listing_notes.aspx" />
+    <Content Include="SandBox.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abiFiles\abiAircraftDetails.aspx.designer.vb">
+      <DependentUpon>abiAircraftDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiAircraftDetails.aspx.vb">
+      <DependentUpon>abiAircraftDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiContact.aspx.designer.vb">
+      <DependentUpon>abiContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiContact.aspx.vb">
+      <DependentUpon>abiContact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiDealer.aspx.designer.vb">
+      <DependentUpon>abiDealer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiDealer.aspx.vb">
+      <DependentUpon>abiDealer.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiEvents.aspx.designer.vb">
+      <DependentUpon>abiEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiEvents.aspx.vb">
+      <DependentUpon>abiEvents.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiForsale.aspx.designer.vb">
+      <DependentUpon>abiForsale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiForsale.aspx.vb">
+      <DependentUpon>abiForsale.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiLinks.aspx.designer.vb">
+      <DependentUpon>abiLinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiLinks.aspx.vb">
+      <DependentUpon>abiLinks.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiNews.aspx.designer.vb">
+      <DependentUpon>abiNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiNews.aspx.vb">
+      <DependentUpon>abiNews.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiProducts.aspx.designer.vb">
+      <DependentUpon>abiProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiProducts.aspx.vb">
+      <DependentUpon>abiProducts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiWanteds.aspx.designer.vb">
+      <DependentUpon>abiWanteds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiWanteds.aspx.vb">
+      <DependentUpon>abiWanteds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\abiRegIndex.aspx.designer.vb">
+      <DependentUpon>abiRegIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\abiRegIndex.aspx.vb">
+      <DependentUpon>abiRegIndex.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\defaultABI.aspx.designer.vb">
+      <DependentUpon>defaultABI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\defaultABI.aspx.vb">
+      <DependentUpon>defaultABI.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\rss\abiNewsRss.aspx.designer.vb">
+      <DependentUpon>abiNewsRss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\rss\abiNewsRss.aspx.vb">
+      <DependentUpon>abiNewsRss.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\rss\aviationrss.aspx.designer.vb">
+      <DependentUpon>aviationrss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\rss\aviationrss.aspx.vb">
+      <DependentUpon>aviationrss.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\rss\globalRss.aspx.designer.vb">
+      <DependentUpon>globalRss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\rss\globalRss.aspx.vb">
+      <DependentUpon>globalRss.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-helicopter.aspx.designer.vb">
+      <DependentUpon>rss-helicopter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-helicopter.aspx.vb">
+      <DependentUpon>rss-helicopter.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-jets.aspx.designer.vb">
+      <DependentUpon>rss-jets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-jets.aspx.vb">
+      <DependentUpon>rss-jets.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-piston.aspx.designer.vb">
+      <DependentUpon>rss-piston.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-piston.aspx.vb">
+      <DependentUpon>rss-piston.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-turbine.aspx.designer.vb">
+      <DependentUpon>rss-turbine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="abiFiles\rss\rss-turbine.aspx.vb">
+      <DependentUpon>rss-turbine.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminActions.aspx.designer.vb">
+      <DependentUpon>adminActions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminActions.aspx.vb">
+      <DependentUpon>adminActions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminAssetInsight.aspx.designer.vb">
+      <DependentUpon>adminAssetInsight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminAssetInsight.aspx.vb">
+      <DependentUpon>adminAssetInsight.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminBackground.aspx.designer.vb">
+      <DependentUpon>adminBackground.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminBackground.aspx.vb">
+      <DependentUpon>adminBackground.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminDeveloper.aspx.designer.vb">
+      <DependentUpon>adminDeveloper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminDeveloper.aspx.vb">
+      <DependentUpon>adminDeveloper.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminUserInsight.aspx.designer.vb">
+      <DependentUpon>adminUserInsight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserInsight.aspx.vb">
+      <DependentUpon>adminUserInsight.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminFlightSummary.aspx.designer.vb">
+      <DependentUpon>adminFlightSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminFlightSummary.aspx.vb">
+      <DependentUpon>adminFlightSummary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminHelp.aspx.designer.vb">
+      <DependentUpon>adminHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminHelp.aspx.vb">
+      <DependentUpon>adminHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminHome.aspx.designer.vb">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminHome.aspx.vb">
+      <DependentUpon>adminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminMPM.aspx.designer.vb">
+      <DependentUpon>adminMPM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminMPM.aspx.vb">
+      <DependentUpon>adminMPM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminSubErrors.aspx.designer.vb">
+      <DependentUpon>adminSubErrors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminSubErrors.aspx.vb">
+      <DependentUpon>adminSubErrors.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminSubscribers.aspx.designer.vb">
+      <DependentUpon>adminSubscribers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminSubscribers.aspx.vb">
+      <DependentUpon>adminSubscribers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminSummary.aspx.designer.vb">
+      <DependentUpon>adminSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminSummary.aspx.vb">
+      <DependentUpon>adminSummary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="aircraftFinder.aspx.designer.vb">
+      <DependentUpon>aircraftFinder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftFinder.aspx.vb">
+      <DependentUpon>aircraftFinder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirportLocationMap.aspx.designer.vb">
+      <DependentUpon>AirportLocationMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirportLocationMap.aspx.vb">
+      <DependentUpon>AirportLocationMap.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Airport_Listing.aspx.designer.vb">
+      <DependentUpon>Airport_Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Airport_Listing.aspx.vb">
+      <DependentUpon>Airport_Listing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Appraisal.aspx.designer.vb">
+      <DependentUpon>Appraisal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appraisal.aspx.vb">
+      <DependentUpon>Appraisal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AssetInsight.aspx.designer.vb">
+      <DependentUpon>AssetInsight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssetInsight.aspx.vb">
+      <DependentUpon>AssetInsight.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Attributes.aspx.designer.vb">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes.aspx.vb">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="chat\ChatBox.aspx.designer.vb">
+      <DependentUpon>ChatBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chat\ChatBox.aspx.vb">
+      <DependentUpon>ChatBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chat\ChatCleanup.aspx.designer.vb">
+      <DependentUpon>ChatCleanup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chat\ChatCleanup.aspx.vb">
+      <DependentUpon>ChatCleanup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="chat\ChatHistory.aspx.designer.vb">
+      <DependentUpon>ChatHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chat\ChatHistory.aspx.vb">
+      <DependentUpon>ChatHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chat\ChatTestPopUp.aspx.designer.vb">
+      <DependentUpon>ChatTestPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chat\ChatTestPopUp.aspx.vb">
+      <DependentUpon>ChatTestPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="chat\Logic\communityUser.vb" />
+    <Compile Include="chat\Logic\currentChat.vb" />
+    <Compile Include="chat\Logic\msgHistory.vb" />
+    <Compile Include="controls\eventCategoryType.ascx.designer.vb">
+      <DependentUpon>eventCategoryType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\eventCategoryType.ascx.vb">
+      <DependentUpon>eventCategoryType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\valueControl.ascx.designer.vb">
+      <DependentUpon>valueControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\valueControl.ascx.vb">
+      <DependentUpon>valueControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\View_Mobile.ascx.designer.vb">
+      <DependentUpon>View_Mobile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\View_Mobile.ascx.vb">
+      <DependentUpon>View_Mobile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\yachtTypeSizeBrandModel.ascx.designer.vb">
+      <DependentUpon>yachtTypeSizeBrandModel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\yachtTypeSizeBrandModel.ascx.vb">
+      <DependentUpon>yachtTypeSizeBrandModel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayCompanyDetailClassic.aspx.designer.vb">
+      <DependentUpon>DisplayCompanyDetailClassic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayCompanyDetailClassic.aspx.vb">
+      <DependentUpon>DisplayCompanyDetailClassic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayCompanyDetail.aspx.designer.vb">
+      <DependentUpon>DisplayCompanyDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayCompanyDetail.aspx.vb">
+      <DependentUpon>DisplayCompanyDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayModelDetail.aspx.designer.vb">
+      <DependentUpon>DisplayModelDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity Classes\deliveries_view_functions.vb" />
+    <Compile Include="Entity Classes\displayCompanyDetailsFunctions.vb" />
+    <Compile Include="Entity Classes\googleGraphsFunctions.vb" />
+    <Compile Include="Entity Classes\homebaseModelClass.vb" />
+    <Compile Include="Entity Classes\homebaseServiceSubClass.vb" />
+    <Compile Include="Entity Classes\homebaseUserClass.vb" />
+    <Compile Include="Entity Classes\journalClass.vb" />
+    <Compile Include="Entity Classes\resdiual_market_value.vb">
+    </Compile>
+    <Compile Include="Entity Classes\user_portfolio_view.vb" />
+    <Compile Include="Entity Classes\utilization_functions.vb" />
+    <Compile Include="Entity Classes\utilization_view_functions.vb" />
+    <Compile Include="EventAlertMaintenance.aspx.designer.vb">
+      <DependentUpon>EventAlertMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventAlertMaintenance.aspx.vb">
+      <DependentUpon>EventAlertMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\EmptyCustomerAdminTheme.Master.designer.vb">
+      <DependentUpon>EmptyCustomerAdminTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\EmptyCustomerAdminTheme.Master.vb">
+      <DependentUpon>EmptyCustomerAdminTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\EmptyHomebaseTheme.Master.designer.vb">
+      <DependentUpon>EmptyHomebaseTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\EmptyHomebaseTheme.Master.vb">
+      <DependentUpon>EmptyHomebaseTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotPasswordVerify.aspx.designer.vb">
+      <DependentUpon>forgotPasswordVerify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgotPasswordVerify.aspx.vb">
+      <DependentUpon>forgotPasswordVerify.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="fullTextSearch.aspx.designer.vb">
+      <DependentUpon>fullTextSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fullTextSearch.aspx.vb">
+      <DependentUpon>fullTextSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home_tile.aspx.designer.vb">
+      <DependentUpon>home_tile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home_tile.aspx.vb">
+      <DependentUpon>home_tile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="homebaseCompanyProspect.aspx.designer.vb">
+      <DependentUpon>homebaseCompanyProspect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebaseCompanyProspect.aspx.vb">
+      <DependentUpon>homebaseCompanyProspect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homebaseEditAircraftModel.aspx.designer.vb">
+      <DependentUpon>homebaseEditAircraftModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebaseEditAircraftModel.aspx.vb">
+      <DependentUpon>homebaseEditAircraftModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homebaseFlightResearch.aspx.designer.vb">
+      <DependentUpon>homebaseFlightResearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebaseFlightResearch.aspx.vb">
+      <DependentUpon>homebaseFlightResearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="homebasePerformance.aspx.designer.vb">
+      <DependentUpon>homebasePerformance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebasePerformance.aspx.vb">
+      <DependentUpon>homebasePerformance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homebaseOpCosts.aspx.designer.vb">
+      <DependentUpon>homebaseOpCosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebaseOpCosts.aspx.vb">
+      <DependentUpon>homebaseOpCosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homebaseSPDCS.aspx.designer.vb">
+      <DependentUpon>homebaseSPDCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebaseSPDCS.aspx.vb">
+      <DependentUpon>homebaseSPDCS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homebaseSubscription.aspx.designer.vb">
+      <DependentUpon>homebaseSubscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebaseSubscription.aspx.vb">
+      <DependentUpon>homebaseSubscription.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="homeMenuEditor.aspx.designer.vb">
+      <DependentUpon>homeMenuEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homeMenuEditor.aspx.vb">
+      <DependentUpon>homeMenuEditor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="homeTables.aspx.designer.vb">
+      <DependentUpon>homeTables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homeTables.aspx.vb">
+      <DependentUpon>homeTables.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="home_Model.aspx.designer.vb">
+      <DependentUpon>home_Model.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home_Model.aspx.vb">
+      <DependentUpon>home_Model.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="JSONresponse.aspx.designer.vb">
+      <DependentUpon>JSONresponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JSONresponse.aspx.vb">
+      <DependentUpon>JSONresponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="largeGraphDisplay.aspx.designer.vb">
+      <DependentUpon>largeGraphDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="largeGraphDisplay.aspx.vb">
+      <DependentUpon>largeGraphDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="macShell.aspx.designer.vb">
+      <DependentUpon>macShell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="macShell.aspx.vb">
+      <DependentUpon>macShell.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance.aspx.designer.vb">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance.aspx.vb">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="resdiualMarketValue.aspx.designer.vb">
+      <DependentUpon>resdiualMarketValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resdiualMarketValue.aspx.vb">
+      <DependentUpon>resdiualMarketValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="selection_listing.aspx.designer.vb">
+      <DependentUpon>selection_listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="selection_listing.aspx.vb">
+      <DependentUpon>selection_listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendSalesTransaction.aspx.designer.vb">
+      <DependentUpon>SendSalesTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendSalesTransaction.aspx.vb">
+      <DependentUpon>SendSalesTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\aircraft_dealer_functions.vb" />
+    <Compile Include="homebaseHome.aspx.designer.vb">
+      <DependentUpon>homebaseHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homebaseHome.aspx.vb">
+      <DependentUpon>homebaseHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayEventsDetailListing.aspx.designer.vb">
+      <DependentUpon>DisplayEventsDetailListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayEventsDetailListing.aspx.vb">
+      <DependentUpon>DisplayEventsDetailListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\HomebaseTheme.Master.designer.vb">
+      <DependentUpon>HomebaseTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\HomebaseTheme.Master.vb">
+      <DependentUpon>HomebaseTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="offLine.aspx.designer.vb">
+      <DependentUpon>offLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="offLine.aspx.vb">
+      <DependentUpon>offLine.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\abi_functions.vb" />
+    <Compile Include="chat\Logic\chatSession.vb" />
+    <Compile Include="controls\chatNotify.ascx.designer.vb">
+      <DependentUpon>chatNotify.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\chatNotify.ascx.vb">
+      <DependentUpon>chatNotify.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chat\Data\SessionDB.designer.vb">
+      <DependentUpon>SessionDB.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="chat\Data\SessionDB.vb">
+      <DependentUpon>SessionDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="chat\Logic\ChatManager.vb" />
+    <Compile Include="chat\Logic\ChatRoom.vb" />
+    <Compile Include="chat\Logic\Message.vb" />
+    <Compile Include="chat\Logic\NotifyUser.vb" />
+    <Compile Include="chat\Logic\RoomTalker.vb" />
+    <Compile Include="chat\Services\chatServices.svc.vb">
+      <DependentUpon>chatServices.svc</DependentUpon>
+    </Compile>
+    <Compile Include="clsData_Manager_SQL.vb" />
+    <Compile Include="company_spec.aspx.designer.vb">
+      <DependentUpon>company_spec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="company_spec.aspx.vb">
+      <DependentUpon>company_spec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Avionics_Tab.ascx.designer.vb">
+      <DependentUpon>Aircraft_Edit_Avionics_Tab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Avionics_Tab.ascx.vb">
+      <DependentUpon>Aircraft_Edit_Avionics_Tab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Details_Tabs.ascx.designer.vb">
+      <DependentUpon>Aircraft_Edit_Details_Tabs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Details_Tabs.ascx.vb">
+      <DependentUpon>Aircraft_Edit_Details_Tabs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Engine_Tab.ascx.designer.vb">
+      <DependentUpon>Aircraft_Edit_Engine_Tab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Engine_Tab.ascx.vb">
+      <DependentUpon>Aircraft_Edit_Engine_Tab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Features_Tab.ascx.designer.vb">
+      <DependentUpon>Aircraft_Edit_Features_Tab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Features_Tab.ascx.vb">
+      <DependentUpon>Aircraft_Edit_Features_Tab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Propeller_Tab.ascx.designer.vb">
+      <DependentUpon>Aircraft_Edit_Propeller_Tab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Propeller_Tab.ascx.vb">
+      <DependentUpon>Aircraft_Edit_Propeller_Tab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Transactions_Tab.ascx.designer.vb">
+      <DependentUpon>Aircraft_Edit_Transactions_Tab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Transactions_Tab.ascx.vb">
+      <DependentUpon>Aircraft_Edit_Transactions_Tab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ContactQuickEntry.ascx.designer.vb">
+      <DependentUpon>ContactQuickEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ContactQuickEntry.ascx.vb">
+      <DependentUpon>ContactQuickEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\continentRegionDropdowns.ascx.designer.vb">
+      <DependentUpon>continentRegionDropdowns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\continentRegionDropdowns.ascx.vb">
+      <DependentUpon>continentRegionDropdowns.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\localReminders.ascx.designer.vb">
+      <DependentUpon>localReminders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\localReminders.ascx.vb">
+      <DependentUpon>localReminders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\marketTimeSpanDropdowns.ascx.designer.vb">
+      <DependentUpon>marketTimeSpanDropdowns.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\marketTimeSpanDropdowns.ascx.vb">
+      <DependentUpon>marketTimeSpanDropdowns.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\simpleInsertForm.ascx.designer.vb">
+      <DependentUpon>simpleInsertForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\simpleInsertForm.ascx.vb">
+      <DependentUpon>simpleInsertForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\viewTypeMakeModel.ascx.designer.vb">
+      <DependentUpon>viewTypeMakeModel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\viewTypeMakeModel.ascx.vb">
+      <DependentUpon>viewTypeMakeModel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\yachtCatBrandModel.ascx.designer.vb">
+      <DependentUpon>yachtCatBrandModel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\yachtCatBrandModel.ascx.vb">
+      <DependentUpon>yachtCatBrandModel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Yacht_View_Master.ascx.designer.vb">
+      <DependentUpon>Yacht_View_Master.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Yacht_View_Master.ascx.vb">
+      <DependentUpon>Yacht_View_Master.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Yacht_Criteria_Bar.ascx.designer.vb">
+      <DependentUpon>Yacht_Criteria_Bar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Yacht_Criteria_Bar.ascx.vb">
+      <DependentUpon>Yacht_Criteria_Bar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Criteria_Bar.ascx.designer.vb">
+      <DependentUpon>Criteria_Bar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Criteria_Bar.ascx.vb">
+      <DependentUpon>Criteria_Bar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Documents.ascx.designer.vb">
+      <DependentUpon>Documents.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Documents.ascx.vb">
+      <DependentUpon>Documents.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Email.ascx.designer.vb">
+      <DependentUpon>Email.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Email.ascx.vb">
+      <DependentUpon>Email.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\market_search.ascx.designer.vb">
+      <DependentUpon>market_search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\market_search.ascx.vb">
+      <DependentUpon>market_search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\TransactionSearch.ascx.designer.vb">
+      <DependentUpon>TransactionSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\TransactionSearch.ascx.vb">
+      <DependentUpon>TransactionSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\validateUser.ascx.designer.vb">
+      <DependentUpon>validateUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\validateUser.ascx.vb">
+      <DependentUpon>validateUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ViewLogs.ascx.designer.vb">
+      <DependentUpon>ViewLogs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ViewLogs.ascx.vb">
+      <DependentUpon>ViewLogs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\View_Master.ascx.designer.vb">
+      <DependentUpon>View_Master.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\View_Master.ascx.vb">
+      <DependentUpon>View_Master.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Wanted.ascx.designer.vb">
+      <DependentUpon>Wanted.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Wanted.ascx.vb">
+      <DependentUpon>Wanted.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\WantedSearch.ascx.designer.vb">
+      <DependentUpon>WantedSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\WantedSearch.ascx.vb">
+      <DependentUpon>WantedSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company_Listing.aspx.designer.vb">
+      <DependentUpon>Company_Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Listing.aspx.vb">
+      <DependentUpon>Company_Listing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayContactDetail.aspx.designer.vb">
+      <DependentUpon>DisplayContactDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayContactDetail.aspx.vb">
+      <DependentUpon>DisplayContactDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="enterWantedInfo.aspx.designer.vb">
+      <DependentUpon>enterWantedInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enterWantedInfo.aspx.vb">
+      <DependentUpon>enterWantedInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\admin_center_dataLayer.vb" />
+    <Compile Include="Entity Classes\AdvancedQueryResults.vb" />
+    <Compile Include="Entity Classes\airport_fbo_functions.vb" />
+    <Compile Include="Entity Classes\charter_view_functions.vb" />
+    <Compile Include="Entity Classes\clsRecordsetClass.vb" />
+    <Compile Include="Entity Classes\clsSubscriptionCls.vb" />
+    <Compile Include="Entity Classes\commonEvo.vb" />
+    <Compile Include="Entity Classes\commonLogFunctions.vb" />
+    <Compile Include="Entity Classes\CompanyFunctions.vb" />
+    <Compile Include="Entity Classes\ContactFunctions.vb" />
+    <Compile Include="Entity Classes\crmViewDataLayer.vb" />
+    <Compile Include="Entity Classes\DisplayFunctions.vb" />
+    <Compile Include="Entity Classes\financial_view_functions.vb" />
+    <Compile Include="Entity Classes\flightDataFunctions.vb" />
+    <Compile Include="Entity Classes\fractional_view_functions.vb" />
+    <Compile Include="Entity Classes\generateOpCostsReport.vb">
+    </Compile>
+    <Compile Include="Entity Classes\helpListsDataLayer.vb" />
+    <Compile Include="Entity Classes\lease_view_functions.vb" />
+    <Compile Include="Entity Classes\location_view_functions.vb" />
+    <Compile Include="Entity Classes\manufacturer_view_functions.vb" />
+    <Compile Include="Entity Classes\marketGraphData.vb" />
+    <Compile Include="Entity Classes\marketSummaryFunctions.vb" />
+    <Compile Include="Entity Classes\market_model_functions.vb" />
+    <Compile Include="Entity Classes\newsDataLayer.vb" />
+    <Compile Include="Entity Classes\notes_view_functions.vb" />
+    <Compile Include="Entity Classes\opCostsClass.vb" />
+    <Compile Include="Entity Classes\operator_view_functions.vb" />
+    <Compile Include="Entity Classes\preferencesDataLayer.vb" />
+    <Compile Include="Entity Classes\reportFunctions.vb" />
+    <Compile Include="Entity Classes\SearchSelectionCriteria.vb" />
+    <Compile Include="Entity Classes\star_view_functions.vb" />
+    <Compile Include="Entity Classes\viewsDataLayer.vb" />
+    <Compile Include="Entity Classes\viewSelectionCriteria.vb" />
+    <Compile Include="Entity Classes\YachtFunctions.vb" />
+    <Compile Include="Entity Classes\yachtViewDataLayer.vb" />
+    <Compile Include="Entity Classes\yachtViewSelectionCriteria.vb" />
+    <Compile Include="eventsManager.aspx.designer.vb">
+      <DependentUpon>eventsManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eventsManager.aspx.vb">
+      <DependentUpon>eventsManager.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="evoNews.aspx.designer.vb">
+      <DependentUpon>evoNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="evoNews.aspx.vb">
+      <DependentUpon>evoNews.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="evoProjectConversion.aspx.designer.vb">
+      <DependentUpon>evoProjectConversion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="evoProjectConversion.aspx.vb">
+      <DependentUpon>evoProjectConversion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\ABITheme.Master.designer.vb">
+      <DependentUpon>ABITheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\ABITheme.Master.vb">
+      <DependentUpon>ABITheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\MobileTheme.Master.designer.vb">
+      <DependentUpon>MobileTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\MobileTheme.Master.vb">
+      <DependentUpon>MobileTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAAFlightData.aspx.designer.vb">
+      <DependentUpon>FAAFlightData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAAFlightData.aspx.vb">
+      <DependentUpon>FAAFlightData.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FolderMaintenance.aspx.designer.vb">
+      <DependentUpon>FolderMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FolderMaintenance.aspx.vb">
+      <DependentUpon>FolderMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="fractionalShareholderList.aspx.designer.vb">
+      <DependentUpon>fractionalShareholderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fractionalShareholderList.aspx.vb">
+      <DependentUpon>fractionalShareholderList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MapItems.aspx.designer.vb">
+      <DependentUpon>MapItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MapItems.aspx.vb">
+      <DependentUpon>MapItems.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MarketSummary.aspx.designer.vb">
+      <DependentUpon>MarketSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarketSummary.aspx.vb">
+      <DependentUpon>MarketSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MarketSummaryGraphs.aspx.designer.vb">
+      <DependentUpon>MarketSummaryGraphs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarketSummaryGraphs.aspx.vb">
+      <DependentUpon>MarketSummaryGraphs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterLists.aspx.designer.vb">
+      <DependentUpon>MasterLists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterLists.aspx.vb">
+      <DependentUpon>MasterLists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notify.aspx.designer.vb">
+      <DependentUpon>Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notify.aspx.vb">
+      <DependentUpon>Notify.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PDF_Creator.aspx.designer.vb">
+      <DependentUpon>PDF_Creator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PDF_Creator.aspx.vb">
+      <DependentUpon>PDF_Creator.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchSummary.aspx.designer.vb">
+      <DependentUpon>searchSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchSummary.aspx.vb">
+      <DependentUpon>searchSummary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Short_Spec_Sheet.aspx.designer.vb">
+      <DependentUpon>Short_Spec_Sheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Short_Spec_Sheet.aspx.vb">
+      <DependentUpon>Short_Spec_Sheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowNoteDetails.aspx.designer.vb">
+      <DependentUpon>ShowNoteDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowNoteDetails.aspx.vb">
+      <DependentUpon>ShowNoteDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spec_Sheet.aspx.designer.vb">
+      <DependentUpon>Spec_Sheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Spec_Sheet.aspx.vb">
+      <DependentUpon>Spec_Sheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STAR_ToFromReport.aspx.designer.vb">
+      <DependentUpon>STAR_ToFromReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="STAR_ToFromReport.aspx.vb">
+      <DependentUpon>STAR_ToFromReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="staticFolderEditor.aspx.designer.vb">
+      <DependentUpon>staticFolderEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staticFolderEditor.aspx.vb">
+      <DependentUpon>staticFolderEditor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="userPortfolio.aspx.designer.vb">
+      <DependentUpon>userPortfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userPortfolio.aspx.vb">
+      <DependentUpon>userPortfolio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="userScheduledJobs.aspx.designer.vb">
+      <DependentUpon>userScheduledJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userScheduledJobs.aspx.vb">
+      <DependentUpon>userScheduledJobs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserVerification.aspx.designer.vb">
+      <DependentUpon>UserVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserVerification.aspx.vb">
+      <DependentUpon>UserVerification.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="View.aspx.designer.vb">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View.aspx.vb">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewToPDF.aspx.designer.vb">
+      <DependentUpon>viewToPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewToPDF.aspx.vb">
+      <DependentUpon>viewToPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wantedDetails.aspx.designer.vb">
+      <DependentUpon>wantedDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wantedDetails.aspx.vb">
+      <DependentUpon>wantedDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Web References\com.jetnet.aiservice.www\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebSource.aspx.designer.vb">
+      <DependentUpon>WebSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebSource.aspx.vb">
+      <DependentUpon>WebSource.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="YachtListing.aspx.designer.vb">
+      <DependentUpon>YachtListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yachtPicture.aspx.designer.vb">
+      <DependentUpon>yachtPicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yachtPicture.aspx.vb">
+      <DependentUpon>yachtPicture.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Yacht_View_Template.aspx.designer.vb">
+      <DependentUpon>Yacht_View_Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yacht_View_Template.aspx.vb">
+      <DependentUpon>Yacht_View_Template.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayModelDetail.aspx.vb">
+      <DependentUpon>DisplayModelDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EmptySessionRefresh.aspx.designer.vb">
+      <DependentUpon>EmptySessionRefresh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmptySessionRefresh.aspx.vb">
+      <DependentUpon>EmptySessionRefresh.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\ConversionFunctions.vb" />
+    <Compile Include="EvoStyles\EmptyEvoTheme.Master.designer.vb">
+      <DependentUpon>EmptyEvoTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\EmptyEvoTheme.Master.vb">
+      <DependentUpon>EmptyEvoTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Operating_Listing.aspx.designer.vb">
+      <DependentUpon>Operating_Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operating_Listing.aspx.vb">
+      <DependentUpon>Operating_Listing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Wanted_Listing.aspx.designer.vb">
+      <DependentUpon>Wanted_Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wanted_Listing.aspx.vb">
+      <DependentUpon>Wanted_Listing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Performance_Listing.aspx.designer.vb">
+      <DependentUpon>Performance_Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Performance_Listing.aspx.vb">
+      <DependentUpon>Performance_Listing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="YachtListing.aspx.vb">
+      <DependentUpon>YachtListing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="crmAdministration.aspx.designer.vb">
+      <DependentUpon>crmAdministration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crmAdministration.aspx.vb">
+      <DependentUpon>crmAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="controls\DocumentSearch.ascx.designer.vb">
+      <DependentUpon>DocumentSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\DocumentSearch.ascx.vb">
+      <DependentUpon>DocumentSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crmAdministration_Worker.aspx.designer.vb">
+      <DependentUpon>crmAdministration_Worker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crmAdministration_Worker.aspx.vb">
+      <DependentUpon>crmAdministration_Worker.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminCurrentUsers.aspx.designer.vb">
+      <DependentUpon>adminCurrentUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminCurrentUsers.aspx.vb">
+      <DependentUpon>adminCurrentUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Debug.aspx.designer.vb">
+      <DependentUpon>Debug.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Debug.aspx.vb">
+      <DependentUpon>Debug.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayAircraftDetail.aspx.designer.vb">
+      <DependentUpon>DisplayAircraftDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayAircraftDetail.aspx.vb">
+      <DependentUpon>DisplayAircraftDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayCompanyDetailold.aspx.designer.vb">
+      <DependentUpon>DisplayCompanyDetailold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayCompanyDetailold.aspx.vb">
+      <DependentUpon>DisplayCompanyDetailold.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\clsClient Project_Reference.vb" />
+    <Compile Include="Entity Classes\clsClient_Aircraft_Engine.vb" />
+    <Compile Include="controls\ActionItems.ascx.designer.vb">
+      <DependentUpon>ActionItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ActionItems.ascx.vb">
+      <DependentUpon>ActionItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ActionItemsSearch.ascx.designer.vb">
+      <DependentUpon>ActionItemsSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ActionItemsSearch.ascx.vb">
+      <DependentUpon>ActionItemsSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\aircraftCard.ascx.designer.vb">
+      <DependentUpon>aircraftCard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\aircraftCard.ascx.vb">
+      <DependentUpon>aircraftCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\aircraftSearch.ascx.designer.vb">
+      <DependentUpon>aircraftSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\aircraftSearch.ascx.vb">
+      <DependentUpon>aircraftSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Template.ascx.designer.vb">
+      <DependentUpon>Aircraft_Edit_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Edit_Template.ascx.vb">
+      <DependentUpon>Aircraft_Edit_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Aircraft_Tabs.ascx.designer.vb">
+      <DependentUpon>Aircraft_Tabs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Aircraft_Tabs.ascx.vb">
+      <DependentUpon>Aircraft_Tabs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Calendar.ascx.designer.vb">
+      <DependentUpon>Calendar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Calendar.ascx.vb">
+      <DependentUpon>Calendar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\companyCard.ascx.designer.vb">
+      <DependentUpon>companyCard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\companyCard.ascx.vb">
+      <DependentUpon>companyCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\companySearch.ascx.designer.vb">
+      <DependentUpon>companySearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\companySearch.ascx.vb">
+      <DependentUpon>companySearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Company_Edit_Template.ascx.designer.vb">
+      <DependentUpon>Company_Edit_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Company_Edit_Template.ascx.vb">
+      <DependentUpon>Company_Edit_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Company_Tabs.ascx.designer.vb">
+      <DependentUpon>Company_Tabs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Company_Tabs.ascx.vb">
+      <DependentUpon>Company_Tabs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\contactCard.ascx.designer.vb">
+      <DependentUpon>contactCard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contactCard.ascx.vb">
+      <DependentUpon>contactCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ContactSearch.ascx.designer.vb">
+      <DependentUpon>ContactSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ContactSearch.ascx.vb">
+      <DependentUpon>ContactSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Contact_Edit_Template.ascx.designer.vb">
+      <DependentUpon>Contact_Edit_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Contact_Edit_Template.ascx.vb">
+      <DependentUpon>Contact_Edit_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Contact_Reference_Edit_Template.ascx.designer.vb">
+      <DependentUpon>Contact_Reference_Edit_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Contact_Reference_Edit_Template.ascx.vb">
+      <DependentUpon>Contact_Reference_Edit_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\JobsSearch.ascx.designer.vb">
+      <DependentUpon>JobsSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\JobsSearch.ascx.vb">
+      <DependentUpon>JobsSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Notes.ascx.designer.vb">
+      <DependentUpon>Notes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Notes.ascx.vb">
+      <DependentUpon>Notes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\NotesSearch.ascx.designer.vb">
+      <DependentUpon>NotesSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\NotesSearch.ascx.vb">
+      <DependentUpon>NotesSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Opportunities.ascx.designer.vb">
+      <DependentUpon>Opportunities.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Opportunities.ascx.vb">
+      <DependentUpon>Opportunities.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\OpportunitiesSearch.ascx.designer.vb">
+      <DependentUpon>OpportunitiesSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\OpportunitiesSearch.ascx.vb">
+      <DependentUpon>OpportunitiesSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Preference_Edit_Template.ascx.designer.vb">
+      <DependentUpon>Preference_Edit_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Preference_Edit_Template.ascx.vb">
+      <DependentUpon>Preference_Edit_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\RecordNavBar.ascx.designer.vb">
+      <DependentUpon>RecordNavBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\RecordNavBar.ascx.vb">
+      <DependentUpon>RecordNavBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Submenu_Edit_Template.ascx.designer.vb">
+      <DependentUpon>Submenu_Edit_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Submenu_Edit_Template.ascx.vb">
+      <DependentUpon>Submenu_Edit_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\SubNav.ascx.designer.vb">
+      <DependentUpon>SubNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\SubNav.ascx.vb">
+      <DependentUpon>SubNav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\TreeNav.ascx.designer.vb">
+      <DependentUpon>TreeNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\TreeNav.ascx.vb">
+      <DependentUpon>TreeNav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\User_Edit_Template.ascx.designer.vb">
+      <DependentUpon>User_Edit_Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\User_Edit_Template.ascx.vb">
+      <DependentUpon>User_Edit_Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\WelcomeUser.ascx.designer.vb">
+      <DependentUpon>WelcomeUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\WelcomeUser.ascx.vb">
+      <DependentUpon>WelcomeUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\clsClient_Aircraft.vb" />
+    <Compile Include="Entity Classes\clsClient_Aircraft_Model.vb" />
+    <Compile Include="Entity Classes\clsClient_Aircraft_Propeller.vb" />
+    <Compile Include="Entity Classes\clsClient_Aircraft_Reference.vb" />
+    <Compile Include="controls\LogonUser.ascx.designer.vb">
+      <DependentUpon>LogonUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LogonUser.ascx.vb">
+      <DependentUpon>LogonUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\RegisterUser.ascx.designer.vb">
+      <DependentUpon>RegisterUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\RegisterUser.ascx.vb">
+      <DependentUpon>RegisterUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\CommonAircraftFunctions.vb" />
+    <Compile Include="Entity Classes\Constants.vb" />
+    <Compile Include="Entity Classes\crmTypeClass.vb" />
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="details.aspx.designer.vb">
+      <DependentUpon>details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="details.aspx.vb">
+      <DependentUpon>details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit.aspx.designer.vb">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit.aspx.vb">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="edit_note.aspx.designer.vb">
+      <DependentUpon>edit_note.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_note.aspx.vb">
+      <DependentUpon>edit_note.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\clsClient_Company.vb" />
+    <Compile Include="Entity Classes\clsClient_Contact.vb" />
+    <Compile Include="Entity Classes\clsClient_Document.vb" />
+    <Compile Include="Entity Classes\clsClient_Error_Log.vb" />
+    <Compile Include="Entity Classes\clsClient_Phone_Numbers.vb" />
+    <Compile Include="Entity Classes\clsClient_Project.vb" />
+    <Compile Include="Entity Classes\clsClient_Transactions.vb" />
+    <Compile Include="Entity Classes\clsClient_Transactions_Company.vb" />
+    <Compile Include="Entity Classes\clsClient_Transactions_Contact.vb" />
+    <Compile Include="Entity Classes\clsClient_Transactions_Phone_Numbers.vb" />
+    <Compile Include="Entity Classes\clsClient_Transactions_Sircraft_Reference.vb" />
+    <Compile Include="Entity Classes\clsClient_Transaction_Category.vb" />
+    <Compile Include="Entity Classes\clsGeneral.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entity Classes\clsGenericMethods.vb" />
+    <Compile Include="Entity Classes\clsGenericMethodsDA.vb" />
+    <Compile Include="Entity Classes\clsLocal_Notes.vb" />
+    <Compile Include="Entity Classes\mdlDatabaseUtilties.vb" />
+    <Compile Include="errorPages\genericError.aspx.designer.vb">
+      <DependentUpon>genericError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errorPages\genericError.aspx.vb">
+      <DependentUpon>genericError.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="errorPages\scriptError.aspx.designer.vb">
+      <DependentUpon>scriptError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errorPages\scriptError.aspx.vb">
+      <DependentUpon>scriptError.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="adminOnline.aspx.designer.vb">
+      <DependentUpon>adminOnline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminOnline.aspx.vb">
+      <DependentUpon>adminOnline.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\CustomerAdminTheme.Master.designer.vb">
+      <DependentUpon>CustomerAdminTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\CustomerAdminTheme.Master.vb">
+      <DependentUpon>CustomerAdminTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\EvoTheme.Master.designer.vb">
+      <DependentUpon>EvoTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\EvoTheme.Master.vb">
+      <DependentUpon>EvoTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvoStyles\YachtTheme.Master.designer.vb">
+      <DependentUpon>YachtTheme.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EvoStyles\YachtTheme.Master.vb">
+      <DependentUpon>YachtTheme.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="evo_exporter.aspx.designer.vb">
+      <DependentUpon>evo_exporter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="evo_exporter.aspx.vb">
+      <DependentUpon>evo_exporter.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="export.aspx.designer.vb">
+      <DependentUpon>export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export.aspx.vb">
+      <DependentUpon>export.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="export_creator.aspx.designer.vb">
+      <DependentUpon>export_creator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export_creator.aspx.vb">
+      <DependentUpon>export_creator.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.designer.vb">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.vb">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="listing.aspx.designer.vb">
+      <DependentUpon>listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listing.aspx.vb">
+      <DependentUpon>listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listing_air.aspx.designer.vb">
+      <DependentUpon>listing_air.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listing_contact.aspx.designer.vb">
+      <DependentUpon>listing_contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listing_document.aspx.designer.vb">
+      <DependentUpon>listing_document.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listing_document.aspx.vb">
+      <DependentUpon>listing_document.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="listing_jobs.aspx.designer.vb">
+      <DependentUpon>listing_jobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listing_transaction.aspx.designer.vb">
+      <DependentUpon>listing_transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listing_transaction.aspx.vb">
+      <DependentUpon>listing_transaction.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Aircraft_Listing.aspx.designer.vb">
+      <DependentUpon>Aircraft_Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aircraft_Listing.aspx.vb">
+      <DependentUpon>Aircraft_Listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main_site.Master.designer.vb">
+      <DependentUpon>main_site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="main_site.Master.vb">
+      <DependentUpon>main_site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="market.aspx.designer.vb">
+      <DependentUpon>market.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="market.aspx.vb">
+      <DependentUpon>market.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mobile.Master.designer.vb">
+      <DependentUpon>Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile.Master.vb">
+      <DependentUpon>Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile_Details.aspx.designer.vb">
+      <DependentUpon>Mobile_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile_Details.aspx.vb">
+      <DependentUpon>Mobile_Details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mobile_Listing.aspx.designer.vb">
+      <DependentUpon>Mobile_Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile_Listing.aspx.vb">
+      <DependentUpon>Mobile_Listing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="myCRM.aspx.designer.vb">
+      <DependentUpon>myCRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myCRM.aspx.vb">
+      <DependentUpon>myCRM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="op_costs.aspx.designer.vb">
+      <DependentUpon>op_costs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="op_costs.aspx.vb">
+      <DependentUpon>op_costs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="performance_specs.aspx.designer.vb">
+      <DependentUpon>performance_specs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="performance_specs.aspx.vb">
+      <DependentUpon>performance_specs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="picture.aspx.designer.vb">
+      <DependentUpon>picture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="picture.aspx.vb">
+      <DependentUpon>picture.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Preferences.aspx.designer.vb">
+      <DependentUpon>Preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences.aspx.vb">
+      <DependentUpon>Preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="print_spec.aspx.designer.vb">
+      <DependentUpon>print_spec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="print_spec.aspx.vb">
+      <DependentUpon>print_spec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SandBox.aspx.designer.vb">
+      <DependentUpon>SandBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SandBox.aspx.vb">
+      <DependentUpon>SandBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sessionKeepAlive.aspx.designer.vb">
+      <DependentUpon>sessionKeepAlive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sessionKeepAlive.aspx.vb">
+      <DependentUpon>sessionKeepAlive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="subscriptionInfo.aspx.designer.vb">
+      <DependentUpon>subscriptionInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="subscriptionInfo.aspx.vb">
+      <DependentUpon>subscriptionInfo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="View_Template.aspx.designer.vb">
+      <DependentUpon>View_Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Template.aspx.vb">
+      <DependentUpon>View_Template.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DisplayYachtDetail.aspx.designer.vb">
+      <DependentUpon>DisplayYachtDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayYachtDetail.aspx.vb">
+      <DependentUpon>DisplayYachtDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="chat\Data\SessionDB.dbml.layout">
+      <DependentUpon>SessionDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="abiFiles\abiAircraftDetails.aspx" />
+    <Content Include="abiFiles\abiContact.aspx" />
+    <Content Include="abiFiles\abiDealer.aspx" />
+    <Content Include="abiFiles\abiEvents.aspx" />
+    <Content Include="abiFiles\abiForsale.aspx" />
+    <Content Include="abiFiles\abiLinks.aspx" />
+    <Content Include="abiFiles\abiNews.aspx" />
+    <Content Include="abiFiles\abiProducts.aspx" />
+    <Content Include="abiFiles\abiWanteds.aspx" />
+    <Content Include="abiFiles\abiRegIndex.aspx" />
+    <Content Include="abiFiles\css\abi_styles.css" />
+    <Content Include="abiFiles\css\all-hovers.css" />
+    <Content Include="abiFiles\css\caroufredsel.css" />
+    <Content Include="abiFiles\css\dialog_default.css" />
+    <Content Include="abiFiles\css\fancybox_default.css" />
+    <Content Include="abiFiles\css\jquery.bxslider.css" />
+    <Content Include="abiFiles\css\jquery.fancybox-buttons.css" />
+    <Content Include="abiFiles\css\jquery.fancybox-thumbs.css" />
+    <Content Include="abiFiles\css\jquery.fancybox.css" />
+    <Content Include="abiFiles\css\komento_common.css" />
+    <Content Include="abiFiles\css\komento_style.css" />
+    <Content Include="EvoStyles\stylesheets\superfish.css" />
+    <Content Include="abiFiles\css\syntaxhighlighter_default.css" />
+    <Content Include="abiFiles\css\template.css" />
+    <Content Include="abiFiles\defaultABI.aspx" />
+    <Content Include="abiFiles\fonts\fontawesome-webfont.svg" />
+    <Content Include="abiFiles\fonts\icomoon.dev.svg" />
+    <Content Include="abiFiles\fonts\icomoon.svg" />
+    <Content Include="abiFiles\images\abiLogo.png" />
+    <Content Include="abiFiles\images\bg_1.jpg" />
+    <Content Include="abiFiles\images\blank.gif" />
+    <Content Include="abiFiles\images\bx_loader.gif" />
+    <Content Include="abiFiles\images\camera-loader.gif" />
+    <Content Include="abiFiles\images\camera_skins.png" />
+    <Content Include="abiFiles\images\carousel\big\image1.jpg" />
+    <Content Include="abiFiles\images\carousel\big\image2.jpg" />
+    <Content Include="abiFiles\images\controls.png" />
+    <Content Include="abiFiles\images\fancybox\blank.gif" />
+    <Content Include="abiFiles\images\fancybox\fancybox_buttons.png" />
+    <Content Include="abiFiles\images\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="abiFiles\images\fancybox\fancybox_loading.gif" />
+    <Content Include="abiFiles\images\fancybox\fancybox_overlay.png" />
+    <Content Include="abiFiles\images\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="abiFiles\images\fancybox\fancybox_sprite.png" />
+    <Content Include="abiFiles\images\index.html" />
+    <Content Include="abiFiles\images\loader.gif" />
+    <Content Include="abiFiles\images\market_trends.jpg" />
+    <Content Include="abiFiles\images\searchButton.gif" />
+    <Content Include="abiFiles\images\system\preloader.gif" />
+    <Content Include="abiFiles\images\system\rating_star.png" />
+    <Content Include="abiFiles\images\system\rating_star_blank.png" />
+    <Content Include="abiFiles\images\system\sort_asc.png" />
+    <Content Include="abiFiles\images\system\sort_desc.png" />
+    <Content Include="abiFiles\images\template\bgblack.jpg" />
+    <Content Include="abiFiles\images\template\bgwhite.jpg" />
+    <Content Include="abiFiles\images\template\bodyBg.png" />
+    <Content Include="abiFiles\images\template\captionBg.png" />
+    <Content Include="abiFiles\images\template\carfig.png" />
+    <Content Include="abiFiles\images\template\nav-sep.gif" />
+    <Content Include="abiFiles\images\template\typeBg.png" />
+    <Content Include="abiFiles\images\up-arrow.png" />
+    <Content Include="abiFiles\images\zoom.png" />
+    <Content Include="abiFiles\js\bootstrap.min.js" />
+    <Content Include="abiFiles\js\caption.js" />
+    <Content Include="abiFiles\js\d3d8fdbe616a2a631d769a869b96e1c0.js" />
+    <Content Include="abiFiles\js\foundry_config.js" />
+    <Content Include="abiFiles\js\html5shiv+printshiv.js" />
+    <Content Include="abiFiles\js\jquery-migrate.min.js" />
+    <Content Include="abiFiles\js\jquery-noconflict.js" />
+    <Content Include="abiFiles\js\jquery.bxslider.min.js" />
+    <Content Include="abiFiles\js\jquery.caroufredsel.js" />
+    <Content Include="abiFiles\js\jquery.centerIn.js" />
+    <Content Include="abiFiles\js\jquery.fancybox-buttons.js" />
+    <Content Include="abiFiles\js\jquery.fancybox-media.js" />
+    <Content Include="abiFiles\js\jquery.fancybox-thumbs.js" />
+    <Content Include="abiFiles\js\jquery.fancybox.pack.js" />
+    <Content Include="abiFiles\js\jquery.min.js" />
+    <Content Include="abiFiles\js\jquery.mousewheel.min.js" />
+    <Content Include="abiFiles\js\jquery.pep.js" />
+    <Content Include="abiFiles\js\jquery.simplr.smoothscroll.stellar.modernizr.min.js" />
+    <Content Include="abiFiles\js\jquery.touchSwipe.min.js" />
+    <Content Include="abiFiles\js\jquery.vide.min.js" />
+    <Content Include="abiFiles\js\komento-1.8.3.static.min.js" />
+    <Content Include="abiFiles\js\komento_config.js" />
+    <Content Include="abiFiles\js\scripts.js" />
+    <Content Include="abiFiles\js\superfish.min.js" />
+    <Content Include="abiFiles\js\tmlazyload.js" />
+    <Content Include="abiFiles\rss\abiNewsRss.aspx" />
+    <Content Include="abiFiles\rss\aviationrss.aspx" />
+    <Content Include="abiFiles\rss\globalRss.aspx" />
+    <Content Include="abiFiles\rss\rss-helicopter.aspx" />
+    <Content Include="abiFiles\rss\rss-jets.aspx" />
+    <Content Include="abiFiles\rss\rss-piston.aspx" />
+    <Content Include="abiFiles\rss\rss-turbine.aspx" />
+    <Content Include="adminAssetInsight.aspx" />
+    <Content Include="adminBackground.aspx" />
+    <Content Include="adminDeveloper.aspx" />
+    <Content Include="adminFlightSummary.aspx" />
+    <Content Include="adminHelp.aspx" />
+    <Content Include="adminHome.aspx" />
+    <Content Include="adminMPM.aspx" />
+    <Content Include="adminSubErrors.aspx" />
+    <Content Include="adminSubscribers.aspx" />
+    <Content Include="adminSummary.aspx" />
+    <Content Include="aircraftFinder.aspx" />
+    <Content Include="AirportLocationMap.aspx" />
+    <Content Include="Airport_Listing.aspx" />
+    <Content Include="Appraisal.aspx" />
+    <Content Include="App_Themes\Evo\Evo.skin" />
+    <Content Include="AssetInsight.aspx" />
+    <Content Include="Attributes.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\CKEditor.NET.dll" />
+    <Content Include="bin\DayPilot.dll" />
+    <Content Include="bin\evohtmltopdf.dll" />
+    <Content Include="bin\evohtmltopdf.xml" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\obout_Flyout2_NET.dll" />
+    <Content Include="bin\System.Web.DataVisualization.dll" />
+    <Content Include="bin\System.Web.DataVisualization.xml" />
+    <Content Include="chat\ChatBox.aspx" />
+    <Content Include="chat\ChatCleanup.aspx" />
+    <Content Include="chat\chatHeader.png" />
+    <Content Include="chat\ChatHistory.aspx" />
+    <Content Include="chat\ChatTestPopUp.aspx" />
+    <Content Include="chat\Scripts\chatUtility.js" />
+    <Content Include="chat\Scripts\chatWithUser.js" />
+    <Content Include="common\chosen.css" />
+    <Content Include="common\chosen.jquery.min.js" />
+    <Content Include="common\classic.css" />
+    <Content Include="common\crmLeftMenu.css" />
+    <Content Include="common\date.js" />
+    <Content Include="common\daterangepicker.jQuery.js" />
+    <Content Include="common\eventSearchScript.js" />
+    <Content Include="common\header_scripts.js" />
+    <Content Include="common\jQDateRangeSlider-min.js" />
+    <Content Include="common\jquery-1.8.2.min.js" />
+    <Content Include="common\jquery-ui.css" />
+    <Content Include="common\jquery-ui.min.js" />
+    <Content Include="common\jquery.cookie.js" />
+    <Content Include="common\jquery.number.min.js" />
+    <Content Include="common\jquery.sidr.min.js" />
+    <Content Include="common\jquery.slicknav.min.js" />
+    <Content Include="common\moment-with-locales.js" />
+    <Content Include="common\typeSizeBrandModel.js" />
+    <Content Include="controls\chatNotify.ascx" />
+    <Content Include="chat\Scripts\chatbox.js" />
+    <Content Include="chat\Scripts\chatMessage.js" />
+    <Content Include="chat\Scripts\chatNotify.js" />
+    <Content Include="chat\Scripts\chatRoom.js" />
+    <Content Include="chat\Services\chatServices.svc" />
+    <Content Include="common\aircraft_model.css" />
+    <Content Include="common\categoryBrandModel.js" />
+    <Content Include="common\common_functions.js" />
+    <Content Include="common\contentslider.css" />
+    <Content Include="common\contentslider.js" />
+    <Content Include="common\ipad-landscape.css" />
+    <Content Include="common\ipad-portrait.css" />
+    <Content Include="common\jetnet.css" />
+    <Content Include="common\jquery-ui-autocomplete.js" />
+    <Content Include="common\jquery.select-to-autocomplete.min.js" />
+    <Content Include="common\jsDate.js" />
+    <Content Include="common\marketPickDateScript.js" />
+    <Content Include="common\marketSummary.css" />
+    <Content Include="common\MyCRM_style.css" />
+    <Content Include="common\rebuildClientArray.js" />
+    <Content Include="common\redesign.css" />
+    <Content Include="common\refreshCCSTDropdowns.js" />
+    <Content Include="common\refreshTMMDropdowns.js" />
+    <Content Include="common\RegionDropdowns.js" />
+    <Content Include="common\regular.css" />
+    <Content Include="common\stepcarousel.js" />
+    <Content Include="common\TypeMakeModelDropdown.js" />
+    <Content Include="company_spec.aspx" />
+    <Content Include="controls\ActionItems.ascx" />
+    <Content Include="controls\ActionItemsSearch.ascx" />
+    <Content Include="controls\aircraftCard.ascx" />
+    <Content Include="controls\aircraftSearch.ascx" />
+    <Content Include="controls\Aircraft_Edit_Avionics_Tab.ascx" />
+    <Content Include="controls\Aircraft_Edit_Details_Tabs.ascx" />
+    <Content Include="controls\Aircraft_Edit_Engine_Tab.ascx" />
+    <Content Include="controls\Aircraft_Edit_Features_Tab.ascx" />
+    <Content Include="controls\Aircraft_Edit_Propeller_Tab.ascx" />
+    <Content Include="controls\Aircraft_Edit_Template.ascx" />
+    <Content Include="controls\Aircraft_Edit_Transactions_Tab.ascx" />
+    <Content Include="controls\Aircraft_Tabs.ascx" />
+    <Content Include="controls\Calendar.ascx" />
+    <Content Include="controls\companyCard.ascx" />
+    <Content Include="controls\companySearch.ascx" />
+    <Content Include="controls\Company_Edit_Template.ascx" />
+    <Content Include="controls\Company_Tabs.ascx" />
+    <Content Include="controls\contactCard.ascx" />
+    <Content Include="controls\ContactQuickEntry.ascx" />
+    <Content Include="controls\ContactSearch.ascx" />
+    <Content Include="controls\Contact_Edit_Template.ascx" />
+    <Content Include="controls\Contact_Reference_Edit_Template.ascx" />
+    <Content Include="controls\continentRegionDropdowns.ascx" />
+    <Content Include="controls\eventCategoryType.ascx" />
+    <Content Include="controls\localReminders.ascx" />
+    <Content Include="controls\marketTimeSpanDropdowns.ascx" />
+    <Content Include="controls\simpleInsertForm.ascx" />
+    <Content Include="controls\valueControl.ascx" />
+    <Content Include="controls\viewTypeMakeModel.ascx" />
+    <Content Include="controls\View_Mobile.ascx" />
+    <Content Include="controls\yachtCatBrandModel.ascx" />
+    <Content Include="controls\yachtTypeSizeBrandModel.ascx" />
+    <Content Include="controls\Yacht_View_Master.ascx" />
+    <Content Include="controls\Yacht_Criteria_Bar.ascx" />
+    <Content Include="controls\Criteria_Bar.ascx" />
+    <Content Include="controls\Documents.ascx" />
+    <Content Include="controls\Email.ascx" />
+    <Content Include="controls\JobsSearch.ascx" />
+    <Content Include="controls\market_search.ascx" />
+    <Content Include="controls\Notes.ascx" />
+    <Content Include="controls\NotesSearch.ascx" />
+    <Content Include="controls\Opportunities.ascx" />
+    <Content Include="controls\OpportunitiesSearch.ascx" />
+    <Content Include="controls\Preference_Edit_Template.ascx" />
+    <Content Include="controls\RecordNavBar.ascx" />
+    <Content Include="controls\Submenu_Edit_Template.ascx" />
+    <Content Include="controls\SubNav.ascx" />
+    <Content Include="controls\TransactionSearch.ascx" />
+    <Content Include="controls\TreeNav.ascx" />
+    <Content Include="controls\User_Edit_Template.ascx" />
+    <Content Include="controls\validateUser.ascx" />
+    <Content Include="controls\ViewLogs.ascx" />
+    <Content Include="controls\View_Master.ascx" />
+    <Content Include="controls\Wanted.ascx" />
+    <Content Include="controls\WantedSearch.ascx" />
+    <Content Include="controls\WelcomeUser.ascx" />
+    <Content Include="Company_Listing.aspx" />
+    <Content Include="EvoStyles\stylesheets\print.css" />
+    <Content Include="EvoStyles\stylesheets\tableThemes.css" />
+    <Content Include="EvoStyles\stylesheets\widget_themes.css" />
+    <Content Include="fullTextSearch.aspx" />
+    <Content Include="homebaseEditAircraftModel.aspx" />
+    <Content Include="homebaseFlightResearch.aspx" />
+    <Content Include="homebasePerformance.aspx" />
+    <Content Include="homebaseOpCosts.aspx" />
+    <Content Include="homebaseSPDCS.aspx" />
+    <Content Include="home_Model.aspx" />
+    <Content Include="images\aircraftDetailsDropdown.jpg" />
+    <Content Include="images\aircraftMobileButton.png" />
+    <Content Include="images\airportMobileButton.png" />
+    <Content Include="images\background\0.jpg" />
+    <Content Include="images\background\38.jpg" />
+    <Content Include="images\background\39.jpg" />
+    <Content Include="images\background\40.jpg" />
+    <Content Include="images\background\41.jpg" />
+    <Content Include="images\background\42.jpg" />
+    <Content Include="images\background\43.jpg" />
+    <Content Include="images\background\44.jpg" />
+    <Content Include="images\background\45.jpg" />
+    <Content Include="images\background\46.jpg" />
+    <Content Include="images\background\47.jpg" />
+    <Content Include="images\background\48.jpg" />
+    <Content Include="images\background\49.jpg" />
+    <Content Include="images\background\50.jpg" />
+    <Content Include="images\background\51.jpg" />
+    <Content Include="images\background\52.jpg" />
+    <Content Include="images\background\53.jpg" />
+    <Content Include="images\background\54.jpg" />
+    <Content Include="images\background\55.jpg" />
+    <Content Include="images\background\56.jpg" />
+    <Content Include="images\background\57.jpg" />
+    <Content Include="images\background\58.jpg" />
+    <Content Include="images\background\59.jpg" />
+    <Content Include="images\background\60.jpg" />
+    <Content Include="images\background\61.jpg" />
+    <Content Include="images\background\62.jpg" />
+    <Content Include="images\background\63.jpg" />
+    <Content Include="images\background\64.jpg" />
+    <Content Include="images\background\lightwordBackground.jpg" />
+    <Content Include="images\background\login.jpg" />
+    <Content Include="images\background\wordBackground.jpg" />
+    <Content Include="images\calendar_picture.png" />
+    <Content Include="images\chain.png" />
+    <Content Include="images\chevron.png" />
+    <Content Include="images\chosen-sprite%402x.png" />
+    <Content Include="images\chosen-sprite.png" />
+    <Content Include="images\companyMobileButton.png" />
+    <Content Include="images\compare_arrows.png" />
+    <Content Include="images\crm_SearchHeader.png" />
+    <Content Include="images\crm_SearchHeaderNew.png" />
+    <Content Include="images\crm_SearchHeader_blank.png" />
+    <Content Include="images\eventMobileButton.png" />
+    <Content Include="images\file-2x.png" />
+    <Content Include="images\flightActivityDropdown.jpg" />
+    <Content Include="images\flight_aware.jpg" />
+    <Content Include="images\folder-2x.png" />
+    <Content Include="images\homebase.png" />
+    <Content Include="images\JETNET_AerodexElite_FINAL.png" />
+    <Content Include="images\JETNET_EvoMarketplace_Mobile.png" />
+    <Content Include="images\JETNET_Homebase_Outlines.png" />
+    <Content Include="images\JETNET_MarketplaceValues.png" />
+    <Content Include="images\JETNET_MPMandValues.png" />
+    <Content Include="images\JETNET_MPMOnly.png" />
+    <Content Include="images\legendValueChart.jpg" />
+    <Content Include="images\market_report.png" />
+    <Content Include="images\modelMobileButton.png" />
+    <Content Include="images\MPM_Values.png" />
+    <Content Include="images\operatingMobileButton.png" />
+    <Content Include="images\performanceMobileButton.png" />
+    <Content Include="images\save_disk_icon.png" />
+    <Content Include="images\valuesLogo.png" />
+    <Content Include="images\valuesMobileButton.png" />
+    <Content Include="JSONresponse.aspx" />
+    <Content Include="largeGraphDisplay.aspx" />
+    <Content Include="macShell.aspx" />
+    <Content Include="Maintenance.aspx" />
+    <Content Include="resdiualMarketValue.aspx" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="selection_listing.aspx" />
+    <Content Include="SendSalesTransaction.aspx" />
+    <Content Include="homebaseHome.aspx" />
+    <Content Include="DisplayEventsDetailListing.aspx" />
+    <Content Include="EvoStyles\stylesheets\header_styles.css" />
+    <Content Include="EvoStyles\stylesheets\slicknav.css" />
+    <Content Include="images\JETNET_Aerodex.png" />
+    <Content Include="images\JETNET_EvoAdmin_Outlines.png" />
+    <Content Include="images\JETNET_EvoMarketplace.png" />
+    <Content Include="images\JETNET_Helidex.png" />
+    <Content Include="images\JETNET_MarketplaceMan.png" />
+    <Content Include="images\JETNET_Rotodex.png" />
+    <Content Include="images\JETNET_YachtSpot.png" />
+    <Content Include="offLine.aspx" />
+    <Content Include="DisplayContactDetail.aspx" />
+    <Content Include="enterWantedInfo.aspx" />
+    <Content Include="eventsManager.aspx" />
+    <Content Include="evoNews.aspx" />
+    <Content Include="evoProjectConversion.aspx" />
+    <Content Include="EvoStyles\images\apple-touch-icon-114x114.jpg" />
+    <Content Include="EvoStyles\images\apple-touch-icon-114x114.png" />
+    <Content Include="EvoStyles\images\apple-touch-icon-72x72.jpg" />
+    <Content Include="EvoStyles\images\apple-touch-icon-72x72.png" />
+    <Content Include="EvoStyles\images\apple-touch-icon.png" />
+    <Content Include="EvoStyles\images\favicon.ico" />
+    <Content Include="EvoStyles\images\tab_background.jpg" />
+    <Content Include="EvoStyles\stylesheets\additional_mobile_styles.css" />
+    <Content Include="EvoStyles\stylesheets\chatStyles.css" />
+    <Content Include="EvoStyles\stylesheets\ui.daterangepicker.css" />
+    <Content Include="FAAFlightData.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="FolderMaintenance.aspx" />
+    <Content Include="fractionalShareholderList.aspx" />
+    <Content Include="images\action_button.jpg" />
+    <Content Include="images\action_button.png" />
+    <Content Include="images\addcompare.png" />
+    <Content Include="images\add_parent.jpg" />
+    <Content Include="images\add_user.png" />
+    <Content Include="images\aircraft_button.jpg" />
+    <Content Include="images\aircraft_button.png" />
+    <Content Include="images\analytics.jpg" />
+    <Content Include="images\arrowsCircle.png" />
+    <Content Include="images\background\1.jpg" />
+    <Content Include="images\background\10.jpg" />
+    <Content Include="images\background\11.jpg" />
+    <Content Include="images\background\12.jpg" />
+    <Content Include="images\background\13.jpg" />
+    <Content Include="images\background\14.jpg" />
+    <Content Include="images\background\15.jpg" />
+    <Content Include="images\background\16.jpg" />
+    <Content Include="images\background\17.jpg" />
+    <Content Include="images\background\18.jpg" />
+    <Content Include="images\background\19.jpg" />
+    <Content Include="images\background\2.jpg" />
+    <Content Include="images\background\20.jpg" />
+    <Content Include="images\background\21.jpg" />
+    <Content Include="images\background\22.jpg" />
+    <Content Include="images\background\23.jpg" />
+    <Content Include="images\background\24.jpg" />
+    <Content Include="images\background\25.jpg" />
+    <Content Include="images\background\26.jpg" />
+    <Content Include="images\background\27.jpg" />
+    <Content Include="images\background\28.jpg" />
+    <Content Include="images\background\29.jpg" />
+    <Content Include="images\background\3.jpg" />
+    <Content Include="images\background\30.jpg" />
+    <Content Include="images\background\31.jpg" />
+    <Content Include="images\background\32.jpg" />
+    <Content Include="images\background\33.jpg" />
+    <Content Include="images\background\34.jpg" />
+    <Content Include="images\background\35.jpg" />
+    <Content Include="images\background\36.jpg" />
+    <Content Include="images\background\37.jpg" />
+    <Content Include="images\background\4.jpg" />
+    <Content Include="images\background\5.jpg" />
+    <Content Include="images\background\6.jpg" />
+    <Content Include="images\background\7.jpg" />
+    <Content Include="images\background\8.jpg" />
+    <Content Include="images\background\9.jpg" />
+    <Content Include="images\base.png" />
+    <Content Include="images\binoculars.jpg" />
+    <Content Include="images\binoculars_green.png" />
+    <Content Include="images\blue_plus_sign.png" />
+    <Content Include="images\blue_tab_background.jpg" />
+    <Content Include="images\camera.png" />
+    <Content Include="images\cert-far-121.jpg" />
+    <Content Include="images\cert-far-125.jpg" />
+    <Content Include="images\cert-far-133.jpg" />
+    <Content Include="images\cert-far-137.jpg" />
+    <Content Include="images\cert-far-145.jpg" />
+    <Content Include="images\cert-far-91.jpg" />
+    <Content Include="images\cert_isboa.jpg" />
+    <Content Include="images\client_water.png" />
+    <Content Include="images\cloud.png" />
+    <Content Include="images\cloud_watermark.jpg" />
+    <Content Include="images\comment.png" />
+    <Content Include="images\comments.png" />
+    <Content Include="images\companies_folder.jpg" />
+    <Content Include="images\companies_folder.png" />
+    <Content Include="images\company_button.jpg" />
+    <Content Include="images\company_button.png" />
+    <Content Include="images\comp_no_image.png" />
+    <Content Include="images\condensed_spec_sheet.jpg" />
+    <Content Include="images\contacts_folder.png" />
+    <Content Include="images\contact_button.jpg" />
+    <Content Include="images\contact_button.png" />
+    <Content Include="images\current_value.png" />
+    <Content Include="images\delete_user.png" />
+    <Content Include="images\DocumentSM.gif" />
+    <Content Include="images\DocumentSmall.gif" />
+    <Content Include="images\DocumentSM_Display.GIF" />
+    <Content Include="images\document_button.png" />
+    <Content Include="images\event_search_box.png" />
+    <Content Include="images\evolutionlogo.gif" />
+    <Content Include="images\evoPlane.png" />
+    <Content Include="images\evo_green_check.png" />
+    <Content Include="images\evo_header.jpg" />
+    <Content Include="images\evo_red_check.png" />
+    <Content Include="images\evo_water.png" />
+    <Content Include="images\excel.jpg" />
+    <Content Include="images\exclusive_client.gif" />
+    <Content Include="images\exclusive_client.png" />
+    <Content Include="images\exclusive_jetnet.png" />
+    <Content Include="images\exterior_notes.jpg" />
+    <Content Include="images\flag.jpg" />
+    <Content Include="images\flag.png" />
+    <Content Include="images\folder_my_aircraft.jpg" />
+    <Content Include="images\full_spec.jpg" />
+    <Content Include="images\gear.png" />
+    <Content Include="images\gold_plus_sign.png" />
+    <Content Include="images\gold_prospect_icon.png" />
+    <Content Include="images\helicopter_icon.png" />
+    <Content Include="images\home_button.png" />
+    <Content Include="images\interior_notes.jpg" />
+    <Content Include="images\jbul.png" />
+    <Content Include="images\JETNETEvolutionAdminFINAL.png" />
+    <Content Include="images\lease_client.gif" />
+    <Content Include="images\lease_client.png" />
+    <Content Include="images\lease_jetnet.gif" />
+    <Content Include="images\lease_jetnet.png" />
+    <Content Include="images\listing_view.jpg" />
+    <Content Include="images\listing_view_down.jpg" />
+    <Content Include="images\magnify_small.png" />
+    <Content Include="images\marketpdfheader.jpg" />
+    <Content Include="images\market_button.png" />
+    <Content Include="images\market_manager.png" />
+    <Content Include="images\market_search_box.png" />
+    <Content Include="images\market_summary_type_search_box.png" />
+    <Content Include="images\model_search_box.png" />
+    <Content Include="images\notes_button.jpg" />
+    <Content Include="images\notes_button.png" />
+    <Content Include="images\note_pin_add.png" />
+    <Content Include="images\note_view_pin.png" />
+    <Content Include="images\opportunities_button.png" />
+    <Content Include="images\orange_arrow_client.gif" />
+    <Content Include="images\papers.jpg" />
+    <Content Include="images\papers.png" />
+    <Content Include="images\PASTE_24.PNG" />
+    <Content Include="images\pdf.jpg" />
+    <Content Include="images\picture.jpg" />
+    <Content Include="images\plane_icon.png" />
+    <Content Include="images\ppt.jpg" />
+    <Content Include="images\purple_arrow_client.gif" />
+    <Content Include="images\red_plus_sign.png" />
+    <Content Include="images\refresh_regular_folder.png" />
+    <Content Include="images\refresh_regular_folder_hidden.png" />
+    <Content Include="images\refresh_shared_folder.png" />
+    <Content Include="images\refresh_shared_folder_hidden.png" />
+    <Content Include="images\regular_folder.jpg" />
+    <Content Include="images\remote.jpg" />
+    <Content Include="images\remove_exclusive.gif" />
+    <Content Include="images\remove_lease.gif" />
+    <Content Include="images\reset_demo.gif" />
+    <Content Include="images\save_as.gif" />
+    <Content Include="images\search_collapse.jpg" />
+    <Content Include="images\search_expand.jpg" />
+    <Content Include="images\send_email.jpg" />
+    <Content Include="images\server.png" />
+    <Content Include="images\shared_final.jpg" />
+    <Content Include="images\share_folder.jpg" />
+    <Content Include="images\single_page_spec.jpg" />
+    <Content Include="images\small_blue_question.png" />
+    <Content Include="images\star_cover.jpg" />
+    <Content Include="images\Star_Report_img.jpg" />
+    <Content Include="images\static_regular_folder.png" />
+    <Content Include="images\static_regular_folder_hidden.png" />
+    <Content Include="images\static_shared_folder.png" />
+    <Content Include="images\static_shared_folder_hidden.png" />
+    <Content Include="images\summary_type_search_box.png" />
+    <Content Include="images\tab_green_background.jpg" />
+    <Content Include="images\technorati.png" />
+    <Content Include="images\thumbnail.jpg" />
+    <Content Include="images\thumbnail_down.jpg" />
+    <Content Include="images\transactions_button.png" />
+    <Content Include="images\transaction_search_box.png" />
+    <Content Include="images\users.png" />
+    <Content Include="images\user_female.png" />
+    <Content Include="images\user_info.png" />
+    <Content Include="images\user_male.png" />
+    <Content Include="images\user_male_gray.png" />
+    <Content Include="images\value.png" />
+    <Content Include="images\views_header.jpg" />
+    <Content Include="images\view_all_pictures.png" />
+    <Content Include="images\YachtSpot_Logo.png" />
+    <Content Include="images\yacht_icon.png" />
+    <Content Include="images\yacht_no_image.jpg" />
+    <Content Include="MapItems.aspx" />
+    <Content Include="MarketSummary.aspx" />
+    <Content Include="MarketSummaryGraphs.aspx" />
+    <Content Include="MasterLists.aspx" />
+    <Content Include="Notify.aspx" />
+    <Content Include="PDF_Creator.aspx" />
+    <Content Include="searchSummary.aspx" />
+    <Content Include="Short_Spec_Sheet.aspx" />
+    <Content Include="ShowNoteDetails.aspx" />
+    <Content Include="Spec_Sheet.aspx" />
+    <Content Include="STAR_ToFromReport.aspx" />
+    <Content Include="staticFolderEditor.aspx" />
+    <Content Include="tempFiles\contact.vcf" />
+    <Content Include="tempFiles\OperatingCostsEXCELmetric.xslt" />
+    <Content Include="tempFiles\OperatingCostsEXCELnautical.xslt" />
+    <Content Include="tempFiles\OperatingCostsEXCELstandard.xslt" />
+    <Content Include="tempFiles\OperatingCostsHTML.css" />
+    <Content Include="tempFiles\OperatingCostsHTMLmetric.xslt" />
+    <Content Include="tempFiles\OperatingCostsHTMLnautical.xslt" />
+    <Content Include="tempFiles\OperatingCostsHTMLstandard.xslt" />
+    <Content Include="userPortfolio.aspx" />
+    <Content Include="userScheduledJobs.aspx" />
+    <Content Include="UserVerification.aspx" />
+    <Content Include="View.aspx" />
+    <Content Include="viewToPDF.aspx" />
+    <Content Include="wantedDetails.aspx" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <None Include="Web References\com.jetnet.aiservice.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.jetnet.aiservice.www\Service1.disco" />
+    <Content Include="WebSource.aspx" />
+    <Content Include="yachtPicture.aspx" />
+    <Content Include="Yacht_View_Template.aspx" />
+    <Content Include="DisplayModelDetail.aspx" />
+    <Content Include="EmptySessionRefresh.aspx" />
+    <Content Include="Gallery\css\basic.css" />
+    <Content Include="Gallery\css\black.css" />
+    <Content Include="Gallery\css\caption.png" />
+    <Content Include="Gallery\css\galleriffic-3.css" />
+    <Content Include="Gallery\css\jush.css" />
+    <Content Include="Gallery\css\loader.gif" />
+    <Content Include="Gallery\css\loaderWhite.gif" />
+    <Content Include="Gallery\css\nextPageArrow.gif" />
+    <Content Include="Gallery\css\nextPageArrowWhite.gif" />
+    <Content Include="Gallery\css\prevPageArrow.gif" />
+    <Content Include="Gallery\css\prevPageArrowWhite.gif" />
+    <Content Include="Gallery\css\white.css" />
+    <Content Include="Gallery\js\jquery-1.3.2.js" />
+    <Content Include="Gallery\js\jquery.galleriffic.js" />
+    <Content Include="Gallery\js\jquery.history.js" />
+    <Content Include="Gallery\js\jquery.opacityrollover.js" />
+    <Content Include="Gallery\js\jush.js" />
+    <Content Include="Help.aspx" />
+    <Content Include="Operating_Listing.aspx" />
+    <Content Include="Wanted_Listing.aspx" />
+    <Content Include="Performance_Listing.aspx" />
+    <Content Include="YachtListing.aspx" />
+    <Content Include="crmAdministration.aspx" />
+    <Content Include="controls\DocumentSearch.ascx" />
+    <Content Include="crmAdministration_Worker.aspx" />
+    <Content Include="adminCurrentUsers.aspx" />
+    <Content Include="Debug.aspx" />
+    <Content Include="DisplayAircraftDetail.aspx" />
+    <Content Include="DisplayCompanyDetailold.aspx" />
+    <Content Include="errorPages\genericError.aspx" />
+    <Content Include="errorPages\scriptError.aspx" />
+    <Content Include="adminOnline.aspx" />
+    <Content Include="EvoStyles\stylesheets\additional_styles.css" />
+    <Content Include="EvoStyles\stylesheets\layout\base_html_elements.css" />
+    <Content Include="EvoStyles\stylesheets\layout\skeleton_grid.css" />
+    <Content Include="evo_exporter.aspx" />
+    <Content Include="export_creator.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="images\action.jpg" />
+    <Content Include="images\ac_active.png" />
+    <Content Include="images\add_to_folder.jpg" />
+    <Content Include="images\aircraft_folder.png" />
+    <Content Include="images\aircraft_info.jpg" />
+    <Content Include="images\aircraft_info.png" />
+    <Content Include="images\airplane_light_blue.png" />
+    <Content Include="images\alert.png" />
+    <Content Include="images\autologin.jpg" />
+    <Content Include="images\back.jpg" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\background_image.jpg" />
+    <Content Include="images\backtolisting.png" />
+    <Content Include="images\begin_synch.jpg" />
+    <Content Include="images\binoculars.png" />
+    <Content Include="images\blue_dash.gif" />
+    <Content Include="images\camera.jpg" />
+    <Content Include="images\cancel_export.jpg" />
+    <Content Include="images\card_edit.jpg" />
+    <Content Include="images\card_left_client.jpg" />
+    <Content Include="images\card_left_jetnet.jpg" />
+    <Content Include="images\card_right_jetnet.jpg" />
+    <Content Include="images\category_watermark.jpg" />
+    <Content Include="images\cert_aoc.jpg" />
+    <Content Include="images\cert_argusgold.jpg" />
+    <Content Include="images\cert_argusgoldplus.jpg" />
+    <Content Include="images\cert_argusplatinum.jpg" />
+    <Content Include="images\cert_far_129.jpg" />
+    <Content Include="images\cert_far_135.jpg" />
+    <Content Include="images\cert_isbao.jpg" />
+    <Content Include="images\ch_red.jpg" />
+    <Content Include="images\client_aircraft.png" />
+    <Content Include="images\client_info.jpg" />
+    <Content Include="images\client_small.png" />
+    <Content Include="images\collapse_search.jpg" />
+    <Content Include="images\combine_companies.jpg" />
+    <Content Include="images\connect_companies.jpg" />
+    <Content Include="images\contact.jpg" />
+    <Content Include="images\create_client.jpg" />
+    <Content Include="images\create_export_template.jpg" />
+    <Content Include="images\crm_logo.png" />
+    <Content Include="images\dark_blue_bullet.jpg" />
+    <Content Include="images\delete_icon.png" />
+    <Content Include="images\details_background.png" />
+    <Content Include="images\display_watermark.jpg" />
+    <Content Include="images\doc.png" />
+    <Content Include="images\doc_pdf.png" />
+    <Content Include="images\done_with_changes.jpg" />
+    <Content Include="images\down_arrow.png" />
+    <Content Include="images\edit_card.jpg" />
+    <Content Include="images\edit_icon.png" />
+    <Content Include="images\edit_tree_list.jpg" />
+    <Content Include="images\email.jpg" />
+    <Content Include="images\event_info.jpg" />
+    <Content Include="images\evo_exporter.jpg" />
+    <Content Include="images\evo_small.png" />
+    <Content Include="images\excel.png" />
+    <Content Include="images\exclusive_jetnet.gif" />
+    <Content Include="images\expand.jpg" />
+    <Content Include="images\expandable.png" />
+    <Content Include="images\expanded.png" />
+    <Content Include="images\export_now.jpg" />
+    <Content Include="images\file_background.jpg" />
+    <Content Include="images\file_save.jpg" />
+    <Content Include="images\final.png" />
+    <Content Include="images\flag.gif" />
+    <Content Include="images\flag_low.gif" />
+    <Content Include="images\flag_medium.gif" />
+    <Content Include="images\full_page.png" />
+    <Content Include="images\full_view.jpg" />
+    <Content Include="images\gain_loss_down.jpg" />
+    <Content Include="images\gain_loss_none.jpg" />
+    <Content Include="images\gain_loss_up.jpg" />
+    <Content Include="images\gray_menu.jpg" />
+    <Content Include="images\grd_alt.png" />
+    <Content Include="images\grd_head.png" />
+    <Content Include="images\grd_pgr.png" />
+    <Content Include="images\green_check.gif" />
+    <Content Include="images\header_background.jpg" />
+    <Content Include="images\helidex_blue.png" />
+    <Content Include="images\helo_no_image.jpg" />
+    <Content Include="images\history_transparent_watermark.png" />
+    <Content Include="images\image_unavailable.jpg" />
+    <Content Include="images\image_unavailable_thumb.jpg" />
+    <Content Include="images\info.jpg" />
+    <Content Include="images\info.png" />
+    <Content Include="images\info_white.png" />
+    <Content Include="images\jetnet_info.jpg" />
+    <Content Include="images\jet_no_image.jpg" />
+    <Content Include="images\JN_AerodexMarketplace_Logo2.png" />
+    <Content Include="images\JN_EvolutionMarketplace_Logo2.png" />
+    <Content Include="images\left_arrow.png" />
+    <Content Include="images\light.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\load_export_template.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\magnify.png" />
+    <Content Include="images\mail_compose.png" />
+    <Content Include="images\mobile_left.jpg" />
+    <Content Include="images\modify_icon.png" />
+    <Content Include="images\most_recent_head.jpg" />
+    <Content Include="images\myCRM_small.png" />
+    <Content Include="images\myevo_tools.jpg" />
+    <Content Include="images\newsearch.png" />
+    <Content Include="images\new_search.jpg" />
+    <Content Include="images\next.jpg" />
+    <Content Include="images\next.png" />
+    <Content Include="images\next_all.png" />
+    <Content Include="images\next_listing.png" />
+    <Content Include="images\non_client_info.jpg" />
+    <Content Include="images\notes.jpg" />
+    <Content Include="images\notes_water.jpg" />
+    <Content Include="images\notes_watermark.jpg" />
+    <Content Include="images\number.jpg" />
+    <Content Include="images\pdf.png" />
+    <Content Include="images\person.jpg" />
+    <Content Include="images\phone_details_watermark.png" />
+    <Content Include="images\picture.png" />
+    <Content Include="images\ppt.png" />
+    <Content Include="images\previous.jpg" />
+    <Content Include="images\previous.png" />
+    <Content Include="images\previous_all.png" />
+    <Content Include="images\previous_listing.png" />
+    <Content Include="images\printer.png" />
+    <Content Include="images\red_pin.png" />
+    <Content Include="images\red_x.gif" />
+    <Content Include="images\regular_folder.png" />
+    <Content Include="images\regular_folder_hidden.png" />
+    <Content Include="images\relationship.jpg" />
+    <Content Include="images\remote.png" />
+    <Content Include="images\remove.gif" />
+    <Content Include="images\root.jpg" />
+    <Content Include="images\rotodex_red.png" />
+    <Content Include="images\rounded_popup_blc.gif" />
+    <Content Include="images\rounded_popup_bottom.gif" />
+    <Content Include="images\rounded_popup_brc.gif" />
+    <Content Include="images\rounded_popup_left.gif" />
+    <Content Include="images\rounded_popup_right.gif" />
+    <Content Include="images\rounded_popup_tlc.gif" />
+    <Content Include="images\rounded_popup_top.gif" />
+    <Content Include="images\rounded_popup_trc.gif" />
+    <Content Include="images\save_as_new_template.jpg" />
+    <Content Include="images\save_icon.jpg" />
+    <Content Include="images\save_icon.png" />
+    <Content Include="images\save_template.jpg" />
+    <Content Include="images\services_watermark.jpg" />
+    <Content Include="images\shared_folder.png" />
+    <Content Include="images\shared_folder_hidden.png" />
+    <Content Include="images\slideshow_caption.png" />
+    <Content Include="images\slideshow_off.png" />
+    <Content Include="images\slideshow_on.png" />
+    <Content Include="images\small_arrow.png" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\status_background.png" />
+    <Content Include="images\submenu_background.gif" />
+    <Content Include="images\submit_email.jpg" />
+    <Content Include="images\subnav_image.jpg" />
+    <Content Include="images\sub_menu_background.png" />
+    <Content Include="images\support.jpg" />
+    <Content Include="images\switch.jpg" />
+    <Content Include="images\switch_client.jpg" />
+    <Content Include="images\switch_jetnet.jpg" />
+    <Content Include="images\tab_background.jpg" />
+    <Content Include="images\text.jpg" />
+    <Content Include="images\tiers.jpg" />
+    <Content Include="images\tools.jpg" />
+    <Content Include="images\to_monitor.jpg" />
+    <Content Include="images\transactions.jpg" />
+    <Content Include="images\treeview_header.jpg" />
+    <Content Include="images\video_reel.jpg" />
+    <Content Include="images\welcome_text.jpg" />
+    <Content Include="images\white_background.png" />
+    <Content Include="images\white_background_transparent.png" />
+    <Content Include="images\white_text_background.png" />
+    <Content Include="images\world.jpg" />
+    <Content Include="listing_document.aspx" />
+    <Content Include="listing_opportunities.aspx" />
+    <Content Include="listing_transaction.aspx" />
+    <Content Include="listing_wanted.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Aircraft_Listing.aspx" />
+    <Content Include="main_site.Master" />
+    <Content Include="market.aspx" />
+    <Content Include="Mobile_Details.aspx" />
+    <Content Include="Mobile_Listing.aspx" />
+    <Content Include="myCRM.aspx" />
+    <Content Include="op_costs.aspx" />
+    <Content Include="performance_specs.aspx" />
+    <Content Include="picture.aspx" />
+    <Content Include="Preferences.aspx" />
+    <Content Include="print_spec.aspx" />
+    <Content Include="sessionKeepAlive.aspx" />
+    <Content Include="Mobile.Master" />
+    <Content Include="subscriptionInfo.aspx" />
+    <Content Include="View_Template.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="EvoStyles\EvoTheme.Master" />
+    <Content Include="EvoStyles\YachtTheme.Master" />
+    <Content Include="EvoStyles\CustomerAdminTheme.Master" />
+    <Content Include="DisplayYachtDetail.aspx" />
+    <Content Include="EvoStyles\EmptyEvoTheme.Master" />
+    <None Include="abiFiles\fonts\fontawesome-webfont.eot" />
+    <None Include="abiFiles\fonts\fontawesome-webfont.ttf" />
+    <None Include="abiFiles\fonts\fontawesome-webfont.woff" />
+    <None Include="abiFiles\fonts\FontAwesome.otf" />
+    <None Include="abiFiles\fonts\icomoon.eot" />
+    <None Include="abiFiles\fonts\icomoon.ttf" />
+    <None Include="abiFiles\fonts\icomoon.woff" />
+    <None Include="bin\evointernal.dat" />
+    <None Include="chat\Data\SessionDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SessionDB.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="EvoStyles\ABITheme.Master" />
+    <Content Include="EvoStyles\MobileTheme.Master" />
+    <Content Include="EvoStyles\HomebaseTheme.Master" />
+    <Content Include="EvoStyles\EmptyHomebaseTheme.Master" />
+    <Content Include="EvoStyles\EmptyCustomerAdminTheme.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.jetnet.aiservice.www\AssetInsightService.wsdl" />
+    <None Include="Web References\com.jetnet.aiservice.www\Service1.xsd" />
+    <None Include="Web References\com.jetnet.aiservice.www\Service10.xsd" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.aiservice.jetnet.com/Service1.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.jetnet.aiservice.www\</RelPath>
+      <UpdateFromURL>http://www.aiservice.jetnet.com/Service1.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>crmWebClient_com_jetnet_aiservice_www_AssetInsightService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
